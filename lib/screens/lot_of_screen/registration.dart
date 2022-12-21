@@ -89,7 +89,7 @@ class RegitrationScreen extends StatelessWidget {
                 allowKeyboard: false,
                 controller: _countryEditingController,
                 widget:
-                    //here i just added a dummy widget but in future it will be a package that display countries, also you can't type
+                    //here i just add a dummy widget but in furure in will be a backage that display countries, also you cant type
                     Row(children: [
                   Container(
                     color: Colors.red.shade200,
