@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sikatronics_equipment/pages_route.dart';
 
 import 'screens/lot_of_screen/screen01.dart';
 import 'screens/lot_of_screen/screen02.dart';
+import 'screens/lot_of_screen/screen03.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +22,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SecondScreen(),
+      getPages: pages,
+      home: FirstScreen(),
     );
   }
 }

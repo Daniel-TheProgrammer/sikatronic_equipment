@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:sikatronics_equipment/screens/lot_of_screen/screen02.dart';
-
 import 'package:sikatronics_equipment/widget/my_button.dart';
 
 import '../../colors.dart';
 
-class FirstScreen extends StatelessWidget {
-  const FirstScreen({super.key});
+class FirstSplashScreen extends StatelessWidget {
+  const FirstSplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +23,12 @@ class FirstScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
+                    // group259sNF (75:614)
                     margin: const EdgeInsets.fromLTRB(0, 0, 0, 32),
                     width: 180,
                     height: 169.47,
                     child: Image.asset(
-                      'assets/imgs/logo_violet.png',
+                      'assets/imgs/logo_yellow.png',
                       width: 180,
                       height: 169.47,
                     ),
@@ -39,7 +37,7 @@ class FirstScreen extends StatelessWidget {
                     margin: const EdgeInsets.all(8),
                     // companionofentrepreneursweprov (75:626)
 
-                    child: Text(
+                    child: const Text(
                       'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -47,18 +45,14 @@ class FirstScreen extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         height: 1.5,
                         color: // Colors.red
-                            AppColor.textColor,
+                            Color(0xfffff740),
                       ),
                     ),
                   ),
                 ],
               ),
             ),
-            MyButton(
-                onTapped: (() {
-                  Get.to(const SecondScreen());
-                }),
-                label: 'Choose language')
+            MyButton(onTapped: (() {}), label: 'Choose language')
           ],
         ),
       ),
