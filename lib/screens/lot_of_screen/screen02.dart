@@ -69,7 +69,7 @@ class SecondScreen extends StatelessWidget {
                   ),
                   MyButton(
                     onTapped: () {
-                      Get.to(const ThirdScreen());
+                      Get.to(() => const ThirdScreen());
                     },
                     label: 'Continue',
                   ),
