@@ -19,12 +19,14 @@ class SecondScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
+            Container(
+              color: Colors.white,
               width: Get.width,
               height: Get.height / 1.8,
+              padding: const EdgeInsets.all(5),
               child: Image.asset(
                 'assets/imgs/engine001.png',
-                fit: BoxFit.cover,
+                fit: BoxFit.contain,
               ),
             ),
             Expanded(
