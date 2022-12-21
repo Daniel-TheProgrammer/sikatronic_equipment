@@ -56,7 +56,7 @@ class FirstScreen extends StatelessWidget {
             ),
             MyButton(
                 onTapped: (() {
-                  Get.to(const SecondScreen());
+                  Get.to(() => const SecondScreen());
                 }),
                 label: 'Choose language')
           ],
