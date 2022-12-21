@@ -10,4 +10,5 @@ List<GetPage<dynamic>> pages = [
   GetPage(name: '/secondScreen', page: (() => const SecondScreen())),
   GetPage(name: '/thirdScreen', page: (() => const ThirdScreen())),
   GetPage(name: '/registrationScreen', page: (() => RegitrationScreen())),
+  GetPage(name: '/registrationScreen', page: (() => RegitrationScreen()))
 ];

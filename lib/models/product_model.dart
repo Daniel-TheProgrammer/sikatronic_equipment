@@ -25,32 +25,93 @@ class ProductModel extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Expanded(
-            child: Column(children: [
-              Text(
-                label.toUpperCase(),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: GoogleFonts.poppins(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  height: 1.5,
-                  color: AppColor.textColor,
-                ),
-              ),
-              Text(
-                description,
-                maxLines: 5,
-                overflow: TextOverflow.ellipsis,
-                style: GoogleFonts.poppins(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w700,
-                  height: 1.5,
-                  color: Colors.black,
-                ),
-              ),
-            ]),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    label.toUpperCase(),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      height: 1.5,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                  Text(
+                    description,
+                    maxLines: 5,
+                    overflow: TextOverflow.ellipsis,
+                    style: GoogleFonts.poppins(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w700,
+                      height: 1.5,
+                      color: Colors.black,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Row(
+                    children: [
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          height: 40,
+                          width: Get.width / 4,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: AppColor.textColor,
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Send request',
+                              style: GoogleFonts.poppins(
+                                fontSize: 12,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                height: 1.2,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          height: 40,
+                          width: Get.width / 4,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              width: 1.5,
+                              color: AppColor.textColor,
+                            ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'learn more',
+                              style: GoogleFonts.poppins(
+                                fontSize: 12,
+                                color: AppColor.textColor,
+                                fontWeight: FontWeight.w600,
+                                height: 1.2,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                ]),
           ),
           SizedBox(
             width: Get.width / 3,
