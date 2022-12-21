@@ -46,7 +46,7 @@ class SecondScreen extends StatelessWidget {
                               fontSize: 24,
                               fontWeight: FontWeight.w700,
                               height: 1.5,
-                              color: Color.fromARGB(255, 0, 0, 0),
+                              color: AppColor.textColor,
                             ),
                           ),
                         ),

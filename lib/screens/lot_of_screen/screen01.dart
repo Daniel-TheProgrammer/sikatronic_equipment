@@ -29,7 +29,7 @@ class FirstScreen extends StatelessWidget {
                     width: 180,
                     height: 169.47,
                     child: Image.asset(
-                      'assets/imgs/logo_yellow.png',
+                      'assets/imgs/logo_violet.png',
                       width: 180,
                       height: 169.47,
                     ),
@@ -38,7 +38,7 @@ class FirstScreen extends StatelessWidget {
                     margin: const EdgeInsets.all(8),
                     // companionofentrepreneursweprov (75:626)
 
-                    child: const Text(
+                    child: Text(
                       'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -46,7 +46,7 @@ class FirstScreen extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         height: 1.5,
                         color: // Colors.red
-                            Colors.black,
+                            AppColor.textColor,
                       ),
                     ),
                   ),
