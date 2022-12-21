@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/pages_route.dart';
+import 'package:sikatronics_equipment/screens/lot_of_screen/list_of_product.dart';
 
 import 'screens/lot_of_screen/screen01.dart';
 import 'screens/lot_of_screen/screen02.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       getPages: pages,
-      home: FirstScreen(),
+      home: ProductList(),
     );
   }
 }
