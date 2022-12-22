@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/pages_route.dart';
-import 'package:sikatronics_equipment/screens/lot_of_screen/list_of_product.dart';
 
 import 'screens/lot_of_screen/screen01.dart';
 import 'screens/lot_of_screen/screen02.dart';
@@ -19,6 +18,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
+      translations: AppTranslations(),
+      locale: Get.deviceLocale,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -28,3 +29,12 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//******* PLEASE DO NOT DELETE THIS ********* */
+/*
+TODO : 
+Add downloaded font style[DONE], add the dart file for text styles too, do the different routing,
+redo language selection using dropdown widget, commence translation in l10n
+fill in controller and
+
+ */

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sikatronics_equipment/colors.dart';
-import 'package:sikatronics_equipment/screens/lot_of_screen/screen03.dart';
+import 'package:sikatronics_equipment/screens/Screen03/screen03.dart';
+import 'package:sikatronics_equipment/utils/colors.dart';
+
 
 import '../../widget/my_button.dart';
 
@@ -13,8 +14,8 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          color: AppColor.firstClr,
+        decoration: const BoxDecoration(
+          color: AppColor.primaryColor500,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -49,7 +50,7 @@ class SecondScreen extends StatelessWidget {
                               fontSize: 24,
                               fontWeight: FontWeight.w700,
                               height: 1.5,
-                              color: AppColor.textColor,
+                              color: AppColor.accentColor400,
                             ),
                           ),
                         ),
@@ -62,7 +63,7 @@ class SecondScreen extends StatelessWidget {
                               fontSize: 16,
                               fontWeight: FontWeight.w400,
                               height: 1.5,
-                              color: Color.fromARGB(255, 0, 0, 0),
+                              color: const Color(0xFF000000),
                             ),
                           ),
                         ),

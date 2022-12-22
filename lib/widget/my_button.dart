@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sikatronics_equipment/colors.dart';
+import 'package:sikatronics_equipment/utils/colors.dart';
 
 class MyButton extends StatelessWidget {
   final Function() onTapped;
@@ -16,7 +16,7 @@ class MyButton extends StatelessWidget {
         height: 48,
         margin: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          border: Border.all(color: AppColor.textColor),
+          border: Border.all(color: AppColor.accentColor400),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Center(
@@ -26,7 +26,7 @@ class MyButton extends StatelessWidget {
               fontSize: 16,
               fontWeight: FontWeight.w600,
               height: 1.5,
-              color: AppColor.textColor,
+              color: AppColor.accentColor400,
             ),
           ),
         ),
