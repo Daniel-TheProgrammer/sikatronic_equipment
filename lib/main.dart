@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
+import 'package:sikatronics_equipment/screens/Registration_screen/registration_binding.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01.dart';
 import 'package:sikatronics_equipment/screens/SendRequest/send_request_page.dart';
 
 import 'l10n/app_translations.dart';
+import 'screens/Registration_screen/registration.dart';
 import 'screens/screen04/screen04.dart';
 
 void main() {

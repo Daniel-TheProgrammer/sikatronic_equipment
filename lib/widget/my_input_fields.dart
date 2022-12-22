@@ -10,12 +10,14 @@ class MyInputField extends StatelessWidget {
   final Widget? widget;
   final TextInputType? textInputType;
   final bool allowKeyboard;
-  const MyInputField(
+  String? initalValue;
+  MyInputField(
       {super.key,
       required this.title,
       required this.hintText,
       this.textInputType,
       this.controller,
+      this.initalValue,
       required this.allowKeyboard,
       this.widget});
 
@@ -49,6 +51,7 @@ class MyInputField extends StatelessWidget {
               ),
             Expanded(
               child: TextFormField(
+                initialValue: initalValue,
                 readOnly: !allowKeyboard,
                 autofocus: false,
                 keyboardType: textInputType,
@@ -61,7 +64,7 @@ class MyInputField extends StatelessWidget {
                   ),
                 ),
                 decoration: InputDecoration(
-                  hintText: hintText,
+                  hintText: initalValue == null ? hintText : null,
                   hintStyle: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
