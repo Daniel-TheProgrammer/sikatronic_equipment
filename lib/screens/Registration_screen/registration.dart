@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/LIstOfProduct/list_of_product.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
 import 'package:sikatronics_equipment/widget/my_input_fields.dart';
+import 'package:uuid/uuid.dart';
 
 import 'registration_controller.dart';
 
@@ -29,6 +30,8 @@ class RegitrationScreen extends StatelessWidget {
   String? _country;
   String? _phoneNum;
   String hintCountry = 'Country';
+  String _id = const Uuid().v4();
+
   //String countryFlag = 'assets/imgs/united-kingdom.png';
 
   RegistrationScreenController controller =
@@ -177,8 +180,8 @@ class RegitrationScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: GestureDetector(
-                  onTap: () {
-                    validation();
+                  onTap: () async {
+                    await validation();
                   },
                   child: Container(
                     width: Get.width * .9,
@@ -208,7 +211,7 @@ class RegitrationScreen extends StatelessWidget {
     );
   }
 
-  validation() {
+  validation() async {
     if (_nameEditingController.text.isEmpty ||
         _lastNameEditingController.text.isEmpty ||
         _emailEditingController.text.isEmpty ||
@@ -229,12 +232,24 @@ class RegitrationScreen extends StatelessWidget {
       _name = _nameEditingController.text;
       _lastName = _lastNameEditingController.text;
       _email = _emailEditingController.text;
-      _company = _countryEditingController.text;
-      _country = _countryEditingController.text;
+      _company = _companyNameEditingController.text;
+
       _phoneNum = _phoneNumberEditingController.text;
-      Get.to(ProductList());
+      await controller
+          .addSellers(
+            id: _id,
+            name: _name,
+            lastName: _lastName,
+            email: _email,
+            companyName: _company,
+            country: _country,
+            phone: _phoneNum,
+          )
+          .then((value) => Get.to(const ProductList()));
       print(
           'name :$_name,last name : $_lastName,email :$_email,country:$_country,company:$_company,phone number: $_phoneNum');
+
+      ;
     }
   }
 }
