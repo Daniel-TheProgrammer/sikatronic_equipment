@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/Registration_screen/registration.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
 
-
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({super.key});
 
@@ -129,7 +128,7 @@ class ThirdScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: () => Get.to(() => const RegitrationScreen()),
+                                onTap: () => Get.to(() => RegitrationScreen()),
                                 child: Container(
                                   margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   width: 80,
@@ -160,7 +159,7 @@ class ThirdScreen extends StatelessWidget {
                             fontSize: 50,
                             fontWeight: FontWeight.w700,
                             height: 1.5,
-                            color:const Color(0xff000000),
+                            color: const Color(0xff000000),
                           ),
                         ),
                       ),
