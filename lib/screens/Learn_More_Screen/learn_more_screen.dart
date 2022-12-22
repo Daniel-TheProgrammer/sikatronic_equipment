@@ -26,24 +26,28 @@ class LearnMoreScreen extends StatelessWidget {
                 Text('Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. ',style: TextStyle(color: Colors.white,fontWeight: FontWeight.normal,fontSize: 14)),
               SizedBox(height: 35,),
 
-                Container(
-                  height: 40,
-                  width: Get.width / 4,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      width: 1.5,
-                      color:Colors.white,
+                InkWell(onTap: (){
+                  Navigator.of(context).pop();
+                },
+                  child: Container(
+                    height: 40,
+                    width: Get.width / 4,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        width: 1.5,
+                        color:Colors.white,
+                      ),
                     ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Send Request',
-                      style: GoogleFonts.poppins(
-                        fontSize: 12,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                        height: 1.2,
+                    child: Center(
+                      child: Text(
+                        'Send Request',
+                        style: GoogleFonts.poppins(
+                          fontSize: 12,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          height: 1.2,
+                        ),
                       ),
                     ),
                   ),
