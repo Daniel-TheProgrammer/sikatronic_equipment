@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
 //******* PLEASE DO NOT DELETE THIS ********* */
 /*
 TODO : 
-Add downloaded font style, add the dart file too, do the different routing,
+Add downloaded font style[DONE], add the dart file for text styles too, do the different routing,
 redo language selection using dropdown widget, commence translation in l10n
 fill in controller and
 
