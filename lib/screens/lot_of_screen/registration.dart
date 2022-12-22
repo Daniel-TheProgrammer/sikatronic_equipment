@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sikatronics_equipment/screens/LIstOfProduct/list_of_product.dart';
-import 'package:sikatronics_equipment/utils/colors.dart';
+import 'package:sikatronics_equipment/colors.dart';
 import 'package:sikatronics_equipment/widget/my_input_fields.dart';
 
 class RegitrationScreen extends StatelessWidget {
@@ -87,7 +86,7 @@ class RegitrationScreen extends StatelessWidget {
               MyInputField(
                 title: 'Country',
                 hintText: 'Country',
-                allowKeyboard: true,
+                allowKeyboard: false,
                 controller: _countryEditingController,
                 widget:
                     //here i just add a dummy widget but in furure in will be a backage that display countries, also you cant type
@@ -133,7 +132,7 @@ class RegitrationScreen extends StatelessWidget {
                     width: Get.width * .9,
                     height: 48,
                     decoration: BoxDecoration(
-                      color: AppColor.primaryColor500,
+                      color: AppColor.firstClr,
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Center(
@@ -143,7 +142,7 @@ class RegitrationScreen extends StatelessWidget {
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
                           height: 1.5,
-                          color: AppColor.accentColor400,
+                          color: AppColor.textColor,
                         ),
                       ),
                     ),
@@ -175,14 +174,12 @@ class RegitrationScreen extends StatelessWidget {
             color: Colors.red,
           ));
     } else {
-
       _name = _nameEditingController.text;
       _lastName = _lastNameEditingController.text;
       _email = _emailEditingController.text;
       _company = _countryEditingController.text;
       _country = _countryEditingController.text;
       _phoneNum = _phoneNumberEditingController.text;
-      Get.to(ProductList());
       print(
           'name :$_name,last name : $_lastName,email :$_email,country:$_country,company:$_company,phone number: $_phoneNum');
     }

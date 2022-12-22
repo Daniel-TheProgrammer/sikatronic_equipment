@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       getPages: pages,
-      home: ProductList(),
+      home: FirstScreen(),
     );
   }
 }

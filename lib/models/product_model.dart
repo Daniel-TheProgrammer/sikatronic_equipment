@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sikatronics_equipment/screens/Learn_More_Screen/learn_more_screen.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
 
 class ProductModel extends StatelessWidget {
@@ -85,7 +86,9 @@ class ProductModel extends StatelessWidget {
                         width: 5,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(LearnMoreScreen());
+                        },
                         child: Container(
                           height: 40,
                           width: Get.width / 4,
