@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sikatronics_equipment/l10n/l10n.dart';
 import 'package:sikatronics_equipment/pages_route.dart';
 
 import 'screens/lot_of_screen/screen01.dart';
@@ -22,7 +21,6 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      supportedLocales: L10n.all,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
