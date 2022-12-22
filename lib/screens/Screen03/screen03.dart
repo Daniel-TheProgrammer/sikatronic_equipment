@@ -3,8 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sikatronics_equipment/colors.dart';
-import 'package:sikatronics_equipment/screens/lot_of_screen/registration.dart';
+import 'package:sikatronics_equipment/screens/Registration_screen/registration.dart';
+import 'package:sikatronics_equipment/utils/colors.dart';
+
 
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({super.key});

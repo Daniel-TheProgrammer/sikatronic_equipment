@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sikatronics_equipment/colors.dart';
-import 'package:sikatronics_equipment/screens/lot_of_screen/screen03.dart';
+import 'package:sikatronics_equipment/screens/Screen03/screen03.dart';
+import 'package:sikatronics_equipment/utils/colors.dart';
+
 
 import '../../widget/my_button.dart';
 

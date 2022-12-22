@@ -3,9 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/l10n/app_translations.dart';
-import 'package:sikatronics_equipment/pages_route.dart';
-
-import 'screens/lot_of_screen/screen01.dart';
+import 'package:sikatronics_equipment/routes/pages_route.dart';
+import 'package:sikatronics_equipment/screens/Screen01/screen01.dart';
 
 
 void main() {
@@ -18,6 +17,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    
     return GetMaterialApp(
       title: 'Flutter Demo',
       translations: AppTranslations(),
@@ -31,3 +31,12 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//******* PLEASE DO NOT DELETE THIS ********* */
+/*
+TODO : 
+Add downloaded font style, add the dart file too, do the different routing,
+redo language selection using dropdown widget, commence translation in l10n
+fill in controller and
+
+ */

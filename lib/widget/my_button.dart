@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sikatronics_equipment/colors.dart';
+import 'package:sikatronics_equipment/utils/colors.dart';
 
 class MyButton extends StatelessWidget {
   final Function() onTapped;
