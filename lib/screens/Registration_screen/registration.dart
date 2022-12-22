@@ -1,9 +1,13 @@
+import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/LIstOfProduct/list_of_product.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
 import 'package:sikatronics_equipment/widget/my_input_fields.dart';
+
+import 'registration_controller.dart';
 
 class RegitrationScreen extends StatelessWidget {
   RegitrationScreen({super.key});
@@ -14,8 +18,7 @@ class RegitrationScreen extends StatelessWidget {
   final TextEditingController _emailEditingController = TextEditingController();
   final TextEditingController _companyNameEditingController =
       TextEditingController();
-  final TextEditingController _phoneNumberEditingController =
-      TextEditingController();
+  TextEditingController _phoneNumberEditingController = TextEditingController();
   final TextEditingController _countryEditingController =
       TextEditingController();
 
@@ -25,6 +28,12 @@ class RegitrationScreen extends StatelessWidget {
   String? _email;
   String? _country;
   String? _phoneNum;
+  String hintCountry = 'Country';
+  //String countryFlag = 'assets/imgs/united-kingdom.png';
+
+  RegistrationScreenController controller =
+      Get.put(RegistrationScreenController());
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -80,49 +89,91 @@ class RegitrationScreen extends StatelessWidget {
               MyInputField(
                 title: 'Company name ',
                 textInputType: TextInputType.emailAddress,
-                hintText: 'Enter company name',
+                hintText: "Enter company name",
                 controller: _companyNameEditingController,
                 allowKeyboard: true,
               ),
-              MyInputField(
-                title: 'Country',
-                hintText: 'Country',
-                allowKeyboard: true,
-                controller: _countryEditingController,
-                widget:
-                    //here i just add a dummy widget but in furure in will be a backage that display countries, also you cant type
-                    Row(children: [
-                  Container(
-                    color: Colors.red.shade200,
-                    height: 18,
-                    width: 20,
-                    child: Image.asset(
-                      'assets/imgs/arrow+england.png',
-                      height: 18,
-                      width: 20,
-                    ),
-                  )
-                ]),
-              ),
-              MyInputField(
-                title: 'Phone',
-                hintText: '+39 666-666-666',
-                allowKeyboard: true,
-                textInputType: TextInputType.phone,
-                controller: _phoneNumberEditingController,
-                widget: Row(children: [
-                  Container(
-                    color: Colors.red.shade200,
-                    height: 18,
-                    width: 20,
-                    child: Image.asset(
-                      'assets/imgs/arrow+england.png',
-                      height: 18,
-                      width: 20,
-                    ),
-                  )
-                ]),
-              ),
+              Obx((() {
+                return MyInputField(
+                  title: 'Country',
+                  hintText: controller.countryName.toString(),
+                  allowKeyboard: false,
+                  controller: _countryEditingController,
+                  widget:
+                      //here i just add a dummy widget but in furure in will be a backage that display countries, also you cant type
+                      Row(children: [
+                    GestureDetector(
+                      onTap: () {
+                        showCountryPicker(
+                            context: context,
+                            onSelect: ((value) {
+                              controller.getCountryName(
+                                  value.name, value.flagEmoji);
+                              _country = value.name;
+                            }));
+                      },
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            height: 18,
+                            width: 22,
+                            child: Obx(
+                              (() {
+                                return Text(controller.countryFlag
+                                    .toString()); /* Image.asset(
+                                  ,
+                                  height: 18,
+                                  width: 20,
+                                ); */
+                              }),
+                            ),
+                          ),
+                          const Icon(Icons.arrow_drop_down)
+                        ],
+                      ),
+                    )
+                  ]),
+                );
+              })),
+              Obx((() {
+                return MyInputField(
+                  title: 'Phone',
+                  hintText: '+${controller.phoneInit.toString()} 000 000 000',
+                  allowKeyboard: true,
+                  textInputType: TextInputType.phone,
+                  controller: _phoneNumberEditingController,
+                  widget: Row(children: [
+                    GestureDetector(
+                      onTap: () {
+                        showCountryPicker(
+                            context: context,
+                            onSelect: ((value) {
+                              controller.getPhoneInit(
+                                value.phoneCode,
+                              );
+                              controller.getCountryName(
+                                  value.name, value.flagEmoji);
+                              _country = value.name;
+                            }));
+                      },
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            height: 18,
+                            width: 22,
+                            child: Obx(
+                              (() {
+                                return Text(controller.countryFlag.toString());
+                              }),
+                            ),
+                          ),
+                          Icon(Icons.arrow_drop_down)
+                        ],
+                      ),
+                    )
+                  ]),
+                );
+              })),
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: GestureDetector(
@@ -161,9 +212,9 @@ class RegitrationScreen extends StatelessWidget {
     if (_nameEditingController.text.isEmpty ||
         _lastNameEditingController.text.isEmpty ||
         _emailEditingController.text.isEmpty ||
-        _phoneNumberEditingController.text.isEmpty ||
+        _phoneNumberEditingController.text.length < 10 ||
         _companyNameEditingController.text.isEmpty ||
-        _countryEditingController.text.isEmpty) {
+        _country == null) {
       print('not validated');
       return Get.snackbar('an error has been occured',
           'you have to fill al the fields,properly',
@@ -175,7 +226,6 @@ class RegitrationScreen extends StatelessWidget {
             color: Colors.red,
           ));
     } else {
-
       _name = _nameEditingController.text;
       _lastName = _lastNameEditingController.text;
       _email = _emailEditingController.text;
