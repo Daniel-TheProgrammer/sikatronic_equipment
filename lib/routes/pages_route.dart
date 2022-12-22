@@ -13,44 +13,4 @@ List<GetPage<dynamic>> pages = [
 
 
  
-List<GetPage<dynamic>> pages = [
-  GetPage(name: '/firstScreen', page: (() => const FirstScreen())),
-  GetPage(name: '/secondScreen', page: (() => const SecondScreen())),
-  GetPage(name: '/thirdScreen', page: (() => const ThirdScreen())),
-];
-
-
-List<GetPage<dynamic>> pages = [
-  GetPage(name: '/firstScreen', page: (() => const FirstScreen())),
-  GetPage(name: '/secondScreen', page: (() => const SecondScreen())),
-  GetPage(name: '/thirdScreen', page: (() => const ThirdScreen())),
-];
-
-
-List<GetPage<dynamic>> pages = [
-  GetPage(name: '/firstScreen', page: (() => const FirstScreen())),
-  GetPage(name: '/secondScreen', page: (() => const SecondScreen())),
-  GetPage(name: '/thirdScreen', page: (() => const ThirdScreen())),
-];
-
-
-List<GetPage<dynamic>> pages = [
-  GetPage(name: '/firstScreen', page: (() => const FirstScreen())),
-  GetPage(name: '/secondScreen', page: (() => const SecondScreen())),
-  GetPage(name: '/thirdScreen', page: (() => const ThirdScreen())),
-];
-
-
-List<GetPage<dynamic>> pages = [
-  GetPage(name: '/firstScreen', page: (() => const FirstScreen())),
-  GetPage(name: '/secondScreen', page: (() => const SecondScreen())),
-  GetPage(name: '/thirdScreen', page: (() => const ThirdScreen())),
-];
-
-
-List<GetPage<dynamic>> pages = [
-  GetPage(name: '/firstScreen', page: (() => const FirstScreen())),
-  GetPage(name: '/secondScreen', page: (() => const SecondScreen())),
-  GetPage(name: '/thirdScreen', page: (() => const ThirdScreen())),
-];
 
