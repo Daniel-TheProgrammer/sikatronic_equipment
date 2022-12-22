@@ -36,7 +36,7 @@ class ThirdScreen extends StatelessWidget {
                         width: Get.width / 1.2,
                         height: Get.height / 2.6,
                         child: Image.asset(
-                          'assets/imgs/engine002.png',
+                          'assets/imgs/engine001.png',
                           fit: BoxFit.contain,
                         ),
                       ),
