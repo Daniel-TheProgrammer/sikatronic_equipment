@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sikatronics_equipment/screens/lot_of_screen/screen02.dart';
+import 'package:sikatronics_equipment/screens/Screen02/screen02.dart';
 
 import 'package:sikatronics_equipment/widget/my_button.dart';
 
-import '../../colors.dart';
+import 'package:sikatronics_equipment/utils/colors.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});

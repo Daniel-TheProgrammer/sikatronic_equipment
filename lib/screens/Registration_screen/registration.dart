@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sikatronics_equipment/colors.dart';
+import 'package:sikatronics_equipment/utils/colors.dart';
 import 'package:sikatronics_equipment/widget/my_input_fields.dart';
 
 class RegitrationScreen extends StatelessWidget {

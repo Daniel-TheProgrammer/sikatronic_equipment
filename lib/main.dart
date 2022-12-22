@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/pages_route.dart';
 
-import 'screens/lot_of_screen/screen01.dart';
-import 'screens/lot_of_screen/screen02.dart';
-import 'screens/lot_of_screen/screen03.dart';
+import 'screens/Screen01/screen01.dart';
+import 'screens/Screen02/screen02.dart';
+import 'screens/Screen03/screen03.dart';
 
 void main() {
   runApp(const MyApp());
