@@ -1,15 +1,13 @@
-// ignore_for_file: avoid_unnecessary_containers
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/Registration_screen/registration.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
 
-import '../screen04/screen04.dart';
+import '../screen06/screen06.dart';
 
-class ThirdScreen extends StatelessWidget {
-  const ThirdScreen({super.key});
+class FifthScreen extends StatelessWidget {
+  const FifthScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +22,9 @@ class ThirdScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              margin: const EdgeInsets.fromLTRB(18, 0, 34, 47),
+              margin: const EdgeInsets.fromLTRB(18, 0, 34, 5),
               width: double.infinity,
-              height: Get.height / 3,
+              height: Get.height / 2.6,
               child: Stack(
                 children: [
                   Positioned(
@@ -35,9 +33,9 @@ class ThirdScreen extends StatelessWidget {
                     child: Align(
                       child: SizedBox(
                         width: Get.width / 1.2,
-                        height: Get.height / 2.6,
+                        height: Get.height / 2.4,
                         child: Image.asset(
-                          'assets/imgs/engine001.png',
+                          'assets/imgs/engine004.png',
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -91,20 +89,21 @@ class ThirdScreen extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    left: 24,
-                    top: 71,
+                    left: 20,
+                    top: 51,
                     child: SizedBox(
                       width: Get.width / 1.07,
-                      height: Get.height / 1.5,
+                      height: Get.height / 2.1,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
-                            margin: const EdgeInsets.fromLTRB(0, 25, 78, 5),
+                            margin: const EdgeInsets.fromLTRB(0, 25, 5, 5),
                             child: Text(
-                              'Search for  Machines and Equipement ',
+                              'Get a Technical and Commercial Study. ',
                               style: GoogleFonts.poppins(
-                                fontSize: 26,
+                                fontSize: 23,
                                 fontWeight: FontWeight.w700,
                                 height: 1.5,
                                 color: AppColor.accentColor400,
@@ -116,7 +115,7 @@ class ThirdScreen extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
-                                'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit ',
+                                'We will study your request technically and propose you the best equipment for your project. ',
                                 style: GoogleFonts.poppins(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
@@ -130,13 +129,13 @@ class ThirdScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: () => Get.to(() => const FourthScreen()),
+                                onTap: () => Get.to(() => SixthScreen()),
                                 child: Container(
                                   margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   width: 80,
                                   height: 80,
                                   child: Image.asset(
-                                    'assets/imgs/progress_button.png',
+                                    'assets/imgs/progress_button_75.png',
                                     width: 80,
                                     height: 80,
                                   ),
@@ -148,7 +147,7 @@ class ThirdScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  /*                  Positioned(
                     left: 5,
                     top: 40,
                     child: Align(
@@ -156,7 +155,7 @@ class ThirdScreen extends StatelessWidget {
                         width: 66,
                         height: 96,
                         child: Text(
-                          '01',
+                          '03',
                           style: GoogleFonts.poppins(
                             fontSize: 50,
                             fontWeight: FontWeight.w700,
@@ -167,6 +166,7 @@ class ThirdScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+  */
                   Positioned(
                     left: 24,
                     top: 0,
@@ -179,7 +179,7 @@ class ThirdScreen extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          '1',
+                          '3',
                           style: GoogleFonts.poppins(
                             fontSize: 32,
                             fontWeight: FontWeight.w700,

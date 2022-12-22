@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
-import 'package:sikatronics_equipment/screens/LIstOfProduct/list_of_product.dart';
-
+import 'package:sikatronics_equipment/screens/Screen01/screen01.dart';
+import 'package:sikatronics_equipment/screens/SendRequest/send_request_page.dart';
 
 import 'l10n/app_translations.dart';
-import 'screens/Screen01/screen01.dart';
-import 'screens/Screen02/screen02.dart';
-import 'screens/Screen03/screen03.dart';
+import 'screens/screen04/screen04.dart';
 
 void main() {
   runApp(const MyApp());
