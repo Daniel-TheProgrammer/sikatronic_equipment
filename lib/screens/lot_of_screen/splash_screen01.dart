@@ -10,8 +10,8 @@ class FirstSplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          color: AppColor.firstClr,
+        decoration: const BoxDecoration(
+          color: AppColor.primaryColor500,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

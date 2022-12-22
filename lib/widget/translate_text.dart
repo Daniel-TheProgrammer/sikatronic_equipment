@@ -15,3 +15,4 @@ import 'package:get/get.dart';
 Widget translateText({required String text}) {
   return Text(text.tr);
 }
+ 

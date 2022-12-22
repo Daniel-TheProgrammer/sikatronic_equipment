@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/screens/lot_of_screen/screen02.dart';
@@ -55,8 +57,8 @@ class FirstScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          color: AppColor.firstClr,
+        decoration: const BoxDecoration(
+          color: AppColor.primaryColor500,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -81,7 +83,7 @@ class FirstScreen extends StatelessWidget {
                     margin: const EdgeInsets.all(8),
                     // companionofentrepreneursweprov (75:626)
 
-                    child: Text(
+                    child:const Text(
                       'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -89,7 +91,7 @@ class FirstScreen extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         height: 1.5,
                         color: // Colors.red
-                            AppColor.textColor,
+                            AppColor.accentColor400,
                       ),
                     ),
                   ),

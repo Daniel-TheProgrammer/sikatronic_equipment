@@ -13,8 +13,8 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          color: AppColor.firstClr,
+        decoration: const BoxDecoration(
+          color: AppColor.primaryColor500,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,7 +47,7 @@ class SecondScreen extends StatelessWidget {
                               fontSize: 24,
                               fontWeight: FontWeight.w700,
                               height: 1.5,
-                              color: AppColor.textColor,
+                              color: AppColor.accentColor400,
                             ),
                           ),
                         ),
@@ -60,7 +60,7 @@ class SecondScreen extends StatelessWidget {
                               fontSize: 16,
                               fontWeight: FontWeight.w400,
                               height: 1.5,
-                              color: Color.fromARGB(255, 0, 0, 0),
+                              color: const Color(0xFF000000),
                             ),
                           ),
                         ),

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -53,8 +55,8 @@ class ThirdScreen extends StatelessWidget {
                         width: Get.width,
                         height: Get.height,
                         child: Container(
-                          decoration: BoxDecoration(
-                            color: AppColor.firstClr,
+                          decoration: const BoxDecoration(
+                            color: AppColor.primaryColor500,
                           ),
                         ),
                       ),
@@ -67,7 +69,7 @@ class ThirdScreen extends StatelessWidget {
                       width: 55,
                       height: 55,
                       decoration: BoxDecoration(
-                        color: Color(0xffece300),
+                        color: const Color(0xffece300),
                         borderRadius: BorderRadius.circular(27.5),
                       ),
                       child: Center(
@@ -79,7 +81,7 @@ class ThirdScreen extends StatelessWidget {
                               fontSize: 32,
                               fontWeight: FontWeight.w700,
                               height: 1.5,
-                              color: AppColor.textColor,
+                              color: AppColor.accentColor400,
                             ),
                           ),
                         ),
@@ -103,7 +105,7 @@ class ThirdScreen extends StatelessWidget {
                                 fontSize: 26,
                                 fontWeight: FontWeight.w700,
                                 height: 1.5,
-                                color: AppColor.textColor,
+                                color: AppColor.accentColor400,
                               ),
                             ),
                           ),
@@ -117,7 +119,7 @@ class ThirdScreen extends StatelessWidget {
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
                                   height: 1.5950000286,
-                                  color: AppColor.textColor,
+                                  color: AppColor.accentColor400,
                                 ),
                               ),
                             ),
@@ -126,9 +128,9 @@ class ThirdScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: () => Get.to(() => RegitrationScreen()),
+                                onTap: () => Get.to(() => const RegitrationScreen()),
                                 child: Container(
-                                  margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   width: 80,
                                   height: 80,
                                   child: Image.asset(
@@ -157,7 +159,7 @@ class ThirdScreen extends StatelessWidget {
                             fontSize: 50,
                             fontWeight: FontWeight.w700,
                             height: 1.5,
-                            color: Color(0xff000000),
+                            color:const Color(0xff000000),
                           ),
                         ),
                       ),
@@ -170,7 +172,7 @@ class ThirdScreen extends StatelessWidget {
                       width: 55,
                       height: 55,
                       decoration: BoxDecoration(
-                        color: Color(0xff441e59),
+                        color: const Color(0xff441e59),
                         borderRadius: BorderRadius.circular(27.5),
                       ),
                       child: Center(
@@ -181,7 +183,7 @@ class ThirdScreen extends StatelessWidget {
                             fontWeight: FontWeight.w700,
                             height: 1.5,
                             letterSpacing: 2.4,
-                            color: AppColor.firstClr,
+                            color: AppColor.primaryColor500,
                           ),
                         ),
                       ),
