@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sikatronics_equipment/colors.dart';
+import 'package:sikatronics_equipment/utils/colors.dart';
 
 class ProductModel extends StatelessWidget {
   String label;
