@@ -21,7 +21,7 @@ class ProductModel extends StatelessWidget {
       margin: const EdgeInsets.all(15),
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        border: Border.all(width: 1.5, color: AppColor.textColor),
+        border: Border.all(width: 1.5, color: AppColor.accentColor500),
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
@@ -40,7 +40,7 @@ class ProductModel extends StatelessWidget {
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
                       height: 1.5,
-                      color: AppColor.textColor,
+                      color: AppColor.accentColor500,
                     ),
                   ),
                   Text(
@@ -66,7 +66,7 @@ class ProductModel extends StatelessWidget {
                           width: Get.width / 4,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: AppColor.textColor,
+                            color: AppColor.accentColor500,
                           ),
                           child: Center(
                             child: Text(
@@ -93,7 +93,7 @@ class ProductModel extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
                               width: 1.5,
-                              color: AppColor.textColor,
+                              color: AppColor.accentColor500,
                             ),
                           ),
                           child: Center(
@@ -101,7 +101,7 @@ class ProductModel extends StatelessWidget {
                               'learn more',
                               style: GoogleFonts.poppins(
                                 fontSize: 12,
-                                color: AppColor.textColor,
+                                color: AppColor.accentColor500,
                                 fontWeight: FontWeight.w600,
                                 height: 1.2,
                               ),

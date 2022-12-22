@@ -132,7 +132,7 @@ class RegitrationScreen extends StatelessWidget {
                     width: Get.width * .9,
                     height: 48,
                     decoration: BoxDecoration(
-                      color: AppColor.firstClr,
+                      color: AppColor.primaryColor500,
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Center(
@@ -142,7 +142,7 @@ class RegitrationScreen extends StatelessWidget {
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
                           height: 1.5,
-                          color: AppColor.textColor,
+                          color: AppColor.accentColor400,
                         ),
                       ),
                     ),
