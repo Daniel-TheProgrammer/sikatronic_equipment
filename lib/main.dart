@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
-import 'package:sikatronics_equipment/screens/lot_of_screen/list_of_product.dart';
+import 'package:sikatronics_equipment/screens/LIstOfProduct/list_of_product.dart';
 
 
 import 'l10n/app_translations.dart';
