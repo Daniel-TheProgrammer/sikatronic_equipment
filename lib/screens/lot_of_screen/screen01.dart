@@ -9,6 +9,48 @@ import '../../colors.dart';
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
 
+  //Add any new language here and also in the app_translations.dart as required
+  final List<Map<String, dynamic>> locale = const <Map<String, dynamic>>[
+    {'name': 'English', 'locale': Locale('en', 'US')},
+    {'name': 'French', 'locale': Locale('fr', 'FR')},
+    {'name': 'German', 'locale': Locale('de', 'DE')},
+    {'name': 'Portuguese', 'locale': Locale('pt', 'PT')},
+    {'name': 'Spanish', 'locale': Locale('es', 'ES')}
+  ];
+
+//TODO: to be refatored later using the getx controller and calling it here
+  Future<T?> showLocalDialog<T>(BuildContext context) {
+    return showDialog(
+        context: context,
+        builder: (_) => AlertDialog(
+              content: Container(
+                width: double.maxFinite,
+                child: ListView.separated(
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) => InkWell(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8),
+                            child: Text(locale[index]['name']),
+                          ),
+                          onTap: () =>
+                              updateLocale(locale[index]['locale'], context),
+                        ),
+                    separatorBuilder: (context, index) => const Divider(
+                          color: Colors.black45,
+                        ),
+                    itemCount: locale.length),
+              ),
+            ));
+  }
+
+//This is to update the locale meaning the language changes
+  updateLocale(Locale locale, BuildContext context) {
+    Navigator.of(context).pop();
+    Get.updateLocale(locale);
+    debugPrint('update locale called');
+    Get.to(const SecondScreen());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +98,7 @@ class FirstScreen extends StatelessWidget {
             ),
             MyButton(
                 onTapped: (() {
-                  Get.to(const SecondScreen());
+                  showLocalDialog(context);
                 }),
                 label: 'Choose language')
           ],
