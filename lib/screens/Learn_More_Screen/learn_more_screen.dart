@@ -21,37 +21,25 @@ class LearnMoreScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 30,),
-                Text('INDUSTRY RAW MATERIALS',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18),)
+                Text('INDUSTRY',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18),)
                , SizedBox(height: 30,),
-                Text('Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. ',style: TextStyle(color: Colors.white,fontWeight: FontWeight.normal,fontSize: 14)),
+                Text('Sikatronics equipment assists you technically and commercially to have new or used machines for production, production lines and equipment in the field of agri-food, electronics, metal and forging, packaging and conditioning, pharmaceutical, chemical, textiles, printing machines, wood, plastic, industrial equipment,... and any machine or equipment of your field',style: TextStyle(color: Colors.white,fontWeight: FontWeight.normal,fontSize: 14)),
               SizedBox(height: 35,),
 
-                InkWell(onTap: (){
-                  Navigator.of(context).pop();
-                },
-                  child: Container(
-                    height: 40,
-                    width: Get.width / 4,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        width: 1.5,
-                        color:Colors.white,
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Send Request',
-                        style: GoogleFonts.poppins(
-                          fontSize: 12,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          height: 1.2,
-                        ),
-                      ),
-                    ),
+                MaterialButton(
+                  color: Color(0xffFFF510),
+                  minWidth: double.infinity,
+                  height: 45,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(14)),
+                  onPressed: () {
+                    Get.back();
+                  },
+                  child: const Text(
+                    'Back to Home',
+                    style: TextStyle(fontSize: 18, color: Color(0xff361847)),
                   ),
-                ),
+                )
               ],
             ),
           ),)
