@@ -18,7 +18,6 @@ class SendRequestPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('the category is ${Get.arguments['category']}');
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: SafeArea(
