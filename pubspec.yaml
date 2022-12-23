@@ -44,6 +44,8 @@ dependencies:
   cloud_firestore: ^4.3.0
   uuid: ^3.0.7
   firebase_auth: ^4.2.3
+  date_picker_timeline: ^1.2.3
+  intl:
 
 
 dev_dependencies:
