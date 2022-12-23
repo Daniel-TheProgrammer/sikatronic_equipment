@@ -5,9 +5,6 @@ import 'package:sikatronics_equipment/screens/LIstOfProduct/list_of_product.dart
 
 
 import 'l10n/app_translations.dart';
-import 'screens/Screen01/screen01.dart';
-import 'screens/Screen02/screen02.dart';
-import 'screens/Screen03/screen03.dart';
 
 void main() {
   runApp(const MyApp());
