@@ -18,6 +18,7 @@ class SendRequestPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('the category is ${Get.arguments['category']}');
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: SafeArea(
@@ -297,7 +298,7 @@ class SendRequestPage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(14)),
                         onPressed: () {
-                          Validation();
+                          Validation(context);
                         },
                         child: const Text(
                           'Send',
@@ -352,18 +353,11 @@ class SendRequestPage extends StatelessWidget {
     }
   }
 
-  Validation() {
+  Validation(BuildContext context) {
     if (_nameEditingController.text.isEmpty ||
         _emailEditingController.text.isEmpty ||
         _productDetailsEditingController.text.isEmpty) {
       print('not validated');
-
-      print(_nameEditingController.text);
-      print(_emailEditingController.text);
-      print(_productDetailsEditingController);
-
-      print(pickedDate);
-      print(timePicked);
 
       return Get.snackbar('an error has been occured',
           'you have to fill al the fields properly',
@@ -377,7 +371,12 @@ class SendRequestPage extends StatelessWidget {
           ));
     } else {
       print('validated');
-
+      if (timePicked.isEmpty) {
+        timePicked = TimeOfDay(
+                hour: int.parse(DateFormat('HH').format(DateTime.now())),
+                minute: int.parse(DateFormat('mm').format(DateTime.now())))
+            .format(context);
+      }
       print(_nameEditingController.text);
       print(_emailEditingController.text);
       print(_productDetailsEditingController);
