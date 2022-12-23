@@ -32,7 +32,7 @@ class SendRequestPage extends StatelessWidget {
                         height: 40,
                       ),
                       const Text(
-                        'INDUSTRY',
+                        'SENT US A REQUEST',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -41,15 +41,34 @@ class SendRequestPage extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      fieldLabel(label: 'Your Name'),
+                      fieldLabel(label: 'Machine Name/Vehicle/Equipment/Merchandise'),
                       const SizedBox(
                         height: 10,
                       ),
                       TextField(
-                        decoration: inputDeco,
+                        decoration: inputDeco.copyWith( hintText: 'Enter Machine Name',),
                         style: const TextStyle(color: Colors.white),
                         controller: _nameEditingController,
+                      ),const SizedBox(
+                        height: 30,
                       ),
+                      fieldLabel(label: 'Availability for call'),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(children: [
+                        Expanded(child: TextField(
+                          decoration: inputDeco.copyWith( hintText: 'DD/MM/YY',),
+                          style: const TextStyle(color: Colors.white),
+                          controller: _nameEditingController,
+                        ),),SizedBox(width: 20,),
+                        Expanded(child: TextField(
+                          decoration: inputDeco.copyWith(
+                            hintText: '00:00 Am',),
+                          style: const TextStyle(color: Colors.white),
+                          controller: _nameEditingController,
+                        ),),
+                      ],),
                       const SizedBox(
                         height: 25,
                       ),
@@ -67,7 +86,7 @@ class SendRequestPage extends StatelessWidget {
                       const SizedBox(
                         height: 25,
                       ),
-                      fieldLabel(label: 'Product Details'),
+                      fieldLabel(label: 'Machine Description'),
                       const SizedBox(
                         height: 10,
                       ),
@@ -96,8 +115,8 @@ class SendRequestPage extends StatelessWidget {
                           Validation();
                         },
                         child: const Text(
-                          'Send Request',
-                          style: TextStyle(color: Color(0xff361847)),
+                          'Send',
+                          style: TextStyle(fontSize: 18, color: Color(0xff361847)),
                         ),
                       )
                     ],
@@ -134,18 +153,20 @@ class SendRequestPage extends StatelessWidget {
   Row fieldLabel({String? label}) {
     return Row(
       children: [
-        Text(label!,
-            style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.normal,
-                fontSize: 18))
+        Expanded(
+          child: Text(label!,
+              style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 18)),
+        )
       ],
     );
   }
 }
 
 InputDecoration inputDeco = const InputDecoration(
-  hintText: 'Enter your Name.',
+  hintText: 'Enter Machine Name.',
   hintStyle: TextStyle(color: Colors.white),
   labelStyle: TextStyle(color: Colors.white),
   contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
