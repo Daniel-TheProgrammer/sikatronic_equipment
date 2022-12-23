@@ -5,6 +5,7 @@ class RegistrationScreenController extends GetxController {
   var countryName = 'Country'.obs;
   var countryFlag = '🇬🇧'.obs;
   var phoneInit = '39'.obs;
+  var progress = false.obs;
 
   getCountryName(String countryname, String countryflag) {
     countryName.value = countryname;
@@ -38,5 +39,9 @@ class RegistrationScreenController extends GetxController {
         })
         .then((value) => print("Seller Added"))
         .catchError((error) => print("Failed to add user: $error"));
+  }
+
+  progressOnOff(bool progressing) {
+    progress.value = progressing;
   }
 }
