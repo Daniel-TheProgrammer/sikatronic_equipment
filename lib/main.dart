@@ -1,12 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
-import 'package:sikatronics_equipment/screens/LIstOfProduct/list_of_product.dart';
+import 'package:sikatronics_equipment/screens/Screen01/screen01.dart';
 
-
+import 'firebase_options.dart';
 import 'l10n/app_translations.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -25,7 +29,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       getPages: pages,
-      home: ProductList(),
+      home: FirstScreen(),
     );
   }
 }

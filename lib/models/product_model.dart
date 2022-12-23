@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sikatronics_equipment/screens/Learn_More_Screen/learn_more_screen.dart';
+import 'package:sikatronics_equipment/screens/SendRequest/send_request_page.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
 
-class ProductModel extends StatelessWidget {
+class ProductModel extends StatefulWidget {
   String label;
   String description;
   String image;
@@ -14,6 +16,11 @@ class ProductModel extends StatelessWidget {
       required this.description,
       required this.image});
 
+  @override
+  State<ProductModel> createState() => _ProductModelState();
+}
+
+class _ProductModelState extends State<ProductModel> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,7 +40,7 @@ class ProductModel extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    label.toUpperCase(),
+                    widget.label.toUpperCase(),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: GoogleFonts.poppins(
@@ -44,7 +51,7 @@ class ProductModel extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    description,
+                    widget.description,
                     maxLines: 5,
                     overflow: TextOverflow.ellipsis,
                     style: GoogleFonts.poppins(
@@ -60,7 +67,9 @@ class ProductModel extends StatelessWidget {
                   Row(
                     children: [
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(SendRequestPage());
+                        },
                         child: Container(
                           height: 40,
                           width: Get.width / 4,
@@ -85,7 +94,10 @@ class ProductModel extends StatelessWidget {
                         width: 5,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(LearnMoreScreen());
+                          // _showMyDialog();
+                        },
                         child: Container(
                           height: 40,
                           width: Get.width / 4,
@@ -117,12 +129,33 @@ class ProductModel extends StatelessWidget {
             width: Get.width / 3,
             height: Get.height / 7,
             child: Image.asset(
-              image,
+              widget.image,
               fit: BoxFit.contain,
             ),
           )
         ],
       ),
+    );
+  }
+
+  Future<void> _showMyDialog() async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('AlertDialog Title'),
+          content: SingleChildScrollView(
+            child:Column(
+              children: [
+                LearnMoreScreen(),
+
+              ],
+            ),
+
+          )
+        );
+      },
     );
   }
 }

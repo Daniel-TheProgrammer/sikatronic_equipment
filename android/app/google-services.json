@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "83868112810",
+    "project_id": "sikatronicequipment",
+    "storage_bucket": "sikatronicequipment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83868112810:android:0fd98ba90d0753be00fdd3",
+        "android_client_info": {
+          "package_name": "com.example.sikatronics_equipment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83868112810-aql73942o2rndsekf5rhketb3p2i4d3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_VX9sf9VZ6OytjwUDVO1YIWBAFwoy6eQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83868112810-aql73942o2rndsekf5rhketb3p2i4d3q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

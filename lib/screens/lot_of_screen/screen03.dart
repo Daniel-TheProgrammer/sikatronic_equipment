@@ -1,12 +1,8 @@
-// ignore_for_file: avoid_unnecessary_containers
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sikatronics_equipment/screens/Registration_screen/registration.dart';
-import 'package:sikatronics_equipment/utils/colors.dart';
-
-import '../screen04/screen04.dart';
+import 'package:sikatronics_equipment/colors.dart';
+import 'package:sikatronics_equipment/screens/lot_of_screen/registration.dart';
 
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({super.key});
@@ -57,8 +53,8 @@ class ThirdScreen extends StatelessWidget {
                         width: Get.width,
                         height: Get.height,
                         child: Container(
-                          decoration: const BoxDecoration(
-                            color: AppColor.primaryColor500,
+                          decoration: BoxDecoration(
+                            color: AppColor.firstClr,
                           ),
                         ),
                       ),
@@ -71,7 +67,7 @@ class ThirdScreen extends StatelessWidget {
                       width: 55,
                       height: 55,
                       decoration: BoxDecoration(
-                        color: const Color(0xffece300),
+                        color: Color(0xffece300),
                         borderRadius: BorderRadius.circular(27.5),
                       ),
                       child: Center(
@@ -83,7 +79,7 @@ class ThirdScreen extends StatelessWidget {
                               fontSize: 32,
                               fontWeight: FontWeight.w700,
                               height: 1.5,
-                              color: AppColor.accentColor400,
+                              color: AppColor.textColor,
                             ),
                           ),
                         ),
@@ -107,7 +103,7 @@ class ThirdScreen extends StatelessWidget {
                                 fontSize: 26,
                                 fontWeight: FontWeight.w700,
                                 height: 1.5,
-                                color: AppColor.accentColor400,
+                                color: AppColor.textColor,
                               ),
                             ),
                           ),
@@ -121,7 +117,7 @@ class ThirdScreen extends StatelessWidget {
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
                                   height: 1.5950000286,
-                                  color: AppColor.accentColor400,
+                                  color: AppColor.textColor,
                                 ),
                               ),
                             ),
@@ -130,9 +126,9 @@ class ThirdScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: () => Get.to(() => const FourthScreen()),
+                                onTap: () => Get.to(() => RegitrationScreen()),
                                 child: Container(
-                                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                  margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   width: 80,
                                   height: 80,
                                   child: Image.asset(
@@ -161,7 +157,7 @@ class ThirdScreen extends StatelessWidget {
                             fontSize: 50,
                             fontWeight: FontWeight.w700,
                             height: 1.5,
-                            color: const Color(0xff000000),
+                            color: Color(0xff000000),
                           ),
                         ),
                       ),
@@ -174,7 +170,7 @@ class ThirdScreen extends StatelessWidget {
                       width: 55,
                       height: 55,
                       decoration: BoxDecoration(
-                        color: const Color(0xff441e59),
+                        color: Color(0xff441e59),
                         borderRadius: BorderRadius.circular(27.5),
                       ),
                       child: Center(
@@ -185,7 +181,7 @@ class ThirdScreen extends StatelessWidget {
                             fontWeight: FontWeight.w700,
                             height: 1.5,
                             letterSpacing: 2.4,
-                            color: AppColor.primaryColor500,
+                            color: AppColor.firstClr,
                           ),
                         ),
                       ),
