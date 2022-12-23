@@ -13,7 +13,7 @@ class FourthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.fromLTRB(0, 14, 0, 0),
+        padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
         width: double.infinity,
         decoration: const BoxDecoration(
           color: Color(0xffffffff),
@@ -22,7 +22,7 @@ class FourthScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              margin: const EdgeInsets.fromLTRB(18, 0, 34, 47),
+              margin: const EdgeInsets.fromLTRB(18, 0, 34, 35),
               width: double.infinity,
               height: Get.height / 3,
               child: Stack(
