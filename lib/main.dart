@@ -5,6 +5,7 @@ import 'package:sikatronics_equipment/auth.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01.dart';
 import 'package:sikatronics_equipment/screens/SendRequest/send_request_page.dart';
+import 'package:sikatronics_equipment/successfull_screen/successfull_screen.dart';
 
 import 'firebase_options.dart';
 import 'l10n/app_translations.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       getPages: pages,
-      home: AuthCheck(),
+      home: const AuthCheck(),
     );
   }
 }
