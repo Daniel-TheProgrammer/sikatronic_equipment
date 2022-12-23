@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       getPages: pages,
-      home: FirstScreen(),
+      home: const FirstScreen(),
     );
   }
 }

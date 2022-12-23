@@ -1,8 +1,12 @@
 
 
+import 'package:flutter/foundation.dart' show immutable;
 import 'package:get/get.dart';
 
+
+
 ///This is the translation core...
+@immutable
 class AppTranslations extends Translations{
   @override
 
