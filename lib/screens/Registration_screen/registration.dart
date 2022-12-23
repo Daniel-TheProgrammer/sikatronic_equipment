@@ -31,7 +31,6 @@ class RegitrationScreen extends StatelessWidget {
   String? _country;
   String? _phoneNum;
   String hintCountry = 'Country';
-  String _id = const Uuid().v4();
 
   //String countryFlag = 'assets/imgs/united-kingdom.png';
 
@@ -241,10 +240,12 @@ class RegitrationScreen extends StatelessWidget {
 
       _phoneNum = _phoneNumberEditingController.text;
       controller.progressOnOff(true);
-      await Future.delayed(Duration(seconds: 2));
+      await Future.delayed(Duration(seconds: 2)).catchError((error) {
+        controller.progressOnOff(false);
+      });
+      await controller.signIn(_email!);
       await controller
           .addSellers(
-        id: _id,
         name: _name,
         lastName: _lastName,
         email: _email,
@@ -254,15 +255,13 @@ class RegitrationScreen extends StatelessWidget {
       )
           .then((value) {
         controller.progressOnOff(false);
-        Get.to(const ProductList());
+        Get.to(ProductList());
       }).catchError((error) {
         controller.progressOnOff(false);
         print("Failed to add user: $error");
       });
       print(
           'name :$_name,last name : $_lastName,email :$_email,country:$_country,company:$_company,phone number: $_phoneNum');
-
-      ;
     }
   }
 }
