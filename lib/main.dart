@@ -1,8 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sikatronics_equipment/auth.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01.dart';
+import 'package:sikatronics_equipment/screens/SendRequest/send_request_page.dart';
 
 import 'firebase_options.dart';
 import 'l10n/app_translations.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       getPages: pages,
-      home: const FirstScreen(),
+      home: AuthCheck(),
     );
   }
 }

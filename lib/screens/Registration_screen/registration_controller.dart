@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -16,9 +17,17 @@ class RegistrationScreenController extends GetxController {
     phoneInit.value = phoneNum;
   }
 
+  Future<void> signIn(String email) async {
+    await FirebaseAuth.instance
+        .createUserWithEmailAndPassword(
+            email: email.trim(), password: email.toUpperCase().trim())
+        .catchError((error) {
+      print('signin error is :$error');
+    });
+  }
+
   Future<void> addSellers(
-      {String? id,
-      String? name,
+      {String? name,
       String? lastName,
       String? email,
       String? companyName,
@@ -26,10 +35,11 @@ class RegistrationScreenController extends GetxController {
       String? phone}) async {
     CollectionReference users =
         FirebaseFirestore.instance.collection('sellers');
+    String id = FirebaseAuth.instance.currentUser!.uid;
     return await users
         .doc(id)
         .set({
-          'sid': id,
+          'id': id,
           'name': name,
           'lastname': lastName,
           'company': companyName,
