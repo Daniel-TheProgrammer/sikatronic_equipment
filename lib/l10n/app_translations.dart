@@ -29,7 +29,9 @@ class AppTranslations extends Translations {
           'screen04BodyText' : 'Contact Sikatronics Equipment support team and provide details of the Machine, Equipment, Raw material or Machinery you need for your business.',
           'screen05HeadText': 'Get a Technical and Commercial Study.',
           'screen05BodyText' : 'We will study your request technically and propose you the best equipment for your project.',
-
+          'screen06HeadText' : 'We purchase, deliver, Install and do the Maintenance',
+          'screen06BodyText' : 'Sikatronics Equipment handles the purchase, installation, delivery and maintenance of the equipment required for your project.',
+          'screen06ButtonText' : 'Ready',
 
         },
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
+import 'package:sikatronics_equipment/widget/translate_text.dart';
 
 import '../Registration_screen/registration.dart';
 
@@ -99,28 +100,42 @@ class SixthScreen extends StatelessWidget {
                         children: [
                           Container(
                             margin: const EdgeInsets.fromLTRB(0, 25, 5, 5),
-                            child: Text(
-                              'We purchase, deliver, Install and do the Maintenance ',
-                              style: GoogleFonts.poppins(
-                                fontSize: 23,
-                                fontWeight: FontWeight.w700,
-                                height: 1.5,
-                                color: AppColor.accentColor400,
-                              ),
+                            // child: Text(
+                            //   'We purchase, deliver, Install and do the Maintenance ',
+                            //   style: GoogleFonts.poppins(
+                            //     fontSize: 23,
+                            //     fontWeight: FontWeight.w700,
+                            //     height: 1.5,
+                            //     color: AppColor.accentColor400,
+                            //   ),
+                            // ),
+                            child: textTranslator(
+                              text: 'screen06HeadText',
+                              fontSize: 23,
+                              fontWeight: FontWeight.w700,
+                              height: 1.5,
+                              color: AppColor.accentColor400,
                             ),
                           ),
                           Container(
                             //margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                'Sikatronics Equipment handles the purchase, installation, delivery and maintenance of the equipment required for your project, ',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  height: 1.5950000286,
-                                  color: AppColor.accentColor400,
-                                ),
+                              // child: Text(
+                              //   'Sikatronics Equipment handles the purchase, installation, delivery and maintenance of the equipment required for your project, ',
+                              //   style: GoogleFonts.poppins(
+                              //     fontSize: 16,
+                              //     fontWeight: FontWeight.w400,
+                              //     height: 1.5950000286,
+                              //     color: AppColor.accentColor400,
+                              //   ),
+                              // ),
+                              child: textTranslator(
+                                text: 'screen06BodyText',
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                height: 1.5950000286,
+                                color: AppColor.accentColor400,
                               ),
                             ),
                           ),
@@ -128,8 +143,8 @@ class SixthScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: () => Get.to(() => RegitrationScreen(), 
-                
+                                onTap: () => Get.to(
+                                  () => RegitrationScreen(),
                                 ),
                                 child: Stack(children: [
                                   Container(
@@ -147,15 +162,18 @@ class SixthScreen extends StatelessWidget {
                                     top: 26,
                                     left: 13,
                                     child: Center(
-                                      child: Text(
-                                        'Ready',
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.poppins(
-                                          color: AppColor.primaryColor500,
+                                      // child: Text(
+                                      //   'Ready',
+                                      //   textAlign: TextAlign.center,
+                                      //   style: GoogleFonts.poppins(
+                                      //     color: AppColor.primaryColor500,
+                                      //     fontWeight: FontWeight.w600,
+                                      //     height: 1.5,
+                                      //   ),
+                                      // ),
+                                      child: textTranslator(text: 'screen06ButtonText',color: AppColor.primaryColor500,
                                           fontWeight: FontWeight.w600,
-                                          height: 1.5,
-                                        ),
-                                      ),
+                                          height: 1.5,),
                                     ),
                                   ),
                                 ]),
