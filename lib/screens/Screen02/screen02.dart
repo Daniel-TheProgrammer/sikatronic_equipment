@@ -59,7 +59,7 @@ class SecondScreen extends StatelessWidget {
                           fontSize: 24,
                           fontWeight: FontWeight.w700,
                           height: 1.5,
-                          color: const Color(0xFF000000)
+                          color: AppColor.accentColor400,
                           ),
                         ),
                         Container(
@@ -74,7 +74,7 @@ class SecondScreen extends StatelessWidget {
                           //     color: const Color(0xFF000000),
                           //   ),
                           // ),
-                          child: textTranslator(text: 'screen02HeadText',
+                          child: textTranslator(text: 'screen02BodyText',
                           textAlign: TextAlign.center,
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
@@ -89,7 +89,7 @@ class SecondScreen extends StatelessWidget {
                     onTapped: () {
                       Get.to(() => const ThirdScreen());
                     },
-                    label: 'Continue',
+                    label: 'continueText'.tr,
                   ),
                 ],
               ),
