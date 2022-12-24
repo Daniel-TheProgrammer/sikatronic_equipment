@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import 'package:sikatronics_equipment/auth.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01.dart';
+import 'package:sikatronics_equipment/screens/Screen01/screen01_binding.dart';
+import 'package:sikatronics_equipment/screens/Screen01/screen01_controller.dart';
 import 'package:sikatronics_equipment/screens/SendRequest/send_request_page.dart';
 import 'package:sikatronics_equipment/screens/Splash_Screen/splash_screen_binding.dart';
 import 'package:sikatronics_equipment/screens/Splash_Screen/splash_screen_controller.dart';
@@ -36,8 +38,8 @@ class MyApp extends StatelessWidget {
       translations: AppTranslations(),
       locale: Get.deviceLocale,
       debugShowCheckedModeBanner: false,
-      initialBinding: SplashScreenBinding(),
-      onInit: () => SplashScreenController().onInit(),
+      initialBinding: Screen01Binding(),
+      onInit: () => Screen01Controller().onInit(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

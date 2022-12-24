@@ -45,7 +45,10 @@ class AppTranslations extends Translations {
           'screen03HeadText' : 'Rechercher des machines et équipements',
           'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
           'screen04HeadText': 'Trouvez des machines, des machines, des véhicules, des matières premières et la maintenance de votre entreprise',
-          'screen04BodyText' : 'Contactez l\'équipe d\'assistance de Sikatronics Equipment et fournissez les détails de la machine, de l\'équipement, de la matière première ou de la machinerie dont vous avez besoin pour votre entreprise.'
+          'screen04BodyText' : 'Contactez l\'équipe d\'assistance de Sikatronics Equipment et fournissez les détails de la machine, de l\'équipement, de la matière première ou de la machinerie dont vous avez besoin pour votre entreprise.',
+        'screen05HeadText': 'Obtenez une étude technique et commerciale.',
+          'screen05BodyText' : 'Nous étudierons techniquement votre demande et vous proposerons le meilleur équipement pour votre projet.',
+
 
           
 
@@ -63,7 +66,10 @@ class AppTranslations extends Translations {
           'screen03HeadText' : 'Suchen Sie nach Maschinen und Anlagen',
           'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
           'screen04HeadText': 'Finden Sie Maschinen, Maschinen, Fahrzeuge, Rohstoffe und Wartung Ihres Unternehmens',
-          'screen04BodyText' : 'Wenden Sie sich an das Support-Team von Sikatronics Equipment und geben Sie Details zu den Maschinen, Geräten, Rohstoffen oder Maschinen an, die Sie für Ihr Unternehmen benötigen.'
+          'screen04BodyText' : 'Wenden Sie sich an das Support-Team von Sikatronics Equipment und geben Sie Details zu den Maschinen, Geräten, Rohstoffen oder Maschinen an, die Sie für Ihr Unternehmen benötigen.',
+    'screen05HeadText': 'Holen Sie sich ein technisches und kaufmännisches Studium.',
+          'screen05BodyText' : 'Wir werden Ihre Anfrage technisch prüfen und Ihnen die beste Ausrüstung für Ihr Projekt vorschlagen.',
+
 
 
         },
@@ -80,7 +86,10 @@ class AppTranslations extends Translations {
           'screen03HeadText' : 'Pesquisar Máquinas e Equipamentos',
           'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
           'screen04HeadText': 'Encontre Máquinas, Maquinários, Veículos, Matéria Prima e Manutenção do seu negócio',
-          'screen04BodyText' : 'Entre em contato com a equipe de suporte da Sikatronics Equipment e forneça detalhes da Máquina, Equipamento, Matéria-prima ou Maquinário que você precisa para o seu negócio.'
+          'screen04BodyText' : 'Entre em contato com a equipe de suporte da Sikatronics Equipment e forneça detalhes da Máquina, Equipamento, Matéria-prima ou Maquinário que você precisa para o seu negócio.',
+
+  'screen05HeadText': 'Obtenha um Estudo Técnico e Comercial.',
+          'screen05BodyText' : 'Estudaremos tecnicamente o seu pedido e propomos-lhe o melhor equipamento para o seu projeto.',
 
 
 
@@ -99,7 +108,10 @@ class AppTranslations extends Translations {
       'screen03HeadText' : 'Búsqueda de Máquinas y Equipos',
           'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
           'screen04HeadText': 'Encuentre Máquinas, Maquinarias, Vehículos, Materia Prima y Mantenimiento de su negocio',
-          'screen04BodyText' : 'Póngase en contacto con el equipo de soporte de Sikatronics Equipment y proporcione detalles de la Máquina, Equipo, Materia prima o Maquinaria que necesita para su negocio.'
+          'screen04BodyText' : 'Póngase en contacto con el equipo de soporte de Sikatronics Equipment y proporcione detalles de la Máquina, Equipo, Materia prima o Maquinaria que necesita para su negocio.',
+  'screen05HeadText': 'Obtenga un Estudio Técnico y Comercial.',
+          'screen05BodyText' : 'Estudiaremos técnicamente su solicitud y le propondremos el mejor equipo para su proyecto.',
+
 
 
 
