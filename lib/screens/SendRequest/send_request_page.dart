@@ -25,7 +25,6 @@ class SendRequestPage extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.white,
           body: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
             child: Container(
               height: Get.height,
               margin: const EdgeInsets.all(8),
@@ -35,7 +34,7 @@ class SendRequestPage extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(
-                    height: 40,
+                    height: 20,
                   ),
                   const Text(
                     'SENT US A REQUEST',
@@ -82,7 +81,7 @@ class SendRequestPage extends StatelessWidget {
                             BorderRadius.all(Radius.circular(12.0)),
                       ),
                     ),
-             */
+                       */
                   ),
                   // TextField(
                   //   decoration: inputDeco.copyWith( hintText: 'Enter Machine Name',),
@@ -138,7 +137,7 @@ class SendRequestPage extends StatelessWidget {
                                     BorderRadius.all(Radius.circular(12.0)),
                               ),
                             ),
-            */
+                      */
                               );
                             }))),
                       ),
@@ -181,29 +180,6 @@ class SendRequestPage extends StatelessWidget {
                       hintText: 'Enter your Email',
                     ),
                     controller: _emailEditingController,
-
-                    /*                      InputDecoration(
-                      hintText: 'Enter your Email',
-                      contentPadding: EdgeInsets.symmetric(
-                          vertical: 10.0, horizontal: 20.0),
-                      border: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.all(Radius.circular(12.0)),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(color: Colors.grey, width: 1.0),
-                        borderRadius:
-                            BorderRadius.all(Radius.circular(12.0)),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(color: Colors.grey, width: 2.0),
-                        borderRadius:
-                            BorderRadius.all(Radius.circular(12.0)),
-                      ),
-                    ),
-   */
                   ),
                   const SizedBox(
                     height: 25,
@@ -220,47 +196,12 @@ class SendRequestPage extends StatelessWidget {
                       },
                       decoration: inputDeco.copyWith(
                           hintText: 'Enter your Product Details'),
-                      /*                      
-                       InputDecoration(
-                        hintText: 'Enter your Product Details',
-                        contentPadding: EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 20.0),
-                        border: OutlineInputBorder(
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(12.0)),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.grey, width: 1.0),
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(12.0)),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.grey, width: 2.0),
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(12.0)),
-                        ),
-                      ),
-     */
                       maxLength: 1000,
                       maxLines: 10,
                       controller: _productDetailsEditingController,
                     ),
                   ),
-                  // TextField(
-                  //   style: const TextStyle(color: Colors.grey),
-                  //   decoration: inputDeco.copyWith(
-                  //
-                  //     hintText: 'Enter your Product Details',
-                  //   ),
-                  //   maxLength: 1000,
-                  //   maxLines: 10,
-                  //   controller: _productDetailsEditingController,
-                  // ),
-                  const SizedBox(
-                    height: 25,
-                  ),
+
                   Expanded(
                     child: Container(),
                   ),

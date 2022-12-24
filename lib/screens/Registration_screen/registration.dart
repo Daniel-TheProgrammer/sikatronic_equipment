@@ -240,10 +240,10 @@ class RegitrationScreen extends StatelessWidget {
 
       _phoneNum = _phoneNumberEditingController.text;
       controller.progressOnOff(true);
-      await Future.delayed(Duration(seconds: 2)).catchError((error) {
+      await controller.signIn(_email!).catchError((error) {
         controller.progressOnOff(false);
       });
-      await controller.signIn(_email!);
+
       await controller
           .addSellers(
         name: _name,
