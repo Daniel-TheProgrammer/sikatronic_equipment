@@ -15,7 +15,7 @@ class FirstScreen extends StatelessWidget {
   //Add any new language here and also in the app_translations.dart as required
   final List<Map<String, dynamic>> locale = const <Map<String, dynamic>>[
     {'name': 'English', 'locale': Locale('en', 'US')},
-    {'name': 'French', 'locale': Locale('fr', 'FR')},
+    {'name': '🇫🇷 French', 'locale': Locale('fr', 'FR')},
     {'name': 'German', 'locale': Locale('de', 'DE')},
     {'name': 'Portuguese', 'locale': Locale('pt', 'PT')},
     {'name': 'Spanish', 'locale': Locale('es', 'ES')}
@@ -51,7 +51,7 @@ class FirstScreen extends StatelessWidget {
     Navigator.of(context).pop();
     Get.updateLocale(locale);
     debugPrint('update locale called');
-    Get.to(const SecondScreen());
+    Get.to(() => const SecondScreen());
   }
 
   @override
