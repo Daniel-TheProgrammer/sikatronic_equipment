@@ -128,7 +128,9 @@ class SixthScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: () => Get.to(() => RegitrationScreen()),
+                                onTap: () => Get.to(() => RegitrationScreen(), 
+                
+                                ),
                                 child: Stack(children: [
                                   Container(
                                     margin:
