@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:sikatronics_equipment/screens/SendRequest/send_request_controller.dart';
 import 'package:sikatronics_equipment/successfull_screen/successfull_screen.dart';
+import 'package:sikatronics_equipment/widget/translate_text.dart';
 
 class SendRequestPage extends StatelessWidget {
   SendRequestPage({Key? key}) : super(key: key);
@@ -36,18 +37,23 @@ class SendRequestPage extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Text(
-                    'SENT US A REQUEST',
-                    style: TextStyle(
-                        color: Color(0xff361847),
+                  // const Text(
+                  //   'SENT US A REQUEST',
+                  //   style: TextStyle(
+                  //       color: Color(0xff361847),
+                  //       fontWeight: FontWeight.bold,
+                  //       fontSize: 22),
+                  // ),
+                  textTranslator(text: 'sendRequestPageHeadText',
+                   color: const Color(0xff361847),
                         fontWeight: FontWeight.bold,
-                        fontSize: 22),
+                        fontSize: 22
                   ),
                   const SizedBox(
                     height: 30,
                   ),
                   fieldLabel(
-                      label: 'Machine Name/Vehicle/Equipment/Merchandise'),
+                      label: 'sendRequestPageBodyText'.tr),
                   const SizedBox(
                     height: 10,
                   ),
@@ -56,7 +62,7 @@ class SendRequestPage extends StatelessWidget {
                       //Do something with the user input.
                     },
                     decoration: inputDeco.copyWith(
-                      hintText: 'Enter the Name',
+                      hintText: 'sendRequestPageName'.tr,
                     ),
                     controller: _nameEditingController,
 
@@ -91,7 +97,7 @@ class SendRequestPage extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  fieldLabel(label: 'Availability for call'),
+                  fieldLabel(label: 'sendRequestPageCall'.tr),
                   const SizedBox(
                     height: 10,
                   ),
@@ -168,7 +174,7 @@ class SendRequestPage extends StatelessWidget {
                   const SizedBox(
                     height: 25,
                   ),
-                  fieldLabel(label: 'Email'),
+                  fieldLabel(label: 'sendRequestPageEmail'.tr),
                   const SizedBox(
                     height: 10,
                   ),
@@ -177,14 +183,14 @@ class SendRequestPage extends StatelessWidget {
                       //Do something with the user input.
                     },
                     decoration: inputDeco.copyWith(
-                      hintText: 'Enter your Email',
+                      hintText: 'sendRequestPageEnterEmail'.tr,
                     ),
                     controller: _emailEditingController,
                   ),
                   const SizedBox(
                     height: 25,
                   ),
-                  fieldLabel(label: 'Description'),
+                  fieldLabel(label: 'sendRequestPageDesc'.tr),
                   const SizedBox(
                     height: 10,
                   ),
@@ -195,7 +201,7 @@ class SendRequestPage extends StatelessWidget {
                         //Do something with the user input.
                       },
                       decoration: inputDeco.copyWith(
-                          hintText: 'Enter your Product Details'),
+                          hintText: 'sendRequestPageProdDetails'.tr),
                       maxLength: 1000,
                       maxLines: 10,
                       controller: _productDetailsEditingController,
@@ -214,10 +220,12 @@ class SendRequestPage extends StatelessWidget {
                     onPressed: () {
                       Validation(context);
                     },
-                    child: const Text(
-                      'Send',
-                      style: TextStyle(fontSize: 18, color: Colors.yellow),
-                    ),
+                    // child: const Text(
+                    //   'Send',
+                    //   style: TextStyle(fontSize: 18, color: Colors.yellow),
+                    // ),
+
+                    child: textTranslator(text: 'sendRequestPageSend',fontSize: 18, color: Colors.yellow, ),
                   )
                 ],
               ),
@@ -271,8 +279,8 @@ class SendRequestPage extends StatelessWidget {
         _productDetailsEditingController.text.isEmpty) {
       print('not validated');
 
-      return Get.snackbar('an error has been occured',
-          'you have to fill al the fields properly',
+      return Get.snackbar('sendRequestSnackbarTitle'.tr,
+          'sendRequestSnackbarMsg'.tr,
           snackPosition: SnackPosition.BOTTOM,
           maxWidth: Get.width,
           backgroundColor: Colors.white,
@@ -308,19 +316,19 @@ class SendRequestPage extends StatelessWidget {
   }
 }
 
-InputDecoration inputDeco = const InputDecoration(
-  hintText: 'Enter Machine Name.',
-  hintStyle: TextStyle(color: Colors.black),
-  labelStyle: TextStyle(color: Colors.black),
-  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-  border: OutlineInputBorder(
+InputDecoration inputDeco =  InputDecoration(
+  hintText: 'sendRequestMachineName'.tr,
+  hintStyle:const TextStyle(color: Colors.black),
+  labelStyle: const TextStyle(color: Colors.black),
+  contentPadding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+  border: const OutlineInputBorder(
     borderRadius: BorderRadius.all(Radius.circular(32.0)),
   ),
-  enabledBorder: OutlineInputBorder(
+  enabledBorder: const OutlineInputBorder(
     borderSide: BorderSide(color: Colors.grey, width: 1.0),
     borderRadius: BorderRadius.all(Radius.circular(12.0)),
   ),
-  focusedBorder: OutlineInputBorder(
+  focusedBorder:const OutlineInputBorder(
     borderSide: BorderSide(color: Colors.grey, width: 2.0),
     borderRadius: BorderRadius.all(Radius.circular(12.0)),
   ),

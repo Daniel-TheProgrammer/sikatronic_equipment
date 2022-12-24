@@ -36,6 +36,22 @@ class AppTranslations extends Translations {
           'successfullScreenHeadText2' :'Ouups',
           'successfullScreenBodyText1' :'Your Request has  been successfully sent',
           'successfullScreenBodyText2' :'Your Request has not been successfully sent please try again',
+          'successfullScreenButtonText1' : 'Resend request',
+          'successfullScreenButtonText2' : 'Go home page',
+          //start here
+          'sendRequestPageHeadText' : 'SENT US A REQUEST',
+          'sendRequestPageBodyText' : 'Machine Name/Vehicle/Equipment/Merchandise',
+          'sendRequestPageName' : 'Enter the Name',
+          'sendRequestPageCall' : 'Availability for call',
+          'sendRequestPageEmail' : 'Email',
+          'sendRequestPageEnterEmail' : 'Enter your Email',
+          'sendRequestPageDesc' : 'Description',
+          'sendRequestPageProdDetails' : 'Enter your Product Details',
+          'sendRequestPageSend' : 'Send',
+          'sendRequestSnackbarTitle' : 'an error has been occured',
+          'sendRequestSnackbarMsg' : 'you have to fill al the fields properly',
+          'sendRequestMachineName' : 'Enter Machine Name.',
+
 
 
 
@@ -62,8 +78,24 @@ class AppTranslations extends Translations {
           'screen06ButtonText' : 'Prêt',
           'successfullScreenHeadText1' :'Merci!!',
           'successfullScreenHeadText2' :'Oups',
- 'successfullScreenBodyText1' :'Your Request has  been successfully sent',
-          'successfullScreenBodyText2' :'Your Request has not been successfully sent please try again',
+ 'successfullScreenBodyText1' :'Votre requête a été envoyée avec succès',
+          'successfullScreenBodyText2' :'Votre demande n\'a pas été envoyée avec succès, veuillez réessayer',
+           'successfullScreenButtonText1' : 'Renvoyer la demande',
+          'successfullScreenButtonText2' : 'Aller à la page d\'accueil',
+
+           //start here
+          'sendRequestPageHeadText' : 'ENVOYEZ-NOUS UNE DEMANDE',
+          'sendRequestPageBodyText' : 'Nom de la machine/véhicule/équipement/marchandise',
+          'sendRequestPageName' : 'Entrez le nom',
+          'sendRequestPageCall' : 'Disponibilité pour appel',
+          'sendRequestPageEmail' : 'E-mail',
+          'sendRequestPageEnterEmail' : 'Entrer votre Email',
+          'sendRequestPageDesc' : 'Description',
+          'sendRequestPageProdDetails' : 'Enter your Product Details',
+          'sendRequestPageSend' : 'Send',
+          'sendRequestSnackbarTitle' : 'an error has been occured',
+          'sendRequestSnackbarMsg' : 'you have to fill al the fields properly',
+          'sendRequestMachineName' : 'Enter Machine Name.',
 
         },
 
@@ -87,9 +119,24 @@ class AppTranslations extends Translations {
           'screen06ButtonText' : 'Bereit',
           'successfullScreenHeadText1' :'Danke!',
           'successfullScreenHeadText2' :'Ouups',
- 'successfullScreenBodyText1' :'Your Request has  been successfully sent',
-          'successfullScreenBodyText2' :'Your Request has not been successfully sent please try again',
+ 'successfullScreenBodyText1' :'Ihre Anfrage wurde erfolgreich gesendet',
+          'successfullScreenBodyText2' :'Ihre Anfrage wurde nicht erfolgreich gesendet, bitte versuchen Sie es erneut',
+ 'successfullScreenButtonText1' : 'Anfrage erneut senden',
+          'successfullScreenButtonText2' : 'Startseite gehen',
 
+           //start here
+          'sendRequestPageHeadText' : 'SENT US A REQUEST',
+          'sendRequestPageBodyText' : 'Machine Name/Vehicle/Equipment/Merchandise',
+          'sendRequestPageName' : 'Enter the Name',
+          'sendRequestPageCall' : 'Availability for call',
+          'sendRequestPageEmail' : 'Email',
+          'sendRequestPageEnterEmail' : 'Enter your Email',
+          'sendRequestPageDesc' : 'Description',
+          'sendRequestPageProdDetails' : 'Enter your Product Details',
+          'sendRequestPageSend' : 'Send',
+          'sendRequestSnackbarTitle' : 'an error has been occured',
+          'sendRequestSnackbarMsg' : 'you have to fill al the fields properly',
+          'sendRequestMachineName' : 'Enter Machine Name.',
         },
 
         //Portuguese
@@ -115,9 +162,24 @@ class AppTranslations extends Translations {
           'screen06ButtonText' : 'Preparar',
           'successfullScreenHeadText1' :'Obrigada!',
           'successfullScreenHeadText2' :'Ouups',
- 'successfullScreenBodyText1' :'Your Request has  been successfully sent',
-          'successfullScreenBodyText2' :'Your Request has not been successfully sent please try again',
+ 'successfullScreenBodyText1' :'Sua solicitação foi enviada com sucesso',
+          'successfullScreenBodyText2' :'Sua Solicitação não foi enviada com sucesso por favor tente novamente',
+ 'successfullScreenButtonText1' : 'Reenviar solicitação',
+          'successfullScreenButtonText2' : 'Ir para a página inicial',
 
+           //start here
+          'sendRequestPageHeadText' : 'SENT US A REQUEST',
+          'sendRequestPageBodyText' : 'Machine Name/Vehicle/Equipment/Merchandise',
+          'sendRequestPageName' : 'Enter the Name',
+          'sendRequestPageCall' : 'Availability for call',
+          'sendRequestPageEmail' : 'Email',
+          'sendRequestPageEnterEmail' : 'Enter your Email',
+          'sendRequestPageDesc' : 'Description',
+          'sendRequestPageProdDetails' : 'Enter your Product Details',
+          'sendRequestPageSend' : 'Send',
+          'sendRequestSnackbarTitle' : 'an error has been occured',
+          'sendRequestSnackbarMsg' : 'you have to fill al the fields properly',
+          'sendRequestMachineName' : 'Enter Machine Name.',
 
 
 
@@ -147,10 +209,36 @@ class AppTranslations extends Translations {
           'successfullScreenHeadText2' :'grupos',
 
 
-           'successfullScreenBodyText1' :'Your Request has  been successfully sent',
-          'successfullScreenBodyText2' :'Your Request has not been successfully sent please try again',
+           'successfullScreenBodyText1' :'Su solicitud ha sido enviada correctamente',
+          'successfullScreenBodyText2' :'Su Solicitud no ha sido enviada con éxito por favor inténtelo de nuevo',
+ 'successfullScreenButtonText1' : 'Reenviar solicitud',
+          'successfullScreenButtonText2' : 'Ir a la página de inicio',
+
+           //start here
+          'sendRequestPageHeadText' : 'SENT US A REQUEST',
+          'sendRequestPageBodyText' : 'Machine Name/Vehicle/Equipment/Merchandise',
+          'sendRequestPageName' : 'Enter the Name',
+          'sendRequestPageCall' : 'Availability for call',
+          'sendRequestPageEmail' : 'Email',
+          'sendRequestPageEnterEmail' : 'Enter your Email',
+          'sendRequestPageDesc' : 'Description',
+          'sendRequestPageProdDetails' : 'Enter your Product Details',
+          'sendRequestPageSend' : 'Send',
+          'sendRequestSnackbarTitle' : 'an error has been occured',
+          'sendRequestSnackbarMsg' : 'you have to fill al the fields properly',
+          'sendRequestMachineName' : 'Enter Machine Name.',
+
+
+
+
+
+
+
+
 
           
         }
       };
 }
+
+
