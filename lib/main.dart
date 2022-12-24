@@ -1,10 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show SystemChrome, DeviceOrientation;
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/auth.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01.dart';
 import 'package:sikatronics_equipment/screens/SendRequest/send_request_page.dart';
+import 'package:sikatronics_equipment/screens/Splash_Screen/splash_screen_binding.dart';
+import 'package:sikatronics_equipment/screens/Splash_Screen/splash_screen_controller.dart';
 import 'package:sikatronics_equipment/successfull_screen/successfull_screen.dart';
 
 import 'firebase_options.dart';
@@ -13,6 +16,11 @@ import 'l10n/app_translations.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  //orientation of the app set...
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
@@ -28,6 +36,8 @@ class MyApp extends StatelessWidget {
       translations: AppTranslations(),
       locale: Get.deviceLocale,
       debugShowCheckedModeBanner: false,
+      initialBinding: SplashScreenBinding(),
+      onInit: () => SplashScreenController().onInit(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -37,11 +47,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//******* PLEASE DO NOT DELETE THIS ********* */
-/*
-TODO : 
-Add downloaded font style[DONE], add the dart file for text styles too, do the different routing,
-redo language selection using dropdown widget, commence translation in l10n
-fill in controller and
 
- */

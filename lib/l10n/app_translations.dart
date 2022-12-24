@@ -22,26 +22,40 @@ class AppTranslations extends Translations{
 
   //English
     'en_US' : {
- 
+      'screen01BodyText' : 'Companion of entrepreneur\'s. We provide your machines, equipment, raw materials and maintenance for your business.',
+      'screen01ButtonText' : 'Choose language',
+      'screen02HeadText' : 'Welcome to Sikatronicks Equipment', 
     },
 
   //French
     'fr_FR' : {
+       'screen01BodyText' : 'Compagnon d\'entrepreneur. Nous fournissons vos machines, équipements, matières premières et maintenance pour votre entreprise.',
+      'screen01ButtonText' : 'Choisissez la langue',
+      'screen02HeadText' : 'Bienvenue chez Sikatronics Equipment', 
 
     },
 
   //German
     'de_DE' : {
+       'screen01BodyText' : 'Begleiter des Unternehmers. Wir stellen Ihre Maschinen, Anlagen, Rohstoffe und Wartung für Ihr Unternehmen bereit.',
+      'screen01ButtonText' : 'Sprache wählen',
+      'screen02HeadText' : 'Willkommen bei Sikatronics Equipment', 
 
     },
 
   //Portuguese
     'pt_PT' : {
+       'screen01BodyText' : 'Companheiro de empresário. Fornecemos suas máquinas, equipamentos, matéria-prima e manutenção para o seu negócio.',
+      'screen01ButtonText' : 'Escolha o seu idioma',
+      'screen02HeadText' : 'Bem-vindo a Equipamentos Sikatronicks', 
 
     },
 
   //Spanish
-    '	es_ES' : {
+    'es_ES' : {
+       'screen01BodyText' : 'Compañero del emprendedor. Proveemos sus máquinas, equipos, materias primas y mantenimiento para su negocio.',
+      'screen01ButtonText' : 'Elige lengua',
+      'screen02HeadText' : 'Bienvenidos a Equipos Sikatronicks', 
 
     }
   };

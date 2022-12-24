@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/Screen03/screen03.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
+import 'package:sikatronics_equipment/widget/translate_text.dart';
 
 
 import '../../widget/my_button.dart';
@@ -43,28 +44,42 @@ class SecondScreen extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.fromLTRB(0, 0, 0, 24),
-                          child: Text(
-                            'Welcome to Sikatronicks Equipment ',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.poppins(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700,
-                              height: 1.5,
-                              color: AppColor.accentColor400,
-                            ),
+                          // child: Text(
+                          //   'Welcome to Sikatronicks Equipment',
+                          //   textAlign: TextAlign.center,
+                          //   style: GoogleFonts.poppins(
+                          //     fontSize: 24,
+                          //     fontWeight: FontWeight.w700,
+                          //     height: 1.5,
+                          //     color: AppColor.accentColor400,
+                          //   ),
+                          // ),
+                           child: textTranslator(text: 'screen02HeadText',
+                          textAlign: TextAlign.center,
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700,
+                          height: 1.5,
+                          color: const Color(0xFF000000)
                           ),
                         ),
                         Container(
                           margin: const EdgeInsets.fromLTRB(0, 0, 0, 24),
-                          child: Text(
-                            'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.poppins(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5,
-                              color: const Color(0xFF000000),
-                            ),
+                          // child: Text(
+                          //   'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.',
+                          //   textAlign: TextAlign.center,
+                          //   style: GoogleFonts.poppins(
+                          //     fontSize: 16,
+                          //     fontWeight: FontWeight.w400,
+                          //     height: 1.5,
+                          //     color: const Color(0xFF000000),
+                          //   ),
+                          // ),
+                          child: textTranslator(text: 'screen02HeadText',
+                          textAlign: TextAlign.center,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          height: 1.5,
+                          color: const Color(0xFF000000)
                           ),
                         ),
                       ],
