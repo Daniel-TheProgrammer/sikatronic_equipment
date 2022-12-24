@@ -21,7 +21,7 @@ class SixthScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              margin: const EdgeInsets.fromLTRB(18, 0, 34, 47),
+              margin: const EdgeInsets.fromLTRB(18, 0, 34, 35),
               width: double.infinity,
               height: Get.height / 2.6,
               child: Stack(
@@ -133,17 +133,17 @@ class SixthScreen extends StatelessWidget {
                                   Container(
                                     margin:
                                         const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                    width: 80,
-                                    height: 80,
+                                    width: 70,
+                                    height: 70,
                                     child: Image.asset(
                                       'assets/imgs/progress_button_100.png',
-                                      width: 80,
-                                      height: 80,
+                                      width: 70,
+                                      height: 70,
                                     ),
                                   ),
                                   Positioned(
-                                    top: 29,
-                                    left: 18,
+                                    top: 26,
+                                    left: 13,
                                     child: Center(
                                       child: Text(
                                         'Ready',

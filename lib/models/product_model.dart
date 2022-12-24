@@ -9,12 +9,14 @@ class ProductModel extends StatefulWidget {
   String label;
   String description;
   String image;
+  String learnMore;
 
   ProductModel(
       {super.key,
       required this.label,
       required this.description,
-      required this.image});
+      required this.image,
+      required this.learnMore});
 
   @override
   State<ProductModel> createState() => _ProductModelState();
@@ -68,7 +70,9 @@ class _ProductModelState extends State<ProductModel> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Get.to(SendRequestPage());
+                          Get.to(
+                            SendRequestPage(),
+                          );
                         },
                         child: Container(
                           height: 40,
@@ -95,7 +99,10 @@ class _ProductModelState extends State<ProductModel> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Get.to(LearnMoreScreen());
+                          Get.to(LearnMoreScreen(), arguments: {
+                            'category': widget.label,
+                            'learnMore': widget.learnMore
+                          });
                           // _showMyDialog();
                         },
                         child: Container(
@@ -144,17 +151,14 @@ class _ProductModelState extends State<ProductModel> {
       barrierDismissible: false, // user must tap button!
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('AlertDialog Title'),
-          content: SingleChildScrollView(
-            child:Column(
-              children: [
-                LearnMoreScreen(),
-
-              ],
-            ),
-
-          )
-        );
+            title: const Text('AlertDialog Title'),
+            content: SingleChildScrollView(
+              child: Column(
+                children: [
+                  LearnMoreScreen(),
+                ],
+              ),
+            ));
       },
     );
   }
