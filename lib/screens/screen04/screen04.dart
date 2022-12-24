@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/Registration_screen/registration.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
+import 'package:sikatronics_equipment/widget/translate_text.dart';
 
 import '../Screen05/screen05.dart';
 
@@ -99,28 +100,42 @@ class FourthScreen extends StatelessWidget {
                         children: [
                           Container(
                             margin: const EdgeInsets.fromLTRB(0, 25, 5, 5),
-                            child: Text(
-                              'Find Machines, Machineries, Vehicles, Raw Material and Maintenance of your business ',
-                              style: GoogleFonts.poppins(
-                                fontSize: 23,
-                                fontWeight: FontWeight.w700,
-                                height: 1.5,
-                                color: AppColor.accentColor400,
-                              ),
+                            // child: Text(
+                            //   'Find Machines, Machineries, Vehicles, Raw Material and Maintenance of your business',
+                            //   style: GoogleFonts.poppins(
+                            //     fontSize: 23,
+                            //     fontWeight: FontWeight.w700,
+                            //     height: 1.5,
+                            //     color: AppColor.accentColor400,
+                            //   ),
+                            // ),
+                            child: textTranslator(
+                              text: 'screen04HeadText',
+                              fontSize: 23,
+                              fontWeight: FontWeight.w700,
+                              height: 1.5,
+                              color: AppColor.accentColor400,
                             ),
                           ),
                           Container(
                             //margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                'Contact Sikatronics Equipment support team and provide details of the Machine, Equipment, Raw material or Machinery you need for your business. ',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  height: 1.5950000286,
-                                  color: AppColor.accentColor400,
-                                ),
+                              // child: Text(
+                              //   'Contact Sikatronics Equipment support team and provide details of the Machine, Equipment, Raw material or Machinery you need for your business. ',
+                              //   style: GoogleFonts.poppins(
+                              //     fontSize: 16,
+                              //     fontWeight: FontWeight.w400,
+                              //     height: 1.5950000286,
+                              //     color: AppColor.accentColor400,
+                              //   ),
+                              // ),
+                              child: textTranslator(
+                                text: 'screen04BodyText',
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                height: 1.5950000286,
+                                color: AppColor.accentColor400,
                               ),
                             ),
                           ),

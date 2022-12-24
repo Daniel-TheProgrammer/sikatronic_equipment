@@ -123,15 +123,21 @@ class ThirdScreen extends StatelessWidget {
                             //margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                '',
-                                style: GoogleFonts.poppins(
+                              // child: Text(
+                              //   '',
+                              //   style: GoogleFonts.poppins(
+                              //     fontSize: 16,
+                              //     fontWeight: FontWeight.w400,
+                              //     height: 1.5950000286,
+                              //     color: AppColor.accentColor400,
+                              //   ),
+                              // ),
+                              child: textTranslator(
+                                  text: 'screen03BodyText',
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
-                                  height: 1.5950000286,
                                   color: AppColor.accentColor400,
-                                ),
-                              ),
+                                  height: 1.5950000286),
                             ),
                           ),
                           Row(

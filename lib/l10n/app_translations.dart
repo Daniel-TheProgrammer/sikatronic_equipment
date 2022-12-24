@@ -25,6 +25,11 @@ class AppTranslations extends Translations {
           'continueText': 'Continue',
           'screen03HeadText' : 'Search for  Machines and Equipement',
           'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+          'screen04HeadText': 'Find Machines, Machineries, Vehicles, Raw Material and Maintenance of your business',
+          'screen04BodyText' : 'Contact Sikatronics Equipment support team and provide details of the Machine, Equipment, Raw material or Machinery you need for your business.',
+          'screen05HeadText': 'Get a Technical and Commercial Study.',
+          'screen05BodyText' : 'We will study your request technically and propose you the best equipment for your project.',
+
 
         },
 
@@ -39,7 +44,10 @@ class AppTranslations extends Translations {
           'continueText': 'Continuer',
           'screen03HeadText' : 'Rechercher des machines et équipements',
           'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+          'screen04HeadText': 'Trouvez des machines, des machines, des véhicules, des matières premières et la maintenance de votre entreprise',
+          'screen04BodyText' : 'Contactez l\'équipe d\'assistance de Sikatronics Equipment et fournissez les détails de la machine, de l\'équipement, de la matière première ou de la machinerie dont vous avez besoin pour votre entreprise.'
 
+          
 
         },
 
@@ -54,6 +62,9 @@ class AppTranslations extends Translations {
           'continueText': 'Fortsetzen',
           'screen03HeadText' : 'Suchen Sie nach Maschinen und Anlagen',
           'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+          'screen04HeadText': 'Finden Sie Maschinen, Maschinen, Fahrzeuge, Rohstoffe und Wartung Ihres Unternehmens',
+          'screen04BodyText' : 'Wenden Sie sich an das Support-Team von Sikatronics Equipment und geben Sie Details zu den Maschinen, Geräten, Rohstoffen oder Maschinen an, die Sie für Ihr Unternehmen benötigen.'
+
 
         },
 
@@ -68,6 +79,9 @@ class AppTranslations extends Translations {
       'continueText' : 'Continuar',
           'screen03HeadText' : 'Pesquisar Máquinas e Equipamentos',
           'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+          'screen04HeadText': 'Encontre Máquinas, Maquinários, Veículos, Matéria Prima e Manutenção do seu negócio',
+          'screen04BodyText' : 'Entre em contato com a equipe de suporte da Sikatronics Equipment e forneça detalhes da Máquina, Equipamento, Matéria-prima ou Maquinário que você precisa para o seu negócio.'
+
 
 
           
@@ -84,6 +98,9 @@ class AppTranslations extends Translations {
       'continueText' : 'Continuar',
       'screen03HeadText' : 'Búsqueda de Máquinas y Equipos',
           'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+          'screen04HeadText': 'Encuentre Máquinas, Maquinarias, Vehículos, Materia Prima y Mantenimiento de su negocio',
+          'screen04BodyText' : 'Póngase en contacto con el equipo de soporte de Sikatronics Equipment y proporcione detalles de la Máquina, Equipo, Materia prima o Maquinaria que necesita para su negocio.'
+
 
 
           
