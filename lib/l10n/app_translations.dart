@@ -32,6 +32,12 @@ class AppTranslations extends Translations {
           'screen06HeadText' : 'We purchase, deliver, Install and do the Maintenance',
           'screen06BodyText' : 'Sikatronics Equipment handles the purchase, installation, delivery and maintenance of the equipment required for your project.',
           'screen06ButtonText' : 'Ready',
+          'successfullScreenHeadText1' :'Thank You!',
+          'successfullScreenHeadText2' :'Ouups',
+          'successfullScreenBodyText1' :'Your Request has  been successfully sent',
+          'successfullScreenBodyText2' :'Your Request has not been successfully sent please try again',
+
+
 
         },
 
@@ -51,8 +57,13 @@ class AppTranslations extends Translations {
         'screen05HeadText': 'Obtenez une étude technique et commerciale.',
           'screen05BodyText' : 'Nous étudierons techniquement votre demande et vous proposerons le meilleur équipement pour votre projet.',
 
-
-          
+          'screen06HeadText' : 'Nous achetons, livrons, installons et effectuons la maintenance',
+          'screen06BodyText' : 'Sikatronics Equipment s\'occupe de l\'achat, de l\'installation, de la livraison et de la maintenance des équipements nécessaires à votre projet.',
+          'screen06ButtonText' : 'Prêt',
+          'successfullScreenHeadText1' :'Merci!!',
+          'successfullScreenHeadText2' :'Oups',
+ 'successfullScreenBodyText1' :'Your Request has  been successfully sent',
+          'successfullScreenBodyText2' :'Your Request has not been successfully sent please try again',
 
         },
 
@@ -71,8 +82,13 @@ class AppTranslations extends Translations {
           'screen04BodyText' : 'Wenden Sie sich an das Support-Team von Sikatronics Equipment und geben Sie Details zu den Maschinen, Geräten, Rohstoffen oder Maschinen an, die Sie für Ihr Unternehmen benötigen.',
     'screen05HeadText': 'Holen Sie sich ein technisches und kaufmännisches Studium.',
           'screen05BodyText' : 'Wir werden Ihre Anfrage technisch prüfen und Ihnen die beste Ausrüstung für Ihr Projekt vorschlagen.',
-
-
+          'screen06HeadText' : 'Wir kaufen, liefern, installieren und führen die Wartung durch',
+          'screen06BodyText' : 'Sikatronics Equipment kümmert sich um den Kauf, die Installation, Lieferung und Wartung der für Ihr Projekt erforderlichen Ausrüstung.',
+          'screen06ButtonText' : 'Bereit',
+          'successfullScreenHeadText1' :'Danke!',
+          'successfullScreenHeadText2' :'Ouups',
+ 'successfullScreenBodyText1' :'Your Request has  been successfully sent',
+          'successfullScreenBodyText2' :'Your Request has not been successfully sent please try again',
 
         },
 
@@ -94,8 +110,17 @@ class AppTranslations extends Translations {
           'screen05BodyText' : 'Estudaremos tecnicamente o seu pedido e propomos-lhe o melhor equipamento para o seu projeto.',
 
 
+          'screen06HeadText' : 'Compramos, entregamos, instalamos e fazemos a manutenção',
+          'screen06BodyText' : 'A Sikatronics Equipment trata da compra, instalação, entrega e manutenção do equipamento necessário para o seu projeto.',
+          'screen06ButtonText' : 'Preparar',
+          'successfullScreenHeadText1' :'Obrigada!',
+          'successfullScreenHeadText2' :'Ouups',
+ 'successfullScreenBodyText1' :'Your Request has  been successfully sent',
+          'successfullScreenBodyText2' :'Your Request has not been successfully sent please try again',
 
-          
+
+
+
         },
 
         //Spanish
@@ -114,8 +139,16 @@ class AppTranslations extends Translations {
   'screen05HeadText': 'Obtenga un Estudio Técnico y Comercial.',
           'screen05BodyText' : 'Estudiaremos técnicamente su solicitud y le propondremos el mejor equipo para su proyecto.',
 
+          'screen06HeadText' : 'Compramos, Entregamos, Instalamos y Hacemos el Mantenimiento',
+          'screen06BodyText' : 'Sikatronics Equipment se encarga de la compra, instalación, entrega y mantenimiento de los equipos necesarios para su proyecto.',
+          'screen06ButtonText' : 'Listo',
+
+        'successfullScreenHeadText1' :'¡Gracias!',
+          'successfullScreenHeadText2' :'grupos',
 
 
+           'successfullScreenBodyText1' :'Your Request has  been successfully sent',
+          'successfullScreenBodyText2' :'Your Request has not been successfully sent please try again',
 
           
         }
