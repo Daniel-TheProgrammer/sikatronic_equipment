@@ -23,6 +23,9 @@ class AppTranslations extends Translations {
           'screen02BodyText':
               'Companion of entrepreneur\'s. We provide your machines, equipment, raw materials and maintenance for your business.',
           'continueText': 'Continue',
+          'screen03HeadText' : 'Search for  Machines and Equipement',
+          'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+
         },
 
         //French
@@ -34,6 +37,10 @@ class AppTranslations extends Translations {
           'screen02BodyText':
               'Compagnon d\'entrepreneur. Nous fournissons vos machines, équipements, matières premières et maintenance pour votre entreprise.',
           'continueText': 'Continuer',
+          'screen03HeadText' : 'Rechercher des machines et équipements',
+          'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+
+
         },
 
         //German
@@ -45,6 +52,9 @@ class AppTranslations extends Translations {
           'screen02BodyText':
               'Begleiter des Unternehmers. Wir stellen Ihre Maschinen, Anlagen, Rohstoffe und Wartung für Ihr Unternehmen bereit.',
           'continueText': 'Fortsetzen',
+          'screen03HeadText' : 'Suchen Sie nach Maschinen und Anlagen',
+          'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+
         },
 
         //Portuguese
@@ -56,6 +66,10 @@ class AppTranslations extends Translations {
           'screen02BodyText':
               'Companheiro de empresário. Fornecemos suas máquinas, equipamentos, matéria-prima e manutenção para o seu negócio.',
       'continueText' : 'Continuar',
+          'screen03HeadText' : 'Pesquisar Máquinas e Equipamentos',
+          'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+
+
           
         },
 
@@ -68,6 +82,10 @@ class AppTranslations extends Translations {
           'screen02BodyText':
               'Compañero del emprendedor. Proveemos sus máquinas, equipos, materias primas y mantenimiento para su negocio.',
       'continueText' : 'Continuar',
+      'screen03HeadText' : 'Búsqueda de Máquinas y Equipos',
+          'screen03BodyText' : 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+
+
           
         }
       };
