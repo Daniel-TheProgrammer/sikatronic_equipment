@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sikatronics_equipment/widget/translate_text.dart';
 
 class LearnMoreScreen extends StatelessWidget {
   const LearnMoreScreen({Key? key}) : super(key: key);
@@ -20,21 +21,31 @@ class LearnMoreScreen extends StatelessWidget {
                   SizedBox(
                     height: 30,
                   ),
-                  Text(
-                    Get.arguments['category'],
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
+                  // Text(
+                  //   Get.arguments['learnMoreScreenCat'.tr],
+                  //   style: TextStyle(
+                  //       color: Colors.white,
+                  //       fontWeight: FontWeight.bold,
+                  //       fontSize: 18),
+                  // ),
+                    textTranslator(text: Get.arguments['learnMoreScreenCat'],
+                   color: Colors.white,
+                          fontWeight:  FontWeight.bold,
+                          fontSize: 18,
                   ),
                   SizedBox(
                     height: 30,
                   ),
-                  Text(Get.arguments['learnMore'],
-                      style: TextStyle(
-                          color: Colors.white,
+                  // Text(Get.arguments['learnMoreScreenLearn'.tr],
+                  //     style: TextStyle(
+                  //         color: Colors.white,
+                  //         fontWeight: FontWeight.normal,
+                  //         fontSize: 14)),
+                  textTranslator(text: Get.arguments['learnMoreScreenLearn'],
+                   color: Colors.white,
                           fontWeight: FontWeight.normal,
-                          fontSize: 14)),
+                          fontSize: 14,
+                  ),
                   SizedBox(
                     height: 35,
                   ),
@@ -47,9 +58,12 @@ class LearnMoreScreen extends StatelessWidget {
                     onPressed: () {
                       Get.back();
                     },
-                    child: const Text(
-                      'Back to Home',
-                      style: TextStyle(fontSize: 18, color: Color(0xff361847)),
+                    // child: const Text(
+                    //   'learnMoreScreenBackHome',
+                    //   style: TextStyle(fontSize: 18, color: Color(0xff361847)),
+                    // ),
+                    child: textTranslator(text: "learnMoreScreenBackHome",
+                    fontSize: 18, color: const Color(0xff361847),
                     ),
                   )
                 ],

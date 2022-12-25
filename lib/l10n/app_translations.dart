@@ -66,6 +66,14 @@ class AppTranslations extends Translations {
           'registrationLastName': 'Last name',
           'registrationFirstName': 'First Name',
           'registrationEnterFirstName': 'Enter first name',
+
+          //start here
+          'learnMoreScreenCat' : 'category',
+          'learnMoreScreenLearn' : 'learnMore',
+          'learnMoreScreenBackHome' : 'Back to Home',
+          'listOfProdHi' : "Hi",
+          'listOfProdWhatYouNeed' : "which equipment do you need?",
+
         },
 
         //French
@@ -121,6 +129,14 @@ class AppTranslations extends Translations {
           'registrationLastName': 'Nom de famille',
           'registrationFirstName': 'Prénom',
           'registrationEnterFirstName': 'Entrez votre prénom',
+
+           //start here
+          'learnMoreScreenCat' : 'category',
+          'learnMoreScreenLearn' : 'learnMore',
+          'learnMoreScreenBackHome' : 'Back to Home',
+          'listOfProdHi' : "Hi",
+          'listOfProdWhatYouNeed' : "which equipment do you need?",
+
         },
 
         //German
@@ -175,6 +191,14 @@ class AppTranslations extends Translations {
           'registrationLastName': 'Nachname',
           'registrationFirstName': 'Vorname',
           'registrationEnterFirstName': 'Bitte Vornamen eingeben',
+
+           //start here
+          'learnMoreScreenCat' : 'category',
+          'learnMoreScreenLearn' : 'learnMore',
+          'learnMoreScreenBackHome' : 'Back to Home',
+          'listOfProdHi' : "Hi",
+          'listOfProdWhatYouNeed' : "which equipment do you need?",
+
         },
 
         //Portuguese
@@ -230,6 +254,14 @@ class AppTranslations extends Translations {
           'registrationLastName': 'Último nome',
           'registrationFirstName': 'Primeiro nome',
           'registrationEnterFirstName': 'Introduza o primeiro nome',
+
+           //start here
+          'learnMoreScreenCat' : 'category',
+          'learnMoreScreenLearn' : 'learnMore',
+          'learnMoreScreenBackHome' : 'Back to Home',
+          'listOfProdHi' : "Hi",
+          'listOfProdWhatYouNeed' : "which equipment do you need?",
+
         },
 
         //Spanish
@@ -285,6 +317,15 @@ class AppTranslations extends Translations {
           'registrationLastName': 'Apellido',
           'registrationFirstName': 'Primer nombre',
           'registrationEnterFirstName': 'Ingrese el nombre',
+
+
+           //start here
+          'learnMoreScreenCat' : 'category',
+          'learnMoreScreenLearn' : 'learnMore',
+          'learnMoreScreenBackHome' : 'Back to Home',
+          'listOfProdHi' : "Hi",
+          'listOfProdWhatYouNeed' : "which equipment do you need?",
+
         }
       };
 }

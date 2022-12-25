@@ -33,7 +33,7 @@ class ProductList extends StatelessWidget {
                               maxHeight: Get.height / 3.3,
                               maxWidth: Get.width * .70),
                           child: Text(
-                            'Hi ${controller.userName.toString()} ${controller.userLastName.toString()}, which equipment do you need?',
+                            'listOfProdHi ${controller.userName.toString()} ${controller.userLastName.toString()}, listOfProdWhatYouNeed'.tr,
                             style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
