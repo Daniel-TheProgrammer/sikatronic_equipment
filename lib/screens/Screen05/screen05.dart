@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/Registration_screen/registration.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
+import 'package:sikatronics_equipment/widget/translate_text.dart';
 
 import '../screen06/screen06.dart';
 
@@ -100,28 +101,42 @@ class FifthScreen extends StatelessWidget {
                         children: [
                           Container(
                             margin: const EdgeInsets.fromLTRB(0, 25, 5, 5),
-                            child: Text(
-                              'Get a Technical and Commercial Study. ',
-                              style: GoogleFonts.poppins(
-                                fontSize: 23,
-                                fontWeight: FontWeight.w700,
-                                height: 1.5,
-                                color: AppColor.accentColor400,
-                              ),
+                            // child: Text(
+                            //   'Get a Technical and Commercial Study. ',
+                            //   style: GoogleFonts.poppins(
+                            //     fontSize: 23,
+                            //     fontWeight: FontWeight.w700,
+                            //     height: 1.5,
+                            //     color: AppColor.accentColor400,
+                            //   ),
+                            // ),
+                            child: textTranslator(
+                              text: 'screen05HeadText',
+                              fontSize: 23,
+                              fontWeight: FontWeight.w700,
+                              height: 1.5,
+                              color: AppColor.accentColor400,
                             ),
                           ),
                           Container(
                             //margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                'We will study your request technically and propose you the best equipment for your project. ',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  height: 1.5950000286,
-                                  color: AppColor.accentColor400,
-                                ),
+                              // child: Text(
+                              //   'We will study your request technically and propose you the best equipment for your project.',
+                              //   style: GoogleFonts.poppins(
+                              //     fontSize: 16,
+                              //     fontWeight: FontWeight.w400,
+                              //     height: 1.5950000286,
+                              //     color: AppColor.accentColor400,
+                              //   ),
+                              // ),
+                              child: textTranslator(
+                                text: 'screen05BodyText',
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                height: 1.5950000286,
+                                color: AppColor.accentColor400,
                               ),
                             ),
                           ),

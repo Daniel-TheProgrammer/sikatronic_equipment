@@ -1,24 +1,25 @@
-// ignore_for_file: sized_box_for_whitespace
+// ignore_for_file: sized_box_for_whitespace, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/screens/Screen02/screen02.dart';
 
-
 import 'package:sikatronics_equipment/widget/my_button.dart';
+import 'package:sikatronics_equipment/widget/translate_text.dart';
 
 import '../../utils/colors.dart';
 
+
 class FirstScreen extends StatelessWidget {
-  const FirstScreen({super.key});
+   const FirstScreen({super.key});
 
   //Add any new language here and also in the app_translations.dart as required
-  final List<Map<String, dynamic>> locale = const <Map<String, dynamic>>[
-    {'name': 'English', 'locale': Locale('en', 'US')},
-    {'name': 'French', 'locale': Locale('fr', 'FR')},
-    {'name': 'German', 'locale': Locale('de', 'DE')},
-    {'name': 'Portuguese', 'locale': Locale('pt', 'PT')},
-    {'name': 'Spanish', 'locale': Locale('es', 'ES')}
+  final List<Map<String, dynamic>> locale =const  <Map<String, dynamic>>[
+    {'name': '🇬🇧 English', 'locale': Locale('en', 'US')},
+    {'name': '🇫🇷 French', 'locale': Locale('fr', 'FR')},
+    {'name': '🇩🇪 German', 'locale': Locale('de', 'DE')},
+    {'name': '🇵🇹 Portuguese', 'locale': Locale('pt', 'PT')},
+    {'name': '🇪🇸 Spanish', 'locale': Locale('es', 'ES')}
   ];
 
 //TODO: to be refatored later using the getx controller and calling it here
@@ -32,8 +33,8 @@ class FirstScreen extends StatelessWidget {
                     shrinkWrap: true,
                     itemBuilder: (context, index) => InkWell(
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 8),
-                            child: Text(locale[index]['name']),
+                            padding: const EdgeInsets.symmetric(vertical: 9),
+                            child: Center(child: Text(locale[index]['name'])),
                           ),
                           onTap: () =>
                               updateLocale(locale[index]['locale'], context),
@@ -51,7 +52,7 @@ class FirstScreen extends StatelessWidget {
     Navigator.of(context).pop();
     Get.updateLocale(locale);
     debugPrint('update locale called');
-    Get.to(const SecondScreen());
+    Future.delayed(const Duration(seconds: 4), () =>   Get.to(() => const SecondScreen()));
   }
 
   @override
@@ -84,16 +85,25 @@ class FirstScreen extends StatelessWidget {
                     margin: const EdgeInsets.all(8),
                     // companionofentrepreneursweprov (75:626)
 
-                    child:const Text(
-                      'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.',
+                    // child:const Text(
+                    //   'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.',
+                    //   textAlign: TextAlign.center,
+                    //   style: TextStyle(
+                    //     fontSize: 16,
+                    //     fontWeight: FontWeight.w400,
+                    //     height: 1.5,
+                    //     color: // Colors.red
+                    //         AppColor.accentColor400,
+                    //   ),
+                    // ),
+
+                    child: textTranslator(
+                      text: 'screen01BodyText',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                        height: 1.5,
-                        color: // Colors.red
-                            AppColor.accentColor400,
-                      ),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      height: 1.5,
+                      color: AppColor.accentColor400,
                     ),
                   ),
                 ],
@@ -103,7 +113,7 @@ class FirstScreen extends StatelessWidget {
                 onTapped: (() {
                   showLocalDialog(context);
                 }),
-                label: 'Choose language')
+                label: 'screen01ButtonText'.tr)
           ],
         ),
       ),
