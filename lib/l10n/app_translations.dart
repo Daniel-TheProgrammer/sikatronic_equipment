@@ -66,14 +66,11 @@ class AppTranslations extends Translations {
           'registrationLastName': 'Last name',
           'registrationFirstName': 'First Name',
           'registrationEnterFirstName': 'Enter first name',
-
-          //start here
-          'learnMoreScreenCat' : 'category',
-          'learnMoreScreenLearn' : 'learnMore',
-          'learnMoreScreenBackHome' : 'Back to Home',
-          'listOfProdHi' : "Hi",
-          'listOfProdWhatYouNeed' : "which equipment do you need?",
-
+          'learnMoreScreenCat': 'category',
+          'learnMoreScreenLearn': 'learn More',
+          'learnMoreScreenBackHome': 'Back to Home',
+          'listOfProdHi': "Hi",
+          'listOfProdWhatYouNeed': "which equipment do you need?",
         },
 
         //French
@@ -129,14 +126,11 @@ class AppTranslations extends Translations {
           'registrationLastName': 'Nom de famille',
           'registrationFirstName': 'Prénom',
           'registrationEnterFirstName': 'Entrez votre prénom',
-
-           //start here
-          'learnMoreScreenCat' : 'category',
-          'learnMoreScreenLearn' : 'learnMore',
-          'learnMoreScreenBackHome' : 'Back to Home',
-          'listOfProdHi' : "Hi",
-          'listOfProdWhatYouNeed' : "which equipment do you need?",
-
+          'learnMoreScreenCat': 'Catégorie',
+          'learnMoreScreenLearn': 'apprendre encore plus',
+          'learnMoreScreenBackHome': 'De retour à la maison',
+          'listOfProdHi': "Salut",
+          'listOfProdWhatYouNeed': "de quel équipement avez-vous besoin?",
         },
 
         //German
@@ -191,14 +185,11 @@ class AppTranslations extends Translations {
           'registrationLastName': 'Nachname',
           'registrationFirstName': 'Vorname',
           'registrationEnterFirstName': 'Bitte Vornamen eingeben',
-
-           //start here
-          'learnMoreScreenCat' : 'category',
-          'learnMoreScreenLearn' : 'learnMore',
-          'learnMoreScreenBackHome' : 'Back to Home',
-          'listOfProdHi' : "Hi",
-          'listOfProdWhatYouNeed' : "which equipment do you need?",
-
+          'learnMoreScreenCat': 'Kategorie',
+          'learnMoreScreenLearn': 'Lern mehr',
+          'learnMoreScreenBackHome': 'Zurück nach Hause',
+          'listOfProdHi': "hallo",
+          'listOfProdWhatYouNeed': "welche ausrüstung benötigst du?",
         },
 
         //Portuguese
@@ -254,14 +245,11 @@ class AppTranslations extends Translations {
           'registrationLastName': 'Último nome',
           'registrationFirstName': 'Primeiro nome',
           'registrationEnterFirstName': 'Introduza o primeiro nome',
-
-           //start here
-          'learnMoreScreenCat' : 'category',
-          'learnMoreScreenLearn' : 'learnMore',
-          'learnMoreScreenBackHome' : 'Back to Home',
-          'listOfProdHi' : "Hi",
-          'listOfProdWhatYouNeed' : "which equipment do you need?",
-
+          'learnMoreScreenCat': 'categoria',
+          'learnMoreScreenLearn': 'Saber mais',
+          'learnMoreScreenBackHome': 'Voltar para casa',
+          'listOfProdHi': "Oi",
+          'listOfProdWhatYouNeed': "qual equipamento você precisa?",
         },
 
         //Spanish
@@ -317,15 +305,11 @@ class AppTranslations extends Translations {
           'registrationLastName': 'Apellido',
           'registrationFirstName': 'Primer nombre',
           'registrationEnterFirstName': 'Ingrese el nombre',
-
-
-           //start here
-          'learnMoreScreenCat' : 'category',
-          'learnMoreScreenLearn' : 'learnMore',
-          'learnMoreScreenBackHome' : 'Back to Home',
-          'listOfProdHi' : "Hi",
-          'listOfProdWhatYouNeed' : "which equipment do you need?",
-
+          'learnMoreScreenCat': 'categoría',
+          'learnMoreScreenLearn': 'aprende más',
+          'learnMoreScreenBackHome': 'De vuelta a casa',
+          'listOfProdHi': "Hola",
+          'listOfProdWhatYouNeed': "¿Qué equipo necesitas?",
         }
       };
 }
