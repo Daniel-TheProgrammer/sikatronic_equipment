@@ -195,24 +195,25 @@ class RegitrationScreen extends StatelessWidget {
                             color: AppColor.primaryColor500,
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          // child: Center(
-                          //   child: Text(
-                          //     'Continue',
-                          //     style: GoogleFonts.poppins(
-                          //       fontSize: 16,
-                          //       fontWeight: FontWeight.w600,
-                          //       height: 1.5,
-                          //       color: AppColor.accentColor400,
-                          //     ),
-                          //   ),
-
-                            child: textTranslator(text: 'continueText', fontSize: 16,
+                          child: Center(
+                            child: Text(
+                              'Continue',
+                              style: GoogleFonts.poppins(
+                                fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 height: 1.5,
-                                color: AppColor.accentColor400,),
+                                color: AppColor.accentColor400,
+                              ),
+                            ),
+
+                            // child:
+                            // textTranslator(text: 'continueText', fontSize: 16,
+                            //     fontWeight: FontWeight.w600,
+                            //     height: 1.5,
+                            //     color: AppColor.accentColor400,),
                           ),
                         ),
-                      ),
+                      ),)
                   ],
                 ),
               );

@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
@@ -28,7 +30,8 @@ class LearnMoreScreen extends StatelessWidget {
                   //       fontWeight: FontWeight.bold,
                   //       fontSize: 18),
                   // ),
-                    textTranslator(text: Get.arguments['learnMoreScreenCat'],
+                    textTranslator(text: 'learnMoreScreenCat',
+                    // Get.arguments['learnMoreScreenCat'].toString(),
                    color: Colors.white,
                           fontWeight:  FontWeight.bold,
                           fontSize: 18,
@@ -41,7 +44,9 @@ class LearnMoreScreen extends StatelessWidget {
                   //         color: Colors.white,
                   //         fontWeight: FontWeight.normal,
                   //         fontSize: 14)),
-                  textTranslator(text: Get.arguments['learnMoreScreenLearn'],
+                  textTranslator(text:Get.arguments['learnMoreScreenLearn'].toString(),
+                  // 'learnMoreScreenLearn',
+                  //
                    color: Colors.white,
                           fontWeight: FontWeight.normal,
                           fontSize: 14,

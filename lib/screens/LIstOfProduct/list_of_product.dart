@@ -56,10 +56,10 @@ class ProductList extends StatelessWidget {
                           itemCount: products.length,
                           itemBuilder: ((context, index) {
                             return ProductModel(
-                              label: products[index].label,
-                              description: products[index].description,
-                              image: products[index].image,
-                              learnMore: products[index].learnMore,
+                              label: products[index].label.toString(),
+                              description: products[index].description.toString(),
+                              image: products[index].image.toString(),
+                              learnMore: products[index].learnMore.toString(),
                             );
                           })))
                 ],

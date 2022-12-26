@@ -99,7 +99,8 @@ class _ProductModelState extends State<ProductModel> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Get.to(LearnMoreScreen(), arguments: {
+                          Get.to(LearnMoreScreen(),
+                              arguments: {
                             'category': widget.label,
                             'learnMore': widget.learnMore
                           });
