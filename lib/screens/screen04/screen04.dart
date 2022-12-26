@@ -138,7 +138,7 @@ class FourthScreen extends StatelessWidget {
                                 color: AppColor.accentColor400,
                               ),
                             ),
-                          ),
+                          ),SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [

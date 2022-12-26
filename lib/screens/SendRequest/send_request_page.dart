@@ -188,6 +188,21 @@ class SendRequestPage extends StatelessWidget {
                     controller: _emailEditingController,
                   ),
                   const SizedBox(
+                    height: 10,
+                  ), fieldLabel(label: 'Phone No'.tr),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  TextField(
+                    onChanged: (value) {
+                      //Do something with the user input.
+                    },
+                    decoration: inputDeco.copyWith(
+                      hintText: 'Enter Phone Number'.tr,
+                    ),
+                    controller: _emailEditingController,
+                  ),
+                  const SizedBox(
                     height: 25,
                   ),
                   fieldLabel(label: 'sendRequestPageDesc'.tr),

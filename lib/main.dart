@@ -10,6 +10,9 @@ import 'package:sikatronics_equipment/screens/Screen01/screen01_controller.dart'
 import 'package:sikatronics_equipment/screens/SendRequest/send_request_page.dart';
 import 'package:sikatronics_equipment/screens/Splash_Screen/splash_screen_binding.dart';
 import 'package:sikatronics_equipment/screens/Splash_Screen/splash_screen_controller.dart';
+import 'package:sikatronics_equipment/screens/lot_of_screen/screen02.dart';
+import 'package:sikatronics_equipment/screens/lot_of_screen/screen03.dart';
+import 'package:sikatronics_equipment/screens/screen04/screen04.dart';
 import 'package:sikatronics_equipment/successfull_screen/successfull_screen.dart';
 
 import 'firebase_options.dart';
@@ -44,7 +47,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       getPages: pages,
-      home: const AuthCheck(),
+      home:
+      // FourthScreen()
+      const AuthCheck(),
     );
   }
 }
