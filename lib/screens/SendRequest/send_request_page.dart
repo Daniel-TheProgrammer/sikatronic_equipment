@@ -294,7 +294,7 @@ class SendRequestPage extends StatelessWidget {
     }
   }
 
-  Validation(BuildContext context) {
+  Validation(BuildContext context) async {
     if (_nameEditingController.text.isEmpty ||
         _emailEditingController.text.isEmpty ||
         _productDetailsEditingController.text.isEmpty ||
@@ -319,7 +319,7 @@ class SendRequestPage extends StatelessWidget {
                 minute: int.parse(DateFormat('mm').format(DateTime.now())))
             .format(context);
       }
-      controller
+      await controller
           .saveDataInDb(
               name: _nameEditingController.text,
               email: _emailEditingController.text,
@@ -329,7 +329,7 @@ class SendRequestPage extends StatelessWidget {
               description: _productDetailsEditingController.text)
           .then((_) {
         print(controller.errorToDb.toString());
-        Get.to(() => SuccessFullScreen(valid: false));
+        Get.to(() => SuccessFullScreen(valid: controller.errorToDb.isFalse));
       });
     }
   }

@@ -51,10 +51,10 @@ class SendRequestController extends GetxController {
       errorToDb.value = true;
     }).then((value) async {
       String body =
-          'this email is sended at $now  \n from $email \n  available to call on $availableToCallDate ,$availableToCallTime \n phone number : $phone \n \n $description';
+          '$description  \n \n from $email \n  available to call on $availableToCallDate ,$availableToCallTime \n phone number : $phone  ';
       Email _email = Email(
         subject: name!,
-        recipients: [email!],
+        recipients: ['sikatronicsequipments@gmail.com'],
         body: body,
       );
       await FlutterEmailSender.send(_email).catchError((e) {
