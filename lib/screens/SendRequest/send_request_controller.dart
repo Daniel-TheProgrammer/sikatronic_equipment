@@ -56,6 +56,7 @@ class SendRequestController extends GetxController {
         subject: name!,
         recipients: ['sikatronicsequipments@gmail.com'],
         body: body,
+         isHTML : false,
       );
       await FlutterEmailSender.send(_email).catchError((e) {
         print('error of email sending is $e');

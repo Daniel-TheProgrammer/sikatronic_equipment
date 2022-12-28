@@ -162,7 +162,7 @@ class ThirdScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  /*                 Positioned(
                     left: 5,
                     top: 40,
                     child: Align(
@@ -170,7 +170,7 @@ class ThirdScreen extends StatelessWidget {
                         width: 66,
                         height: 96,
                         child: Text(
-                          '01',
+                          '05',
                           style: GoogleFonts.poppins(
                             fontSize: 50,
                             fontWeight: FontWeight.w700,
@@ -181,6 +181,7 @@ class ThirdScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+  */
                   Positioned(
                     left: 24,
                     top: 0,
