@@ -49,16 +49,20 @@ class SendRequestController extends GetxController {
       'description': description,
     }).catchError((e) {
       errorToDb.value = true;
-    }).then((value) async {
+    })
+        .then((value) async {
       String body =
           '$description  \n \n from $email \n  available to call on $availableToCallDate ,$availableToCallTime \n phone number : $phone  ';
-      Email _email = Email(
+      Email email1 = Email(
         subject: name!,
-        recipients: ['sikatronicsequipments@gmail.com'],
+        // sikatronics@gmail.com
+      // sikatronicsequipments@gmail.com
+        recipients: ['sikatronics@gmail.com'],
         body: body,
          isHTML : false,
       );
-      await FlutterEmailSender.send(_email).catchError((e) {
+      await FlutterEmailSender.send(email1).
+      catchError((e) {
         print('error of email sending is $e');
         errorToDb.value = true;
       });

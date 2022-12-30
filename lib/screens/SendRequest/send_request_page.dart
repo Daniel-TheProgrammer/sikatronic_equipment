@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:sikatronics_equipment/screens/Notification_screen/notification.dart';
 import 'package:sikatronics_equipment/screens/SendRequest/send_request_controller.dart';
 import 'package:sikatronics_equipment/successfull_screen/successfull_screen.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
@@ -18,6 +20,15 @@ class SendRequestPage extends StatelessWidget {
   SendRequestController controller = Get.put(SendRequestController());
   String pickedDate = DateFormat().add_yMd().format(DateTime.now());
   String timePicked = "";
+  // sendEmail(String subject,String body, ) async{
+  //   final Email email = Email(
+  //     body:body ,
+  //     subject: subject,
+  //     recipients: ['imalikhan662@gmail.com'],
+  //     isHTML: false,
+  //   );
+  //   await FlutterEmailSender.send(email);
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -234,6 +245,7 @@ class SendRequestPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(14)),
                       onPressed: () {
+                        // sendEmail(_nameEditingController.text, _productDetailsEditingController.text);
                         Validation(context);
                       },
                       // child: const Text(
@@ -329,8 +341,13 @@ class SendRequestPage extends StatelessWidget {
               description: _productDetailsEditingController.text)
           .then((_) {
         print(controller.errorToDb.toString());
-        Get.to(() => SuccessFullScreen(valid: controller.errorToDb.isFalse));
+        Get.to(() =>
+            // SuccessFullScreen(valid: controller.errorToDb.isFalse)
+                NotificationScreen()
+            );
       });
+
+
     }
   }
 
