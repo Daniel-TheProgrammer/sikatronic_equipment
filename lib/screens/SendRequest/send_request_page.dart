@@ -342,8 +342,8 @@ class SendRequestPage extends StatelessWidget {
           .then((_) {
         print(controller.errorToDb.toString());
         Get.to(() =>
-            // SuccessFullScreen(valid: controller.errorToDb.isFalse)
-                NotificationScreen()
+             SuccessFullScreen(valid: controller.errorToDb.isFalse)
+                // NotificationScreen()
             );
       });
 

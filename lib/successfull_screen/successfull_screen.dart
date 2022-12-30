@@ -2,6 +2,7 @@ import 'package:flutter/Material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/LIstOfProduct/list_of_product.dart';
+import 'package:sikatronics_equipment/screens/Notification_screen/notification.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
 
 class SuccessFullScreen extends StatelessWidget {
@@ -15,15 +16,19 @@ class SuccessFullScreen extends StatelessWidget {
       backgroundColor: valid ? Color.fromARGB(255, 43, 218, 122) : Colors.pink,
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Center(
-          child: CircleAvatar(
-            radius: Get.width / 6,
-            backgroundColor: Colors.white,
-            child: Center(
-                child: Icon(
-              valid ? Icons.done_rounded : Icons.error_outline,
-              size: Get.width / 6,
-              color: valid ? Color.fromARGB(150, 43, 218, 122) : Colors.pink,
-            )),
+          child: InkWell(onTap: (){
+            Get.to(NotificationScreen());
+          },
+            child: CircleAvatar(
+              radius: Get.width / 6,
+              backgroundColor: Colors.white,
+              child: Center(
+                  child: Icon(
+                valid ? Icons.done_rounded : Icons.error_outline,
+                size: Get.width / 6,
+                color: valid ? Color.fromARGB(150, 43, 218, 122) : Colors.pink,
+              )),
+            ),
           ),
         ),
         const SizedBox(
@@ -70,7 +75,7 @@ class SuccessFullScreen extends StatelessWidget {
                 elevation: 8,
                 child: GestureDetector(
                   onTap: (() {
-                    Get.back();
+                    Get.to(NotificationScreen());
                   }),
                   child: Container(
                     height: 50,
@@ -107,7 +112,8 @@ class SuccessFullScreen extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   Get.to(() {
-                    ProductList();
+                    // ProductList();
+                    Get.to(NotificationScreen());
                   });
                 },
                 child: Container(
