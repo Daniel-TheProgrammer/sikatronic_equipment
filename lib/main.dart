@@ -40,9 +40,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return ScreenUtilInit(
       useInheritedMediaQuery: true,
       minTextAdapt: true,
+      child: const AuthCheck(),
       builder: (context, child) {
         return GetMaterialApp(
           title: 'Flutter Demo',
@@ -60,7 +63,7 @@ class MyApp extends StatelessWidget {
           getPages: pages,
           home:
               // FourthScreen()
-              const AuthCheck(),
+              child,
         );
       },
     );
