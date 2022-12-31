@@ -1,6 +1,9 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemChrome, DeviceOrientation;
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/auth.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
@@ -27,7 +30,8 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
+  runApp(DevicePreview(
+      enabled: !kReleaseMode, builder: (context) => const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -36,20 +40,29 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Flutter Demo',
-      translations: AppTranslations(),
-      locale: Get.deviceLocale,
-      debugShowCheckedModeBanner: false,
-      initialBinding: Screen01Binding(),
-      onInit: () => Screen01Controller().onInit(),
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      getPages: pages,
-      home:
-          // FourthScreen()
-          const AuthCheck(),
+    return ScreenUtilInit(
+      useInheritedMediaQuery: true,
+      minTextAdapt: true,
+      builder: (context, child) {
+        return GetMaterialApp(
+          title: 'Flutter Demo',
+          useInheritedMediaQuery: true,
+          translations: AppTranslations(),
+          // locale: Get.deviceLocale, //TODO: enable back after testing for responsiveness...
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
+          debugShowCheckedModeBanner: false,
+          initialBinding: Screen01Binding(),
+          onInit: () => Screen01Controller().onInit(),
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          getPages: pages,
+          home:
+              // FourthScreen()
+              const AuthCheck(),
+        );
+      },
     );
   }
 }
