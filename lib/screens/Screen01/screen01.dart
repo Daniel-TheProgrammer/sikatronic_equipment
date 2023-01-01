@@ -52,7 +52,7 @@ class FirstScreen extends StatelessWidget {
     Navigator.of(context).pop();
     Get.updateLocale(locale);
     debugPrint('update locale called');
-    Future.delayed(const Duration(seconds: 4), () =>   Get.to(() => const SecondScreen()));
+    Future.delayed(const Duration(seconds: 4), () =>   Get.to(() => SecondScreen()));
   }
 
   @override
