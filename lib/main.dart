@@ -31,7 +31,7 @@ void main() async {
   ]);
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(DevicePreview(
-      enabled: !kReleaseMode, builder: (context) => const MyApp()));
+      enabled: !kReleaseMode, builder: (_) => const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -40,13 +40,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+   
     return ScreenUtilInit(
       useInheritedMediaQuery: true,
       minTextAdapt: true,
       child: const AuthCheck(),
-      builder: (context, child) {
+      builder: (_, child) {
         return GetMaterialApp(
           title: 'Flutter Demo',
           useInheritedMediaQuery: true,
