@@ -26,13 +26,12 @@ class ThirdScreen extends StatelessWidget {
           color: Color(0xffffffff),
         ),
         child: Column(
-          
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               margin: const EdgeInsets.fromLTRB(18, 0, 34, 47),
               width: double.infinity,
-              height: height.height / 3,
+              height: height.height * 0.33, //height.height / 3
               child: Stack(
                 children: [
                   Positioned(
@@ -40,8 +39,8 @@ class ThirdScreen extends StatelessWidget {
                     top: 0,
                     child: Align(
                       child: SizedBox(
-                        width: width.width / 1.2,
-                        height: height.height / 2.6,
+                        width: width.width / 1.2, //width.width / 1.2
+                        height: height.height / 2.6, //height.height / 2.6
                         child: Image.asset(
                           'assets/imgs/engine001.png',
                           fit: BoxFit.contain,
@@ -104,9 +103,11 @@ class ThirdScreen extends StatelessWidget {
                       height: height.height / 1.5,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start, 
                         children: [
                           Container(
-                            margin: const EdgeInsets.fromLTRB(0, 15, 0, 5), //top = 25, right = 78
+                            margin: EdgeInsets.fromLTRB(
+                                0, 1.h, 2.h, 0), //top = 25, right = 78,b=5
                             // child: Text(
                             //   'Search for  Machines and Equipement',
                             //   style: GoogleFonts.poppins(
@@ -127,7 +128,7 @@ class ThirdScreen extends StatelessWidget {
                           Container(
                             //margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: EdgeInsets.fromLTRB(0, 3.h,3.h ,0), //edgeInsets.all(6.0)
                               // child: Text(
                               //   '',
                               //   style: GoogleFonts.poppins(
@@ -145,29 +146,29 @@ class ThirdScreen extends StatelessWidget {
                                   height: 1.5950000286),
                             ),
                           ),
+                          SizedBox(
+height: height.height * 0.030,
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
+                            // crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: () =>
-                                    Get.to(() => const FourthScreen()),
+                                onTap: () => Get.to(() => const FourthScreen()),
                                 child: Container(
-                                  margin:
-                                      const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                  width: 80,
-                                  height: 80,
+                                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                  width: 12.h, //80
+                                  height: 12.h, //80
                                   child: AspectRatio(
                                     aspectRatio: 1 / 1,
                                     child: Image.asset(
                                       'assets/imgs/progress_button.png',
                                       // width: 80,
                                       // height: 80,
-                                      fit: BoxFit.cover,
+                                      // fit: BoxFit.cover,
                                     ),
                                   ),
                                 ),
-                           
                               ),
                             ],
                           ),

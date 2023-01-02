@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/Registration_screen/registration.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
+import 'package:sikatronics_equipment/utils/media_query.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
 
 import '../Screen05/screen05.dart';
@@ -12,6 +13,8 @@ class FourthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQueryContext.ofHeight(context);
+    final width = MediaQueryContext.ofWidth(context);
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
