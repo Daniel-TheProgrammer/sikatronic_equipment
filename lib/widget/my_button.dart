@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart' show sp;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
+import 'package:sizer/sizer.dart';
 
 class MyButton extends StatelessWidget {
   final Function() onTapped;
@@ -27,7 +27,7 @@ class MyButton extends StatelessWidget {
           child: Text(
             label,
             style: GoogleFonts.poppins(
-              fontSize: 16,
+              fontSize: 15.sp,
               fontWeight: FontWeight.w600,
               height: 1.5,
               color: AppColor.accentColor400,

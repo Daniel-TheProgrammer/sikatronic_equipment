@@ -6,6 +6,7 @@ import 'package:sikatronics_equipment/screens/Screen02/screen02.dart';
 
 import 'package:sikatronics_equipment/widget/my_button.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../utils/colors.dart';
 
@@ -100,7 +101,7 @@ class FirstScreen extends StatelessWidget {
                     child: textTranslator(
                       text: 'screen01BodyText',
                       textAlign: TextAlign.center,
-                      fontSize: 16,
+                      fontSize: SizerUtil.deviceType == DeviceType.mobile ? 16.sp : 13.sp,
                       fontWeight: FontWeight.w400,
                       height: 1.5,
                       color: AppColor.accentColor400,
