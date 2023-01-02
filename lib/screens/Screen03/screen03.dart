@@ -5,7 +5,9 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/Registration_screen/registration.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
+import 'package:sikatronics_equipment/utils/media_query.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
+import 'package:sizer/sizer.dart';
 
 import '../screen04/screen04.dart';
 
@@ -14,6 +16,8 @@ class ThirdScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQueryContext.ofHeight(context);
+    final width = MediaQueryContext.ofWidth(context);
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.fromLTRB(0, 14, 0, 0),
@@ -22,12 +26,13 @@ class ThirdScreen extends StatelessWidget {
           color: Color(0xffffffff),
         ),
         child: Column(
+          
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               margin: const EdgeInsets.fromLTRB(18, 0, 34, 47),
               width: double.infinity,
-              height: Get.height / 3,
+              height: height.height / 3,
               child: Stack(
                 children: [
                   Positioned(
@@ -35,8 +40,8 @@ class ThirdScreen extends StatelessWidget {
                     top: 0,
                     child: Align(
                       child: SizedBox(
-                        width: Get.width / 1.2,
-                        height: Get.height / 2.6,
+                        width: width.width / 1.2,
+                        height: height.height / 2.6,
                         child: Image.asset(
                           'assets/imgs/engine001.png',
                           fit: BoxFit.contain,
@@ -55,8 +60,8 @@ class ThirdScreen extends StatelessWidget {
                     top: 28,
                     child: Align(
                       child: SizedBox(
-                        width: Get.width,
-                        height: Get.height,
+                        width: width.width,
+                        height: height.height,
                         child: Container(
                           decoration: const BoxDecoration(
                             color: AppColor.primaryColor500,
@@ -81,7 +86,7 @@ class ThirdScreen extends StatelessWidget {
                           child: Text(
                             '01',
                             style: GoogleFonts.poppins(
-                              fontSize: 32,
+                              fontSize: 32.sp,
                               fontWeight: FontWeight.w700,
                               height: 1.5,
                               color: AppColor.accentColor400,
@@ -95,8 +100,8 @@ class ThirdScreen extends StatelessWidget {
                     left: 24,
                     top: 71,
                     child: SizedBox(
-                      width: Get.width / 1.07,
-                      height: Get.height / 1.5,
+                      width: width.width / 1.07,
+                      height: height.height / 1.5,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -113,7 +118,7 @@ class ThirdScreen extends StatelessWidget {
                             // ),
                             child: textTranslator(
                               text: 'screen03HeadText',
-                              fontSize: 26,
+                              fontSize: 10.sp, //26
                               fontWeight: FontWeight.w700,
                               height: 1.5,
                               color: AppColor.accentColor400,
@@ -134,7 +139,7 @@ class ThirdScreen extends StatelessWidget {
                               // ),
                               child: textTranslator(
                                   text: 'screen03BodyText',
-                                  fontSize: 16,
+                                  fontSize: 1.sp, //16
                                   fontWeight: FontWeight.w400,
                                   color: AppColor.accentColor400,
                                   height: 1.5950000286),
@@ -144,9 +149,11 @@ class ThirdScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: () => Get.to(() => const FourthScreen()),
+                                onTap: () =>
+                                    Get.to(() => const FourthScreen()),
                                 child: Container(
-                                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                  margin:
+                                      const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   width: 80,
                                   height: 80,
                                   child: Image.asset(
@@ -181,7 +188,7 @@ class ThirdScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-  */
+        */
                   Positioned(
                     left: 24,
                     top: 0,
@@ -196,7 +203,7 @@ class ThirdScreen extends StatelessWidget {
                         child: Text(
                           '1',
                           style: GoogleFonts.poppins(
-                            fontSize: 32,
+                            fontSize: 32.sp,
                             fontWeight: FontWeight.w700,
                             height: 1.5,
                             letterSpacing: 2.4,
