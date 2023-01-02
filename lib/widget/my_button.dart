@@ -15,10 +15,10 @@ class MyButton extends StatelessWidget {
       onTap: onTapped,
       child: Container(
         width: double.infinity,
-        height: 30.h,  //48.h,
-        // margin: const EdgeInsets.all(8),
-        margin: EdgeInsets.fromLTRB(8, 0, 8, 0),
-        padding: const EdgeInsets.fromLTRB(8, 0, 8, 10),
+        height: 48,  //48.h,
+        margin: const EdgeInsets.all(8),
+        // margin: EdgeInsets.fromLTRB(8, 0, 8, 0),
+        // padding: const EdgeInsets.fromLTRB(8, 0, 8, 10),
         decoration: BoxDecoration(
           border: Border.all(color: AppColor.accentColor400),
           borderRadius: BorderRadius.circular(12),
@@ -27,7 +27,7 @@ class MyButton extends StatelessWidget {
           child: Text(
             label,
             style: GoogleFonts.poppins(
-              fontSize: 15.sp,
+              fontSize: 16,
               fontWeight: FontWeight.w600,
               height: 1.5,
               color: AppColor.accentColor400,

@@ -25,8 +25,8 @@ class SecondScreen extends StatelessWidget {
           children: [
             Container(
               color: Colors.white,
-              width: Get.width,
-              height: Get.height * .5,              
+              width: double.infinity,
+              height: Get.height / 1.8,              
               padding: const EdgeInsets.all(5),
               child: Image.asset(
                 'assets/imgs/engine001.png',
@@ -37,6 +37,7 @@ class SecondScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
+             
                 children: [
                   Container(
                     margin: const EdgeInsets.fromLTRB(0.5, 0, 0.5, 32),
@@ -58,14 +59,15 @@ class SecondScreen extends StatelessWidget {
                           // ),
                            child: textTranslator(text: 'screen02HeadText',
                           textAlign: TextAlign.center,
-                          fontSize: 24.sp,
+                          fontSize:24, // 24.sp,
                           fontWeight: FontWeight.w700,
                           height: 1.5,
                           color: AppColor.accentColor400,
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 10.sm),
+                          margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          // margin: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                           // child: Text(
                           //   'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.',
                           //   textAlign: TextAlign.center,
@@ -78,7 +80,7 @@ class SecondScreen extends StatelessWidget {
                           // ),
                           child: textTranslator(text: 'screen02BodyText',
                           textAlign: TextAlign.center,
-                          fontSize: 16.sp,
+                          fontSize: 16, //16.sp,
                           fontWeight: FontWeight.w400,
                           height: 1.5,
                           color: const Color(0xFF000000)
