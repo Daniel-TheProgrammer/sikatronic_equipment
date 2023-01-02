@@ -106,7 +106,7 @@ class ThirdScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            margin: const EdgeInsets.fromLTRB(0, 25, 78, 5),
+                            margin: const EdgeInsets.fromLTRB(0, 15, 0, 5), //top = 25, right = 78
                             // child: Text(
                             //   'Search for  Machines and Equipement',
                             //   style: GoogleFonts.poppins(
@@ -118,7 +118,7 @@ class ThirdScreen extends StatelessWidget {
                             // ),
                             child: textTranslator(
                               text: 'screen03HeadText',
-                              fontSize: 10.sp, //26
+                              fontSize: 20.sp, //26
                               fontWeight: FontWeight.w700,
                               height: 1.5,
                               color: AppColor.accentColor400,
@@ -139,7 +139,7 @@ class ThirdScreen extends StatelessWidget {
                               // ),
                               child: textTranslator(
                                   text: 'screen03BodyText',
-                                  fontSize: 1.sp, //16
+                                  fontSize: 13.sp, //16
                                   fontWeight: FontWeight.w400,
                                   color: AppColor.accentColor400,
                                   height: 1.5950000286),
@@ -147,6 +147,7 @@ class ThirdScreen extends StatelessWidget {
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               GestureDetector(
                                 onTap: () =>
@@ -156,12 +157,17 @@ class ThirdScreen extends StatelessWidget {
                                       const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   width: 80,
                                   height: 80,
-                                  child: Image.asset(
-                                    'assets/imgs/progress_button.png',
-                                    width: 80,
-                                    height: 80,
+                                  child: AspectRatio(
+                                    aspectRatio: 1 / 1,
+                                    child: Image.asset(
+                                      'assets/imgs/progress_button.png',
+                                      // width: 80,
+                                      // height: 80,
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
+                           
                               ),
                             ],
                           ),

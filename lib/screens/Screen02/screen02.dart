@@ -15,8 +15,7 @@ class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context){
      final height = MediaQueryContext.ofHeight(context);
-    debugPrint(
-        "MediaQuery: ${height.height} && Get.height: ${Get.height}");
+   
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
