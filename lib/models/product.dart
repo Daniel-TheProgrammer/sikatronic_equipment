@@ -16,20 +16,20 @@ List<Product> products = [
       label: 'industry',
       description:
           'Machines for production, production lines, equipment for industry',
-      image: 'assets/prodList/1.png',
+      image: 'assets/imgs/engine001.png',
       learnMore:
           "Sikatronics equipment assists you technically and commercially to have new or used machines for production, production lines and equipment in the field of agri-food, electronics, metal and forging, packaging and conditioning, pharmaceutical, chemical, textiles, printing machines, wood, plastic, industrial equipment,... and any machine or equipment of your field"),
   Product(
       label: 'logistics & machinery',
       description:
           'Truck, machinery, tractors, commercial vehicle, trailer, semi trailer. ',
-      image: 'assets/prodList/2.png',
+      image: 'assets/imgs/Group.png',
       learnMore:
           'Sikatronics equipment assists you technically and commercially to have new or used tractors,trucks,commercial vehicle, machinery, roller, cranes,bulldozer,tractor agricultural, forklift ,generator,... and any logistic or machinery of your field'),
   Product(
       label: 'transport',
       description: 'Bus, Car, Moto',
-      image: 'assets/prodList/2.png',
+      image: 'assets/imgs/Frame.png',
       learnMore:
           'Sikatronics equipment assists you technically and commercially to have new or used car, bus or motorbike of any brand'),
   Product(

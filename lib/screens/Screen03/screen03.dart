@@ -122,23 +122,30 @@ class ThirdScreen extends StatelessWidget {
                           Container(
                             //margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              // child: Text(
-                              //   '',
-                              //   style: GoogleFonts.poppins(
-                              //     fontSize: 16,
-                              //     fontWeight: FontWeight.w400,
-                              //     height: 1.5950000286,
-                              //     color: AppColor.accentColor400,
-                              //   ),
-                              // ),
-                              child: textTranslator(
-                                  text: 'screen03BodyText',
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  color: AppColor.accentColor400,
-                                  height: 1.5950000286),
-                            ),
+                                padding: const EdgeInsets.all(8.0),
+                                // child: Text(
+                                //   '',
+                                //   style: GoogleFonts.poppins(
+                                //     fontSize: 16,
+                                //     fontWeight: FontWeight.w400,
+                                //     height: 1.5950000286,
+                                //     color: AppColor.accentColor400,
+                                //   ),
+                                // ),
+                                child: Text(
+                                    'Sikatronics Equipment assist you for technical studies, Purchase, Delivery and Installation of equipment for your business.',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400,
+                                        color: AppColor.accentColor400,
+                                        height: 1.5950000286))
+                                //  textTranslator(
+                                //     text: 'screen03BodyText',
+                                //     fontSize: 16,
+                                //     fontWeight: FontWeight.w400,
+                                //     color: AppColor.accentColor400,
+                                //     height: 1.5950000286),
+                                ),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,

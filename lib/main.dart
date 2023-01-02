@@ -4,6 +4,7 @@ import 'package:flutter/services.dart' show SystemChrome, DeviceOrientation;
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/auth.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
+import 'package:sikatronics_equipment/screens/Registration_screen/registration_binding.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01_binding.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01_controller.dart';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
       ),
       getPages: pages,
       home:
-          // FourthScreen()
+      
           const AuthCheck(),
     );
   }
