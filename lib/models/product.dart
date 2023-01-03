@@ -35,31 +35,31 @@ List<Product> products = [
   Product(
       label: 'construction',
       description: 'Machines, equipments',
-      image: 'assets/prodList/4.png',
+      image: 'assets/imgs/construction.png',
       learnMore:
           "Sikatronics equipment assists you technically and commercially to have new or used equipments, machines, machineries in the construction field, like concrete machines, blocks and bricks machines,... and any machines you need."),
   Product(
       label: 'agriculture & breeding',
       description: 'Machines, engines,equipements',
-      image: 'assets/prodList/4.png',
+      image: 'assets/imgs/Group3.png',
       learnMore:
           'Sikatronics equipment assists you technically and commercially to have new or used equipments ,machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed'),
   Product(
       label: 'trading',
       description: 'Agri-food,construction,raw materials for insdustries',
-      image: 'assets/prodList/7.png',
+      image: 'assets/imgs/raw materials.png',
       learnMore:
           'Sikatronics equipment assists you technically and commercially to have new or used equipments ,machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed'),
   Product(
       label: 'maintenance',
       description: 'Maintenance of machines or equivalence',
-      image: 'assets/prodList/2.png',
+      image: 'assets/imgs/Group (1).png',
       learnMore:
           'Sikatronics equipment assists you technically to do maintenance in your equipment and machines. You fit any malfunction.'),
   Product(
       label: 'other services',
       description:
           'we provide diverse sets of services to our clients, get in touch to know more',
-      image: 'assets/prodList/6.png',
+      image: 'assets/imgs/Group (2).png',
       learnMore: 'other services ...'),
 ];

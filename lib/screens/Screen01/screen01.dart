@@ -8,19 +8,32 @@ import 'package:sikatronics_equipment/widget/my_button.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
 
 import '../../utils/colors.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
 
+class FirstScreen extends StatefulWidget {
+  const FirstScreen({super.key});
 
-class FirstScreen extends StatelessWidget {
-   const FirstScreen({super.key});
+  @override
+  State<FirstScreen> createState() => _FirstScreenState();
+}
 
+class _FirstScreenState extends State<FirstScreen> {
   //Add any new language here and also in the app_translations.dart as required
-  final List<Map<String, dynamic>> locale =const  <Map<String, dynamic>>[
+  final List<Map<String, dynamic>> locale = const <Map<String, dynamic>>[
     {'name': '🇬🇧 English', 'locale': Locale('en', 'US')},
     {'name': '🇫🇷 French', 'locale': Locale('fr', 'FR')},
     {'name': '🇩🇪 German', 'locale': Locale('de', 'DE')},
     {'name': '🇵🇹 Portuguese', 'locale': Locale('pt', 'PT')},
     {'name': '🇪🇸 Spanish', 'locale': Locale('es', 'ES')}
   ];
+  final List<String> items = [
+    'English',
+    'French',
+    'German',
+    'Portuguese',
+    'Spanish',
+  ];
+  String? selectedValue;
 
 //TODO: to be refatored later using the getx controller and calling it here
   Future<T?> showLocalDialog<T>(BuildContext context) {
@@ -52,7 +65,8 @@ class FirstScreen extends StatelessWidget {
     Navigator.of(context).pop();
     Get.updateLocale(locale);
     debugPrint('update locale called');
-    Future.delayed(const Duration(seconds: 4), () =>   Get.to(() => const SecondScreen()));
+    Future.delayed(
+        const Duration(seconds: 4), () => Get.to(() => const SecondScreen()));
   }
 
   @override
@@ -109,11 +123,95 @@ class FirstScreen extends StatelessWidget {
                 ],
               ),
             ),
-            MyButton(
-                onTapped: (() {
-                  showLocalDialog(context);
-                }),
-                label: 'screen01ButtonText'.tr)
+
+            Center(
+              child: DropdownButtonHideUnderline(
+                child: DropdownButton2(
+                  isExpanded: true,
+                  hint: Row(
+                    children: const [
+                      Icon(
+                        Icons.list,
+                        size: 16,
+                        color: AppColor.primaryColor500,
+                      ),
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Expanded(
+                        child: Text(
+                          'Choose language',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: AppColor.primaryColor500,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                  items: items
+                      .map((item) => DropdownMenuItem<String>(
+                            value: item,
+                            child: Text(
+                              item,
+                              style: const TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: AppColor.accentColor400,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ))
+                      .toList(),
+                  value: selectedValue,
+                  onChanged: (value) {
+                    setState(() {
+                      selectedValue = value as String;
+                      Get.to(SecondScreen());
+                      // updateLocale(locale[1][''], context);
+                    });
+                  },
+                  icon: const Icon(
+                    Icons.arrow_downward_outlined,
+                  ),
+                  iconSize: 14,
+                  iconEnabledColor: AppColor.accentColor400,
+                  iconDisabledColor: AppColor.accentColor400,
+                  buttonHeight: 50,
+                  buttonWidth: 160,
+                  buttonPadding: const EdgeInsets.only(left: 14, right: 14),
+                  buttonDecoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                      color: AppColor.accentColor400,
+                    ),
+                    color: AppColor.primaryColor500,
+                  ),
+                  buttonElevation: 2,
+                  itemHeight: 40,
+                  itemPadding: const EdgeInsets.only(left: 14, right: 14),
+                  dropdownMaxHeight: 200,
+                  dropdownWidth: 200,
+                  dropdownPadding: null,
+                  dropdownDecoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
+                    color: AppColor.primaryColor500,
+                  ),
+                  dropdownElevation: 8,
+                  scrollbarRadius: const Radius.circular(40),
+                  scrollbarThickness: 6,
+                  scrollbarAlwaysShow: false,
+                  offset: const Offset(-20, 0),
+                ),
+              ),
+            ),
+            // MyButton(
+            //     onTapped: (() {
+            //       showLocalDialog(context);
+            //     }),
+            //     label: 'screen01ButtonText'.tr)
           ],
         ),
       ),

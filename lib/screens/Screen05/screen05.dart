@@ -94,7 +94,7 @@ class FifthScreen extends StatelessWidget {
                     top: 51,
                     child: SizedBox(
                       width: Get.width / 1.07,
-                      height: Get.height / 2.1,
+                      height: Get.height / 2.5,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -121,7 +121,9 @@ class FifthScreen extends StatelessWidget {
                           Container(
                             //margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(
+                                8.0,
+                              ),
                               // child: Text(
                               //   'We will study your request technically and propose you the best equipment for your project.',
                               //   style: GoogleFonts.poppins(

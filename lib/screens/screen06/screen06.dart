@@ -93,7 +93,7 @@ class SixthScreen extends StatelessWidget {
                     top: 51,
                     child: SizedBox(
                       width: Get.width / 1.07,
-                      height: Get.height / 2.2,
+                      height: Get.height / 2.4,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -120,7 +120,8 @@ class SixthScreen extends StatelessWidget {
                           Container(
                             //margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.only(
+                                  left: 8.0, top: 8, bottom: 8, right: 14),
                               // child: Text(
                               //   'Sikatronics Equipment handles the purchase, installation, delivery and maintenance of the equipment required for your project, ',
                               //   style: GoogleFonts.poppins(
@@ -171,9 +172,12 @@ class SixthScreen extends StatelessWidget {
                                       //     height: 1.5,
                                       //   ),
                                       // ),
-                                      child: textTranslator(text: 'screen06ButtonText',color: AppColor.primaryColor500,
-                                          fontWeight: FontWeight.w600,
-                                          height: 1.5,),
+                                      child: textTranslator(
+                                        text: 'screen06ButtonText',
+                                        color: AppColor.primaryColor500,
+                                        fontWeight: FontWeight.w600,
+                                        height: 1.5,
+                                      ),
                                     ),
                                   ),
                                 ]),

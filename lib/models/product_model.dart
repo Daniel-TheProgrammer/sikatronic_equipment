@@ -99,8 +99,7 @@ class _ProductModelState extends State<ProductModel> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Get.to(LearnMoreScreen(),
-                              arguments: {
+                          Get.to(LearnMoreScreen(), arguments: {
                             'category': widget.label,
                             'learnMore': widget.learnMore
                           });
@@ -134,8 +133,8 @@ class _ProductModelState extends State<ProductModel> {
                 ]),
           ),
           SizedBox(
-            width: Get.width / 3,
-            height: Get.height / 7,
+            width: Get.width / 5,
+            height: Get.height / 9,
             child: Image.asset(
               widget.image,
               fit: BoxFit.contain,

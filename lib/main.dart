@@ -18,6 +18,7 @@ import 'package:sikatronics_equipment/successfull_screen/successfull_screen.dart
 
 import 'firebase_options.dart';
 import 'l10n/app_translations.dart';
+import 'package:device_preview/device_preview.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,6 +30,8 @@ void main() async {
   ]);
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
+  // runApp(
+  //   DevicePreview(enabled: true, builder: (context) => const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -41,6 +44,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       translations: AppTranslations(),
       locale: Get.deviceLocale,
+      // builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       initialBinding: Screen01Binding(),
       onInit: () => Screen01Controller().onInit(),
@@ -49,7 +53,9 @@ class MyApp extends StatelessWidget {
       ),
       getPages: pages,
       home:
-      
+          // SuccessFullScreen(
+          //   valid: true,
+          // )
           const AuthCheck(),
     );
   }

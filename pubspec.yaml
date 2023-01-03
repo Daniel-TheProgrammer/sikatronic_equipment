@@ -46,6 +46,8 @@ dependencies:
   intl: null
   mailer: ^5.3.0
   uuid: ^3.0.7
+  device_preview: ^1.1.0
+  dropdown_button2: ^1.9.2
 
 dev_dependencies:
   flutter_lints: ^2.0.0
