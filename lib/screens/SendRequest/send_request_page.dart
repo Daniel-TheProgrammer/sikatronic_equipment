@@ -56,7 +56,7 @@ class SendRequestPage extends StatelessWidget {
                 //       fontSize: 22),
                 // ),
                 textTranslator(
-                    text: 'sendRequestPageHeadText',
+                    text: 'SEND US A REQUEST',
                     color: const Color(0xff361847),
                     fontWeight: FontWeight.bold,
                     fontSize: 22),
@@ -341,13 +341,10 @@ class SendRequestPage extends StatelessWidget {
               description: _productDetailsEditingController.text)
           .then((_) {
         print(controller.errorToDb.toString());
-        Get.to(() =>
-             SuccessFullScreen(valid: controller.errorToDb.isFalse)
-                // NotificationScreen()
+        Get.to(() => SuccessFullScreen(valid: controller.errorToDb.isFalse)
+            // NotificationScreen()
             );
       });
-
-
     }
   }
 

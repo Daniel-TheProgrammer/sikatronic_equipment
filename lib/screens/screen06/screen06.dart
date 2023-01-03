@@ -97,7 +97,7 @@ class SixthScreen extends StatelessWidget {
                     top: 51,
                     child: SizedBox(
                       width: width.width / 1.07, // Get.width / 1.07
-                      height: height.height / 2.2, // Get.height / 2.2
+                      height: height.height / 2.2, // Get.height / 2.4
                       child: Column(
                         // crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.start, //TODO: WAS COMMENTED
@@ -125,7 +125,8 @@ class SixthScreen extends StatelessWidget {
                           Container(
                             margin:  EdgeInsets.fromLTRB(0, 0, 0, 0),
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.only(
+                                  left: 8.0, top: 8, bottom: 8, right: 14),
                               // child: Text(
                               //   'Sikatronics Equipment handles the purchase, installation, delivery and maintenance of the equipment required for your project, ',
                               //   style: GoogleFonts.poppins(

@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:sikatronics_equipment/auth.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
+import 'package:sikatronics_equipment/screens/Registration_screen/registration_binding.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01_binding.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01_controller.dart';

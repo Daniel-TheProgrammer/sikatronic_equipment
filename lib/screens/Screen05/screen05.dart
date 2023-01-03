@@ -98,7 +98,7 @@ class FifthScreen extends StatelessWidget {
                     top: 51,
                     child: SizedBox(
                       width: width.width / 1.07, //Get.width / 1.07
-                      height: height.height / 2.1, //Get.height / 2.1
+                      height: height.height / 2.1, //Get.height / 2.5
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
