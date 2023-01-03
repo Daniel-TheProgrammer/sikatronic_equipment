@@ -106,7 +106,7 @@ class FourthScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                            margin:  EdgeInsets.fromLTRB(0, 3.h, 1.h, 0.7.h), //(0,25,5,5)
+                            margin:  EdgeInsets.fromLTRB(0, 3.h, 1.h, 1.h), //(0,25,5,5)
                             // child: Text(
                             //   'Find Machines, Machineries, Vehicles, Raw Material and Maintenance of your business',
                             //   style: GoogleFonts.poppins(
@@ -118,13 +118,13 @@ class FourthScreen extends StatelessWidget {
                             // ),
                             child: textTranslator(
                               text: 'screen04HeadText',
-                              fontSize: 16.sp, //23
+                              fontSize: 17.sp, //23
                               fontWeight: FontWeight.w700,
                               height: 1.5,
                               color: AppColor.accentColor400,
                             ),
                           ),
-                          SizedBox(height: height.height * 0.001,),
+                          // SizedBox(height: height.height * 0.001,),
 
                           Container(
                             //margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
@@ -141,23 +141,23 @@ class FourthScreen extends StatelessWidget {
                               // ),
                               child: textTranslator(
                                 text: 'screen04BodyText',
-                                fontSize: 12.sp, //16
+                                fontSize: 13.sp, //16
                                 fontWeight: FontWeight.w400,
                                 height: 1.5950000286,
                                 color: AppColor.accentColor400,
                               )
                             ),
                           ),
-                          SizedBox(height: height.height * 0.02,),
+SizedBox(height: 50,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
                                 onTap: () => Get.to(() => FifthScreen()),
                                 child: Container(
-                                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                  width: 12.h, //80
-                                  height: 12.h, //80
+                                  margin: EdgeInsets.fromLTRB(5.h, 0, 9.h, 0),
+                                  width: 11.h, //80
+                                  height: 11.h, //80
                                   child: AspectRatio(
                                     aspectRatio:  1 / 1,
                                     child: Image.asset(
