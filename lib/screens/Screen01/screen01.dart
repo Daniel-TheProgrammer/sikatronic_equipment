@@ -115,7 +115,9 @@ class _FirstScreenState extends State<FirstScreen> {
                     child: textTranslator(
                       text: 'screen01BodyText',
                       textAlign: TextAlign.center,
-                      fontSize: SizerUtil.deviceType == DeviceType.mobile ? 16.sp : 13.sp,
+                      fontSize: SizerUtil.deviceType == DeviceType.mobile
+                          ? 16.sp
+                          : 13.sp,
                       fontWeight: FontWeight.w400,
                       height: 1.5,
                       color: AppColor.accentColor400,
@@ -152,11 +154,11 @@ class _FirstScreenState extends State<FirstScreen> {
                       ),
                     ],
                   ),
-                  items: items
+                  items: locale
                       .map((item) => DropdownMenuItem<String>(
-                            value: item,
+                            value: item['name'],
                             child: Text(
-                              item,
+                              item['name'],
                               style: const TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
@@ -169,6 +171,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   value: selectedValue,
                   onChanged: (value) {
                     setState(() {
+                      debugPrint('**************$value');
                       selectedValue = value as String;
                       Get.to(SecondScreen());
                       // updateLocale(locale[1][''], context);
