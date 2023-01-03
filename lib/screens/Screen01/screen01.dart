@@ -9,7 +9,7 @@ import 'package:sikatronics_equipment/widget/translate_text.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utils/colors.dart';
-// import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({super.key});
@@ -63,7 +63,7 @@ class _FirstScreenState extends State<FirstScreen> {
 
 //This is to update the locale meaning the language changes
   updateLocale(Locale locale, BuildContext context) {
-    Navigator.of(context).pop();
+    // Navigator.of(context).pop();
     Get.updateLocale(locale);
     debugPrint('update locale called');
     Future.delayed(
@@ -127,7 +127,7 @@ class _FirstScreenState extends State<FirstScreen> {
 
             Center(
               child: DropdownButtonHideUnderline(
-                child: DropdownButton(
+                child: DropdownButton2(
                   isExpanded: true,
                   hint: Row(
                     children: const [
