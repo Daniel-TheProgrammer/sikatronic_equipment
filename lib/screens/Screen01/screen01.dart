@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/screens/Screen02/screen02.dart';
+import 'package:sikatronics_equipment/utils/media_query.dart';
 
 import 'package:sikatronics_equipment/widget/my_button.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
@@ -37,41 +38,43 @@ class _FirstScreenState extends State<FirstScreen> {
   String? selectedValue;
 
 //TODO: to be refatored later using the getx controller and calling it here
-  Future<T?> showLocalDialog<T>(BuildContext context) {
-    return showDialog(
-        context: context,
-        builder: (_) => AlertDialog(
-              content: Container(
-                width: double.maxFinite,
-                child: ListView.separated(
-                    shrinkWrap: true,
-                    itemBuilder: (context, index) => InkWell(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 9),
-                            child: Center(child: Text(locale[index]['name'])),
-                          ),
-                          onTap: () =>
-                              updateLocale(locale[index]['locale'], context),
-                        ),
-                    separatorBuilder: (context, index) => const Divider(
-                          color: Colors.black45,
-                        ),
-                    itemCount: locale.length),
-              ),
-            ));
-  }
+  // Future<T?> showLocalDialog<T>(BuildContext context) {
+  //   return showDialog(
+  //       context: context,
+  //       builder: (_) => AlertDialog(
+  //             content: Container(
+  //               width: double.maxFinite,
+  //               child: ListView.separated(
+  //                   shrinkWrap: true,
+  //                   itemBuilder: (context, index) => InkWell(
+  //                         child: Padding(
+  //                           padding: const EdgeInsets.symmetric(vertical: 9),
+  //                           child: Center(child: Text(locale[index]['name'])),
+  //                         ),
+  //                         onTap: () =>
+  //                             updateLocale(locale[index]['locale'], context),
+  //                       ),
+  //                   separatorBuilder: (context, index) => const Divider(
+  //                         color: Colors.black45,
+  //                       ),
+  //                   itemCount: locale.length),
+  //             ),
+  //           ));
+  // }
 
 //This is to update the locale meaning the language changes
-  updateLocale(Locale locale, BuildContext context) {
+  updateLocale(Locale locale) {
     // Navigator.of(context).pop();
     Get.updateLocale(locale);
     debugPrint('update locale called');
     Future.delayed(
-        const Duration(seconds: 4), () => Get.to(() => const SecondScreen()));
+        const Duration(seconds: 3), () => Get.to(() => const SecondScreen()));
   }
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQueryContext.ofWidth(context);
+    final height = MediaQueryContext.ofHeight(context);
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -132,22 +135,22 @@ class _FirstScreenState extends State<FirstScreen> {
                 child: DropdownButton2(
                   isExpanded: true,
                   hint: Row(
-                    children: const [
-                      Icon(
+                    children: [
+                      const Icon(
                         Icons.list,
                         size: 16,
                         color: AppColor.primaryColor500,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 4,
                       ),
                       Expanded(
                         child: Text(
                           'Choose language',
                           style: TextStyle(
-                            fontSize: 14,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.bold,
-                            color: AppColor.primaryColor500,
+                            color: Colors.black, //AppColor.primaryColor500
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -171,9 +174,17 @@ class _FirstScreenState extends State<FirstScreen> {
                   value: selectedValue,
                   onChanged: (value) {
                     setState(() {
-                      debugPrint('**************$value');
                       selectedValue = value as String;
-                      Get.to(SecondScreen());
+                      debugPrint('**************$selectedValue');
+                      final localeName = locale
+                          .where((element) => element['name'] == selectedValue)
+                          .toList();
+                      // final value3 = value2.first;
+                      // debugPrint(value3['locale'].toString());
+
+                      updateLocale(localeName.first['locale']);
+
+                      // Get.to(() => const SecondScreen());
                       // updateLocale(locale[1][''], context);
                     });
                   },
@@ -184,7 +195,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   iconEnabledColor: AppColor.accentColor400,
                   iconDisabledColor: AppColor.accentColor400,
                   buttonHeight: 50,
-                  buttonWidth: 160,
+                  buttonWidth: width.width * 0.5, //160 //220
                   buttonPadding: const EdgeInsets.only(left: 14, right: 14),
                   buttonDecoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(14),
