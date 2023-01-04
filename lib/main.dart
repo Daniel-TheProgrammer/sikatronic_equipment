@@ -1,7 +1,11 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemChrome, DeviceOrientation;
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import 'package:sikatronics_equipment/auth.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
 import 'package:sikatronics_equipment/screens/Registration_screen/registration_binding.dart';
@@ -18,7 +22,7 @@ import 'package:sikatronics_equipment/successfull_screen/successfull_screen.dart
 
 import 'firebase_options.dart';
 import 'l10n/app_translations.dart';
-import 'package:device_preview/device_preview.dart';
+import 'package:sizer/sizer.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,9 +33,7 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
-  // runApp(
-  //   DevicePreview(enabled: true, builder: (context) => const MyApp()));
+  runApp(DevicePreview(enabled: !kReleaseMode, builder: (_) => const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -40,23 +42,52 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Flutter Demo',
-      translations: AppTranslations(),
-      locale: Get.deviceLocale,
-      // builder: DevicePreview.appBuilder,
-      debugShowCheckedModeBanner: false,
-      initialBinding: Screen01Binding(),
-      onInit: () => Screen01Controller().onInit(),
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      getPages: pages,
-      home:
-          // SuccessFullScreen(
-          //   valid: true,
-          // )
-          const AuthCheck(),
-    );
+    // return ScreenUtilInit(
+    //   useInheritedMediaQuery: true,
+    //   minTextAdapt: true,
+    //   child: const AuthCheck(),
+    //   builder: (_, child) {
+    //     return GetMaterialApp(
+    //       title: 'Flutter Demo',
+    //       useInheritedMediaQuery: true,
+    //       translations: AppTranslations(),
+    //       // locale: Get.deviceLocale, //TODO: enable back after testing for responsiveness...
+    //       locale: DevicePreview.locale(context),
+    //       builder: DevicePreview.appBuilder,
+    //       debugShowCheckedModeBanner: false,
+    //       initialBinding: Screen01Binding(),
+    //       onInit: () => Screen01Controller().onInit(),
+    //       theme: ThemeData(
+    //         primarySwatch: Colors.blue,
+    //       ),
+    //       getPages: pages,
+    //       home:
+    //           // FourthScreen()
+    //           child,
+    //     );
+    //   },
+    // );
+    //****************SIZER
+    return Sizer(builder: (context, orientation, deviceType) {
+      return  GetMaterialApp(
+          title: 'Flutter Demo',
+          useInheritedMediaQuery: true,
+          translations: AppTranslations(),
+          // locale: Get.deviceLocale, //TODO: enable back after testing for responsiveness...
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
+          debugShowCheckedModeBanner: false,
+          initialBinding: Screen01Binding(),
+          onInit: () => Screen01Controller().onInit(),
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          getPages: pages,
+          home:
+              // FourthScreen()
+              const AuthCheck(),
+        );
+    });
+    
   }
 }

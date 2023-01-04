@@ -6,7 +6,7 @@ import 'package:sikatronics_equipment/screens/Screen03/screen03.dart';
 
 List<GetPage<dynamic>> pages = [
   GetPage(name: '/firstScreen', page: (() => const FirstScreen())),
-  GetPage(name: '/secondScreen', page: (() => const SecondScreen())),
+  GetPage(name: '/secondScreen', page: (() => SecondScreen())),
   GetPage(name: '/thirdScreen', page: (() => const ThirdScreen())),
   GetPage(name: '/registrationScreen', page: (() => RegitrationScreen())),
 ];

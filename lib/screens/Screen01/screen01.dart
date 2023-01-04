@@ -6,6 +6,7 @@ import 'package:sikatronics_equipment/screens/Screen02/screen02.dart';
 
 import 'package:sikatronics_equipment/widget/my_button.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../utils/colors.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
@@ -62,7 +63,7 @@ class _FirstScreenState extends State<FirstScreen> {
 
 //This is to update the locale meaning the language changes
   updateLocale(Locale locale, BuildContext context) {
-    Navigator.of(context).pop();
+    // Navigator.of(context).pop();
     Get.updateLocale(locale);
     debugPrint('update locale called');
     Future.delayed(
@@ -114,7 +115,9 @@ class _FirstScreenState extends State<FirstScreen> {
                     child: textTranslator(
                       text: 'screen01BodyText',
                       textAlign: TextAlign.center,
-                      fontSize: 16,
+                      fontSize: SizerUtil.deviceType == DeviceType.mobile
+                          ? 16.sp
+                          : 13.sp,
                       fontWeight: FontWeight.w400,
                       height: 1.5,
                       color: AppColor.accentColor400,
@@ -151,11 +154,11 @@ class _FirstScreenState extends State<FirstScreen> {
                       ),
                     ],
                   ),
-                  items: items
+                  items: locale
                       .map((item) => DropdownMenuItem<String>(
-                            value: item,
+                            value: item['name'],
                             child: Text(
-                              item,
+                              item['name'],
                               style: const TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
@@ -168,6 +171,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   value: selectedValue,
                   onChanged: (value) {
                     setState(() {
+                      debugPrint('**************$value');
                       selectedValue = value as String;
                       Get.to(SecondScreen());
                       // updateLocale(locale[1][''], context);
