@@ -87,9 +87,9 @@ class MyApp extends StatelessWidget {
         ),
         getPages: pages,
         home:
-            // ThirdScreen(),
-            // FirstScreen()
-            const AuthCheck(),
+            // FourthScreen()
+            ThirdScreen(),
+        // const AuthCheck(),
       );
     });
   }
