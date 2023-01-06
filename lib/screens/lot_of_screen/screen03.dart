@@ -189,7 +189,7 @@ class ThirdScreen extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
+            )
           ],
         ),
       ),

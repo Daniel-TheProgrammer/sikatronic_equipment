@@ -148,7 +148,8 @@ class FourthScreen extends StatelessWidget {
                               )
                             ),
                           ),
-SizedBox(height: 50,),
+SizedBox(height: 30,),
+
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
