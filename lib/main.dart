@@ -42,12 +42,36 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // return ScreenUtilInit(
-    //   useInheritedMediaQuery: true,
-    //   minTextAdapt: true,
-    //   child: const AuthCheck(),
-    //   builder: (_, child) {
-    //     return GetMaterialApp(
+    return ScreenUtilInit(
+      useInheritedMediaQuery: true,
+      minTextAdapt: true,
+     designSize : const Size(428,926),
+      child: const AuthCheck(),
+      builder: (context, child) {
+        return GetMaterialApp(
+          title: 'Flutter Demo',
+          useInheritedMediaQuery: true,
+          translations: AppTranslations(),
+          // locale: DevicePreview.locale(context), //TODO: enable back after testing for responsiveness...
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
+          debugShowCheckedModeBanner: false,
+          initialBinding: Screen01Binding(),
+          onInit: () => Screen01Controller().onInit(),
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            useMaterial3: true,
+          ),
+          getPages: pages,
+          home: child,
+              // FourthScreen()
+         
+        );
+      },
+    );
+    //****************SIZER
+    // return Sizer(builder: (context, orientation, deviceType) {
+    //   return  GetMaterialApp(
     //       title: 'Flutter Demo',
     //       useInheritedMediaQuery: true,
     //       translations: AppTranslations(),
@@ -63,33 +87,11 @@ class MyApp extends StatelessWidget {
     //       getPages: pages,
     //       home:
     //           // FourthScreen()
-    //           child,
-    //     );
-    //   },
-    // );
-    //****************SIZER
-    return Sizer(builder: (context, orientation, deviceType) {
-      return  GetMaterialApp(
-          title: 'Flutter Demo',
-          useInheritedMediaQuery: true,
-          translations: AppTranslations(),
-          // locale: Get.deviceLocale, //TODO: enable back after testing for responsiveness...
-          locale: DevicePreview.locale(context),
-          builder: DevicePreview.appBuilder,
-          debugShowCheckedModeBanner: false,
-          initialBinding: Screen01Binding(),
-          onInit: () => Screen01Controller().onInit(),
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
-          getPages: pages,
-          home:
-              // FourthScreen()
-          ThirdScreen(),
-              // const AuthCheck(),
+    //       // ThirdScreen(),
+    //           const AuthCheck(),
 
-        );
-    });
+    //     );
+    // });
     
   }
 }
