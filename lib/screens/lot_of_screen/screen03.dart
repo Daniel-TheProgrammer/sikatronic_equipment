@@ -74,7 +74,7 @@ class ThirdScreen extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            '01',
+                            '',
                             style: GoogleFonts.poppins(
                               fontSize: 32,
                               fontWeight: FontWeight.w700,
@@ -112,7 +112,7 @@ class ThirdScreen extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
-                                'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit ',
+                                'Sikatronics Equipment assist you for technical studies, Purchase, Delivery and Installation of equipment for your business.',
                                 style: GoogleFonts.poppins(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
@@ -121,7 +121,7 @@ class ThirdScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          ),
+                          ),SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -144,25 +144,25 @@ class ThirdScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
-                    left: 5,
-                    top: 40,
-                    child: Align(
-                      child: SizedBox(
-                        width: 66,
-                        height: 96,
-                        child: Text(
-                          '01',
-                          style: GoogleFonts.poppins(
-                            fontSize: 50,
-                            fontWeight: FontWeight.w700,
-                            height: 1.5,
-                            color: Color(0xff000000),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  // Positioned(
+                  //   left: 5,
+                  //   top: 40,
+                  //   child: Align(
+                  //     child: SizedBox(
+                  //       width: 66,
+                  //       height: 96,
+                  //       child: Text(
+                  //         '04',
+                  //         style: GoogleFonts.poppins(
+                  //           fontSize: 50,
+                  //           fontWeight: FontWeight.w700,
+                  //           height: 1.5,
+                  //           color: Color(0xff000000),
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                   Positioned(
                     left: 24,
                     top: 0,
@@ -189,7 +189,7 @@ class ThirdScreen extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
+            )
           ],
         ),
       ),

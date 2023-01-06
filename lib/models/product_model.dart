@@ -133,8 +133,8 @@ class _ProductModelState extends State<ProductModel> {
                 ]),
           ),
           SizedBox(
-            width: Get.width / 3,
-            height: Get.height / 7,
+            width: Get.width / 5,
+            height: Get.height / 9,
             child: Image.asset(
               widget.image,
               fit: BoxFit.contain,

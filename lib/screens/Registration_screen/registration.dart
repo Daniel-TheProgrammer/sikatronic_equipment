@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/LIstOfProduct/list_of_product.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
 import 'package:sikatronics_equipment/widget/my_input_fields.dart';
+import 'package:sikatronics_equipment/widget/translate_text.dart';
 import 'package:uuid/uuid.dart';
 
 import '../../widget/progress_indication.dart';
@@ -71,36 +72,36 @@ class RegitrationScreen extends StatelessWidget {
                       ),
                     ),
                     MyInputField(
-                      title: 'First Name',
+                      title: 'registrationFirstName'.tr,
                       textInputType: TextInputType.text,
-                      hintText: 'enter your name here',
+                      hintText: 'registrationEnterFirstName'.tr,
                       controller: _nameEditingController,
                       allowKeyboard: true,
                     ),
                     MyInputField(
-                      title: 'Last name',
+                      title: 'registrationLastName'.tr,
                       textInputType: TextInputType.text,
-                      hintText: 'last name',
+                      hintText: 'registrationLastName'.tr,
                       controller: _lastNameEditingController,
                       allowKeyboard: true,
                     ),
                     MyInputField(
-                      title: 'Email',
+                      title: 'sendRequestPageEmail'.tr,
                       textInputType: TextInputType.emailAddress,
-                      hintText: 'Enter your email',
+                      hintText: 'sendRequestPageEnterEmail'.tr,
                       controller: _emailEditingController,
                       allowKeyboard: true,
                     ),
                     MyInputField(
-                      title: 'Company name ',
+                      title: 'registrationCompanyName'.tr,
                       textInputType: TextInputType.emailAddress,
-                      hintText: "Enter company name",
+                      hintText: "registrationEnterCompanyName".tr,
                       controller: _companyNameEditingController,
                       allowKeyboard: true,
                     ),
                     Obx((() {
                       return MyInputField(
-                        title: 'Country',
+                        title: 'registrationCountry'.tr,
                         hintText: controller.countryName.toString(),
                         allowKeyboard: false,
                         controller: _countryEditingController,
@@ -142,7 +143,7 @@ class RegitrationScreen extends StatelessWidget {
                     })),
                     Obx((() {
                       return MyInputField(
-                        title: 'Phone',
+                        title: 'registrationPhone'.tr,
                         hintText:
                             '+${controller.phoneInit.toString()} 000 000 000',
                         allowKeyboard: true,
@@ -204,10 +205,15 @@ class RegitrationScreen extends StatelessWidget {
                                 color: AppColor.accentColor400,
                               ),
                             ),
+
+                            // child:
+                            // textTranslator(text: 'continueText', fontSize: 16,
+                            //     fontWeight: FontWeight.w600,
+                            //     height: 1.5,
+                            //     color: AppColor.accentColor400,),
                           ),
                         ),
-                      ),
-                    ),
+                      ),)
                   ],
                 ),
               );
@@ -223,8 +229,8 @@ class RegitrationScreen extends StatelessWidget {
         _companyNameEditingController.text.isEmpty ||
         _country == null) {
       print('not validated');
-      return Get.snackbar('an error has been occured',
-          'you have to fill al the fields,properly',
+      return Get.snackbar('sendRequestSnackbarTitle'.tr,
+          'sendRequestSnackbarMsg'.tr,
           snackPosition: SnackPosition.BOTTOM,
           backgroundColor: Colors.white,
           colorText: Colors.pink,

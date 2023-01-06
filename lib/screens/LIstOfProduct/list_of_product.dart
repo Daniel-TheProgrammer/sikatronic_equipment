@@ -23,8 +23,12 @@ class ProductList extends StatelessWidget {
             ? linearProgress()
             : Column(
                 children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Image.asset('assets/imgs/logo_violet.png'),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(12.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -33,7 +37,8 @@ class ProductList extends StatelessWidget {
                               maxHeight: Get.height / 3.3,
                               maxWidth: Get.width * .70),
                           child: Text(
-                            'Hi ${controller.userName.toString()} ${controller.userLastName.toString()}, which equipment do you need?',
+                            'listOfProdHi ${controller.userName.toString()} ${controller.userLastName.toString()}, listOfProdWhatYouNeed'
+                                .tr,
                             style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
@@ -56,10 +61,11 @@ class ProductList extends StatelessWidget {
                           itemCount: products.length,
                           itemBuilder: ((context, index) {
                             return ProductModel(
-                              label: products[index].label,
-                              description: products[index].description,
-                              image: products[index].image,
-                              learnMore: products[index].learnMore,
+                              label: products[index].label.toString(),
+                              description:
+                                  products[index].description.toString(),
+                              image: products[index].image.toString(),
+                              learnMore: products[index].learnMore.toString(),
                             );
                           })))
                 ],

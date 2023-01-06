@@ -5,6 +5,9 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/screens/Registration_screen/registration.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
+import 'package:sikatronics_equipment/utils/media_query.dart';
+import 'package:sikatronics_equipment/widget/translate_text.dart';
+import 'package:sizer/sizer.dart';
 
 import '../screen04/screen04.dart';
 
@@ -13,6 +16,8 @@ class ThirdScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQueryContext.ofHeight(context);
+    final width = MediaQueryContext.ofWidth(context);
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.fromLTRB(0, 14, 0, 0),
@@ -26,7 +31,7 @@ class ThirdScreen extends StatelessWidget {
             Container(
               margin: const EdgeInsets.fromLTRB(18, 0, 34, 47),
               width: double.infinity,
-              height: Get.height / 3,
+              height: height.height * 0.33, //height.height / 3
               child: Stack(
                 children: [
                   Positioned(
@@ -34,8 +39,8 @@ class ThirdScreen extends StatelessWidget {
                     top: 0,
                     child: Align(
                       child: SizedBox(
-                        width: Get.width / 1.2,
-                        height: Get.height / 2.6,
+                        width: width.width / 1.2, //width.width / 1.2
+                        height: height.height / 2.6, //height.height / 2.6
                         child: Image.asset(
                           'assets/imgs/engine001.png',
                           fit: BoxFit.contain,
@@ -54,8 +59,8 @@ class ThirdScreen extends StatelessWidget {
                     top: 28,
                     child: Align(
                       child: SizedBox(
-                        width: Get.width,
-                        height: Get.height,
+                        width: width.width,
+                        height: height.height,
                         child: Container(
                           decoration: const BoxDecoration(
                             color: AppColor.primaryColor500,
@@ -68,8 +73,8 @@ class ThirdScreen extends StatelessWidget {
                     left: 34,
                     top: 0,
                     child: Container(
-                      width: 55,
-                      height: 55,
+                      width: 8.h, //55
+                      height: 8.h, //55
                       decoration: BoxDecoration(
                         color: const Color(0xffece300),
                         borderRadius: BorderRadius.circular(27.5),
@@ -80,7 +85,7 @@ class ThirdScreen extends StatelessWidget {
                           child: Text(
                             '01',
                             style: GoogleFonts.poppins(
-                              fontSize: 32,
+                              fontSize: 32.sp,
                               fontWeight: FontWeight.w700,
                               height: 1.5,
                               color: AppColor.accentColor400,
@@ -94,51 +99,77 @@ class ThirdScreen extends StatelessWidget {
                     left: 24,
                     top: 71,
                     child: SizedBox(
-                      width: Get.width / 1.07,
-                      height: Get.height / 1.5,
+                      width: width.width / 1.07,
+                      height: height.height / 1.5,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start, 
                         children: [
                           Container(
-                            margin: const EdgeInsets.fromLTRB(0, 25, 78, 5),
-                            child: Text(
-                              'Search for  Machines and Equipement ',
-                              style: GoogleFonts.poppins(
-                                fontSize: 26,
-                                fontWeight: FontWeight.w700,
-                                height: 1.5,
-                                color: AppColor.accentColor400,
-                              ),
+                            margin: EdgeInsets.fromLTRB(
+                                0, 0, 2.h, 0), //top = 25, right = 78,b=5
+                            // child: Text(
+                            //   'Search for  Machines and Equipement',
+                            //   style: GoogleFonts.poppins(
+                            //     fontSize: 26,
+                            //     fontWeight: FontWeight.w700,
+                            //     height: 1.5,
+                            //     color: AppColor.accentColor400,
+                            //   ),
+                            // ),
+                            child: textTranslator(
+                              text: 'screen03HeadText',
+                              fontSize: 22.sp, //26
+                              fontWeight: FontWeight.w700,
+                              height: 0.2.h,
+                              color: AppColor.accentColor400,
                             ),
                           ),
+                          // SizedBox(
+                          //   height: height.height * 0.01,
+                          // ),
                           Container(
-                            //margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
+                            margin:  EdgeInsets.fromLTRB(0, 1.h, 0, 1.h), //EdgeInsets.fromLTRB(0, 0, 0, 15)
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit ',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 16,
+                              padding: EdgeInsets.fromLTRB(0, 0.5.h,3.h ,0), //edgeInsets.all(6.0)
+                              // child: Text(
+                              //   '',
+                              //   style: GoogleFonts.poppins(
+                              //     fontSize: 16,
+                              //     fontWeight: FontWeight.w400,
+                              //     height: 1.5950000286,
+                              //     color: AppColor.accentColor400,
+                              //   ),
+                              // ),
+                              child: textTranslator(
+                                  text: 'screen03BodyText',
+                                  fontSize: 13.sp, //16
                                   fontWeight: FontWeight.w400,
-                                  height: 1.5950000286,
                                   color: AppColor.accentColor400,
-                                ),
-                              ),
+                                  height: 1.5950000286),
                             ),
+                          ),
+                          SizedBox(
+height: height.height / 50,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
+                            // crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               GestureDetector(
                                 onTap: () => Get.to(() => const FourthScreen()),
                                 child: Container(
-                                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                  width: 80,
-                                  height: 80,
-                                  child: Image.asset(
-                                    'assets/imgs/progress_button.png',
-                                    width: 80,
-                                    height: 80,
+                                  margin:EdgeInsets.fromLTRB(5.h, 0, 9.h, 0),
+                                  width: 11.h, //80
+                                  height: 11.h, //80
+                                  child: AspectRatio(
+                                    aspectRatio: 1 / 1,
+                                    child: Image.asset(
+                                      'assets/imgs/progress_button.png',
+                                      // width: 80,
+                                      // height: 80,
+                                      // fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -148,7 +179,7 @@ class ThirdScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  /*                 Positioned(
                     left: 5,
                     top: 40,
                     child: Align(
@@ -156,7 +187,7 @@ class ThirdScreen extends StatelessWidget {
                         width: 66,
                         height: 96,
                         child: Text(
-                          '01',
+                          '05',
                           style: GoogleFonts.poppins(
                             fontSize: 50,
                             fontWeight: FontWeight.w700,
@@ -167,12 +198,13 @@ class ThirdScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+        */
                   Positioned(
                     left: 24,
                     top: 0,
                     child: Container(
-                      width: 55,
-                      height: 55,
+                      width: 8.h, //55
+                      height: 8.h, //55
                       decoration: BoxDecoration(
                         color: const Color(0xff441e59),
                         borderRadius: BorderRadius.circular(27.5),
@@ -181,7 +213,7 @@ class ThirdScreen extends StatelessWidget {
                         child: Text(
                           '1',
                           style: GoogleFonts.poppins(
-                            fontSize: 32,
+                            fontSize: 32.sp,
                             fontWeight: FontWeight.w700,
                             height: 1.5,
                             letterSpacing: 2.4,
