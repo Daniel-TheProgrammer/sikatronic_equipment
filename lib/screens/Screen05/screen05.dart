@@ -69,7 +69,6 @@ class FifthScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-<<<<<<< HEAD
                     Positioned(
                       left: 34,
                       top: 0,
@@ -89,63 +88,10 @@ class FifthScreen extends StatelessWidget {
                                 fontSize: 32.sp,
                                 fontWeight: FontWeight.w700,
                                 height: 1.5,
-=======
-                  ),
-                  Positioned(
-                    left: 20,
-                    top: 51,
-                    child: SizedBox(
-                      width: width.width / 1.07, //Get.width / 1.07
-                      height: height.height / 2.5, //Get.height / 2.5
-
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0, 3.h, 1.h, 0.h), //EdgeInsets.fromLTRB(0, 25, 5, 5)
-                            // child: Text(
-                            //   'Get a Technical and Commercial Study. ',
-                            //   style: GoogleFonts.poppins(
-                            //     fontSize: 23,
-                            //     fontWeight: FontWeight.w700,
-                            //     height: 1.5,
-                            //     color: AppColor.accentColor400,
-                            //   ),
-                            // ),
-                            child: textTranslator(
-                              text: 'screen05HeadText',
-                              fontSize: 21.sp, //23
-                              fontWeight: FontWeight.w700,
-                              height: 1.5,
-                              color: AppColor.accentColor400,
-                            ),
-                          ),
-                          Container(
-                            //margin: const EdgeInsets.fromLTRB(0, 0, 0, 15),
-                            child: Padding(
-                              padding: EdgeInsets.fromLTRB(0, 1.h,3.h ,0), //EdgeInsets.all(8.0)
-                              // child: Text(
-                              //   'We will study your request technically and propose you the best equipment for your project.',
-                              //   style: GoogleFonts.poppins(
-                              //     fontSize: 16,
-                              //     fontWeight: FontWeight.w400,
-                              //     height: 1.5950000286,
-                              //     color: AppColor.accentColor400,
-                              //   ),
-                              // ),
-                              child: textTranslator(
-                                text: 'screen05BodyText',
-                                fontSize: 13.sp, //16
-                                fontWeight: FontWeight.w400,
-                                height: 1.5950000286,
->>>>>>> 94f6b02e821ccd4cb2f89f498142a1432c66ccca
                                 color: AppColor.accentColor400,
                               ),
                             ),
                           ),
-<<<<<<< HEAD
                         ),
                       ),
                     ),
@@ -226,28 +172,6 @@ class FifthScreen extends StatelessWidget {
                                         // width: 11.h, //80
                                         // height: 11.h, //80
                                       ),
-=======
-//                            SizedBox(
-// height: height.height * 0.050,
-//                           ),
-                        SizedBox(height: 30,),
-
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              GestureDetector(
-                                onTap: () => Get.to(() => SixthScreen()),
-                                child: Container(
-                                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                  width: 11.h, //80
-                                  height: 11.h, //80
-                                  child: AspectRatio(
-                                    aspectRatio: 1 /1,
-                                    child: Image.asset(
-                                      'assets/imgs/progress_button_75.png',
-                                      // width: 11.h, //80
-                                      // height: 11.h, //80
->>>>>>> 94f6b02e821ccd4cb2f89f498142a1432c66ccca
                                     ),
                                   ),
                                 ),

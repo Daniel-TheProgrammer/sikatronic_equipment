@@ -125,7 +125,6 @@ class FourthScreen extends StatelessWidget {
                                 color: AppColor.accentColor400,
                               ),
                             ),
-<<<<<<< HEAD
                             // SizedBox(height: height.height * 0.001,),
 
                             Container(
@@ -169,26 +168,6 @@ class FourthScreen extends StatelessWidget {
                                         // width: 80,
                                         // height: 80,
                                       ),
-=======
-                          ),
-SizedBox(height: 30,),
-
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              GestureDetector(
-                                onTap: () => Get.to(() => FifthScreen()),
-                                child: Container(
-                                  margin: EdgeInsets.fromLTRB(5.h, 0, 9.h, 0),
-                                  width: 11.h, //80
-                                  height: 11.h, //80
-                                  child: AspectRatio(
-                                    aspectRatio:  1 / 1,
-                                    child: Image.asset(
-                                      'assets/imgs/progress_button_50.png',
-                                      // width: 80,
-                                      // height: 80,
->>>>>>> 94f6b02e821ccd4cb2f89f498142a1432c66ccca
                                     ),
                                   ),
                                 ),
