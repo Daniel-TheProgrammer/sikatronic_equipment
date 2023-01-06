@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
 
@@ -10,13 +11,16 @@ class NotificationScreen extends StatefulWidget {
 }
 
 class _NotificationScreenState extends State<NotificationScreen> {
+  final user=FirebaseAuth.instance.currentUser;
   String datalimit = "";
   int? dataCount;
   bool islimt = false;
   static String request = "requests";
   final Stream<QuerySnapshot> _usersStream = FirebaseFirestore.instance
       .collection(request)
-      .orderBy("submittedAt", descending: true)
+
+      // .orderBy("submittedAt", descending: true)
+      .where('email',isEqualTo: FirebaseAuth.instance.currentUser!.email)
       // .limit(10)
       .snapshots();
 
@@ -141,6 +145,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          print('current user email is :${FirebaseAuth.instance.currentUser!.email}');
           FirebaseFirestore.instance
               .collection(request)
               .snapshots()
