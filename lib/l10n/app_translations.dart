@@ -25,7 +25,7 @@ class AppTranslations extends Translations {
           'continueText': 'Continue',
           'screen03HeadText': 'Search for  Machines and Equipement',
           'screen03BodyText':
-              'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+              'Sikatronics Equipment assist you for technical studies, Purchase, Delivery and Installation of equipment for your business.',
           'screen04HeadText':
               'Find Machines, Machineries, Vehicles, Raw Material and Maintenance of your business',
           'screen04BodyText':
@@ -84,7 +84,7 @@ class AppTranslations extends Translations {
           'continueText': 'Continuer',
           'screen03HeadText': 'Rechercher des machines et équipements',
           'screen03BodyText':
-              'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+              'Sikatronics Equipment vous assiste pour les études techniques, l\'achat, la livraison et l\'installation d\'équipements pour votre entreprise.',
           'screen04HeadText':
               'Trouvez des machines, des machines, des véhicules, des matières premières et la maintenance de votre entreprise',
           'screen04BodyText':
@@ -144,7 +144,7 @@ class AppTranslations extends Translations {
           'continueText': 'Fortsetzen',
           'screen03HeadText': 'Suchen Sie nach Maschinen und Anlagen',
           'screen03BodyText':
-              'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+              'Sikatronics Equipment unterstützt Sie bei technischen Studien, Kauf, Lieferung und Installation von Geräten für Ihr Unternehmen.',
           'screen04HeadText':
               'Finden Sie Maschinen, Maschinen, Fahrzeuge, Rohstoffe und Wartung Ihres Unternehmens',
           'screen04BodyText':
@@ -203,7 +203,7 @@ class AppTranslations extends Translations {
           'continueText': 'Continuar',
           'screen03HeadText': 'Pesquisar Máquinas e Equipamentos',
           'screen03BodyText':
-              'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+              'A Sikatronics Equipment auxilia você nos estudos técnicos, Compra, Entrega e Instalação de equipamentos para o seu negócio.',
           'screen04HeadText':
               'Encontre Máquinas, Maquinários, Veículos, Matéria Prima e Manutenção do seu negócio',
           'screen04BodyText':
@@ -263,7 +263,7 @@ class AppTranslations extends Translations {
           'continueText': 'Continuar',
           'screen03HeadText': 'Búsqueda de Máquinas y Equipos',
           'screen03BodyText':
-              'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet consectetur adipiscing elit',
+              'Sikatronics Equipment lo asiste en los estudios técnicos, Compra, Entrega e Instalación de equipos para su negocio.',
           'screen04HeadText':
               'Encuentre Máquinas, Maquinarias, Vehículos, Materia Prima y Mantenimiento de su negocio',
           'screen04BodyText':

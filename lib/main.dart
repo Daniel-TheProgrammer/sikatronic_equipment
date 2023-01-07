@@ -12,12 +12,14 @@ import 'package:sikatronics_equipment/screens/Registration_screen/registration_b
 import 'package:sikatronics_equipment/screens/Screen01/screen01.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01_binding.dart';
 import 'package:sikatronics_equipment/screens/Screen01/screen01_controller.dart';
+import 'package:sikatronics_equipment/screens/Screen05/screen05.dart';
 import 'package:sikatronics_equipment/screens/SendRequest/send_request_page.dart';
 import 'package:sikatronics_equipment/screens/Splash_Screen/splash_screen_binding.dart';
 import 'package:sikatronics_equipment/screens/Splash_Screen/splash_screen_controller.dart';
 import 'package:sikatronics_equipment/screens/lot_of_screen/screen02.dart';
 import 'package:sikatronics_equipment/screens/lot_of_screen/screen03.dart';
 import 'package:sikatronics_equipment/screens/screen04/screen04.dart';
+import 'package:sikatronics_equipment/screens/screen06/screen06.dart';
 import 'package:sikatronics_equipment/successfull_screen/successfull_screen.dart';
 
 import 'firebase_options.dart';
@@ -33,7 +35,8 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(DevicePreview(enabled: !kReleaseMode, builder: (_) => const MyApp()));
+  // runApp(DevicePreview(enabled: !kReleaseMode, builder: (_) => const MyApp()));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -87,11 +90,40 @@ class MyApp extends StatelessWidget {
     //       getPages: pages,
     //       home:
     //           // FourthScreen()
+<<<<<<< HEAD
     //       // ThirdScreen(),
     //           const AuthCheck(),
 
     //     );
     // });
     
+=======
+    //           child,
+    //     );
+    //   },
+    // );
+    //****************SIZER
+    return Sizer(builder: (context, orientation, deviceType) {
+      return GetMaterialApp(
+        title: 'Flutter Demo',
+        useInheritedMediaQuery: true,
+        translations: AppTranslations(),
+        // locale: Get.deviceLocale, //TODO: enable back after testing for responsiveness...
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
+        debugShowCheckedModeBanner: false,
+        initialBinding: Screen01Binding(),
+        onInit: () => Screen01Controller().onInit(),
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        getPages: pages,
+        home:
+            // ThirdScreen(),
+            // FirstScreen()
+            const AuthCheck(),
+      );
+    });
+>>>>>>> 535d1736b2e356cfd22a845e146500ee9e305b0b
   }
 }
