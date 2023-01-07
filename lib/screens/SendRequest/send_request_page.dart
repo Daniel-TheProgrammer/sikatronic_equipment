@@ -310,35 +310,32 @@ class SendRequestPage extends StatelessWidget {
   Validation(BuildContext context) async {
     if (_nameEditingController.text.isEmpty ||
         _emailEditingController.text.isEmpty ||
-        _emailEditingController.text !=FirebaseAuth.instance.currentUser!.email||
+        _emailEditingController.text !=
+            FirebaseAuth.instance.currentUser!.email ||
         _productDetailsEditingController.text.isEmpty ||
-        _phoneEditingController.text.isEmpty ){
+        _phoneEditingController.text.isEmpty) {
+      print('Please enter current user email');
+      print('not validated');
+      Get.snackbar('Invalid Email', 'Please Enter Current user Email',
+          snackPosition: SnackPosition.BOTTOM,
+          maxWidth: Get.width,
+          backgroundColor: Colors.white,
+          colorText: Colors.pink,
+          icon: const Icon(
+            Icons.warning_amber_outlined,
+            color: Colors.red,
+          ));
 
-        print('Please enter current user email');
-        print('not validated');
-        Get.snackbar(
-            'Invalid Email','Please Enter Current user Email',
-            snackPosition: SnackPosition.BOTTOM,
-            maxWidth: Get.width,
-            backgroundColor: Colors.white,
-            colorText: Colors.pink,
-            icon: const Icon(
-              Icons.warning_amber_outlined,
-              color: Colors.red,
-            ));
-
-        return Get.snackbar(
-            'sendRequestSnackbarTitle'.tr, 'sendRequestSnackbarMsg'.tr,
-            snackPosition: SnackPosition.BOTTOM,
-            maxWidth: Get.width,
-            backgroundColor: Colors.white,
-            colorText: Colors.pink,
-            icon: const Icon(
-              Icons.warning_amber_outlined,
-              color: Colors.red,
-            ));
-
-
+      return Get.snackbar(
+          'sendRequestSnackbarTitle'.tr, 'sendRequestSnackbarMsg'.tr,
+          snackPosition: SnackPosition.BOTTOM,
+          maxWidth: Get.width,
+          backgroundColor: Colors.white,
+          colorText: Colors.pink,
+          icon: const Icon(
+            Icons.warning_amber_outlined,
+            color: Colors.red,
+          ));
     } else {
       print('validated');
       if (timePicked.isEmpty) {

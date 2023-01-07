@@ -1,5 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers
 
+import 'dart:js_util';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -103,7 +105,7 @@ class ThirdScreen extends StatelessWidget {
                       height: height.height / 1.5,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.start, 
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
                             margin: EdgeInsets.fromLTRB(
@@ -129,9 +131,11 @@ class ThirdScreen extends StatelessWidget {
                           //   height: height.height * 0.01,
                           // ),
                           Container(
-                            margin:  EdgeInsets.fromLTRB(0, 1.h, 0, 1.h), //EdgeInsets.fromLTRB(0, 0, 0, 15)
+                            margin: EdgeInsets.fromLTRB(0, 1.h, 0,
+                                1.h), //EdgeInsets.fromLTRB(0, 0, 0, 15)
                             child: Padding(
-                              padding: EdgeInsets.fromLTRB(0, 0.5.h,3.h ,0), //edgeInsets.all(6.0)
+                              padding: EdgeInsets.fromLTRB(
+                                  0, 0.5.h, 3.h, 0), //edgeInsets.all(6.0)
                               // child: Text(
                               //   '',
                               //   style: GoogleFonts.poppins(
@@ -150,7 +154,7 @@ class ThirdScreen extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-height: height.height / 50,
+                            height: height.height / 50,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -159,7 +163,7 @@ height: height.height / 50,
                               GestureDetector(
                                 onTap: () => Get.to(() => const FourthScreen()),
                                 child: Container(
-                                  margin:EdgeInsets.fromLTRB(5.h, 0, 9.h, 0),
+                                  margin: EdgeInsets.fromLTRB(5.h, 0, 9.h, 0),
                                   width: 11.h, //80
                                   height: 11.h, //80
                                   child: AspectRatio(

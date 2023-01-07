@@ -49,8 +49,7 @@ class SendRequestController extends GetxController {
       'description': description,
     }).catchError((e) {
       errorToDb.value = true;
-    })
-        .then((value) async {
+    }).then((value) async {
       String body =
           '$description  \n \n from $email \n  available to call on $availableToCallDate ,$availableToCallTime \n phone number : $phone  ';
       // Email email1 = Email(
