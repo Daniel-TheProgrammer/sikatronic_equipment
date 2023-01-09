@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
@@ -7,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemChrome, DeviceOrientation;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/_http/_html/_file_decoder_html.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:sikatronics_equipment/auth.dart';
 import 'package:sikatronics_equipment/routes/pages_route.dart';
@@ -90,7 +87,7 @@ class MyApp extends StatelessWidget {
         ),
         getPages: pages,
         home:
-            // ThirdScreen(),
+            // FirstScreen(),
             // FirstScreen()
             const AuthCheck(),
       );

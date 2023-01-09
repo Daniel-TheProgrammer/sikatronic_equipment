@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart'
-    show Text, Widget, TextAlign, FontWeight, Color, TextStyle;
+import 'package:flutter/material.dart' show Text, Widget, TextAlign, FontWeight,Color,TextStyle;
 import 'package:get/get.dart';
 
 // class TranslateText extends StatelessWidget {

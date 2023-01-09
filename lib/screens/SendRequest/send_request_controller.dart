@@ -7,6 +7,8 @@ import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 
 class SendRequestController extends GetxController {
+  var countryName = 'Country'.obs;
+  var countryFlag = '🇬🇧'.obs;
   var date = DateFormat().add_yMd().format(DateTime.now()).obs;
   var time = TimeOfDay(
           hour: int.parse(DateFormat('HH').format(DateTime.now())),
@@ -16,7 +18,10 @@ class SendRequestController extends GetxController {
   datePicker(DateTime datepicked) {
     return date.value = DateFormat().add_yMd().format(datepicked);
   }
-
+  getCountryName(String countryname, String countryflag) {
+    countryName.value = countryname;
+    countryFlag.value = countryflag;
+  }
   timePicker(TimeOfDay timepicked) {
     return time.value = timepicked;
   }
@@ -49,7 +54,8 @@ class SendRequestController extends GetxController {
       'description': description,
     }).catchError((e) {
       errorToDb.value = true;
-    }).then((value) async {
+    })
+        .then((value) async {
       String body =
           '$description  \n \n from $email \n  available to call on $availableToCallDate ,$availableToCallTime \n phone number : $phone  ';
       // Email email1 = Email(
