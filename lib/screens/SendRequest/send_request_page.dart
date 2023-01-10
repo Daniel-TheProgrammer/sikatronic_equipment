@@ -7,8 +7,9 @@ import 'package:intl/intl.dart';
 import 'package:sikatronics_equipment/screens/Notification_screen/notification.dart';
 import 'package:sikatronics_equipment/screens/SendRequest/send_request_controller.dart';
 import 'package:sikatronics_equipment/successfull_screen/successfull_screen.dart';
+import 'package:sikatronics_equipment/widget/my_input_fields.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
-
+import 'package:country_picker/country_picker.dart';
 class SendRequestPage extends StatelessWidget {
   SendRequestPage({Key? key}) : super(key: key);
 
@@ -17,10 +18,12 @@ class SendRequestPage extends StatelessWidget {
   TextEditingController _productDetailsEditingController =
       TextEditingController();
   TextEditingController _phoneEditingController = TextEditingController();
-
+  final TextEditingController _countryEditingController =
+  TextEditingController();
   SendRequestController controller = Get.put(SendRequestController());
   String pickedDate = DateFormat().add_yMd().format(DateTime.now());
   String timePicked = "";
+  String? _country;
   // sendEmail(String subject,String body, ) async{
   //   final Email email = Email(
   //     body:body ,
@@ -189,6 +192,7 @@ class SendRequestPage extends StatelessWidget {
                       height: 25,
                     ),
                     fieldLabel(label: 'sendRequestPageEmail'.tr),
+
                     const SizedBox(
                       height: 10,
                     ),
@@ -200,7 +204,51 @@ class SendRequestPage extends StatelessWidget {
                         hintText: 'sendRequestPageEnterEmail'.tr,
                       ),
                       controller: _emailEditingController,
+                    ), const SizedBox(
+                      height: 10,
                     ),
+                    Obx((() {
+                      return MyInputField(
+                        title: 'Country'.tr,
+                        hintText: controller.countryName.toString(),
+                        allowKeyboard: false,
+                        controller: _countryEditingController,
+                        widget:
+                        //here i just add a dummy widget but in furure in will be a backage that display countries, also you cant type
+                        Row(children: [
+                          GestureDetector(
+                            onTap: () {
+                              showCountryPicker(
+                                  context: context,
+                                  onSelect: ((value) {
+                                    controller.getCountryName(
+                                        value.name, value.flagEmoji);
+                                    _country = value.name;
+                                  }));
+                            },
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  height: 18,
+                                  width: 22,
+                                  child: Obx(
+                                    (() {
+                                      return Text(controller.countryFlag
+                                          .toString()); /* Image.asset(
+                                  ,
+                                  height: 18,
+                                  width: 20,
+                                ); */
+                                    }),
+                                  ),
+                                ),
+                                const Icon(Icons.arrow_drop_down)
+                              ],
+                            ),
+                          )
+                        ]),
+                      );
+                    })),
                     const SizedBox(
                       height: 10,
                     ),
