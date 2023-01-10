@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sikatronics_equipment/utils/colors.dart';
 import 'package:sikatronics_equipment/utils/media_query.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
-import 'package:sizer/sizer.dart';
 
 import '../Registration_screen/registration.dart';
 

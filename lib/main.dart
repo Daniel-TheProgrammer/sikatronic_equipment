@@ -90,40 +90,11 @@ class MyApp extends StatelessWidget {
     //       getPages: pages,
     //       home:
     //           // FourthScreen()
-<<<<<<< HEAD
     //       // ThirdScreen(),
     //           const AuthCheck(),
 
     //     );
     // });
     
-=======
-    //           child,
-    //     );
-    //   },
-    // );
-    //****************SIZER
-    return Sizer(builder: (context, orientation, deviceType) {
-      return GetMaterialApp(
-        title: 'Flutter Demo',
-        useInheritedMediaQuery: true,
-        translations: AppTranslations(),
-        // locale: Get.deviceLocale, //TODO: enable back after testing for responsiveness...
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
-        debugShowCheckedModeBanner: false,
-        initialBinding: Screen01Binding(),
-        onInit: () => Screen01Controller().onInit(),
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        getPages: pages,
-        home:
-            // ThirdScreen(),
-            // FirstScreen()
-            const AuthCheck(),
-      );
-    });
->>>>>>> 535d1736b2e356cfd22a845e146500ee9e305b0b
   }
 }

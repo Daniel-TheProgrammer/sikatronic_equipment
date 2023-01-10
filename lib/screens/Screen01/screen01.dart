@@ -105,26 +105,27 @@ class _FirstScreenState extends State<FirstScreen> {
                     // margin: const EdgeInsets.all(8), //can be restored later
                     // companionofentrepreneursweprov (75:626)
 
-                    // child:const Text(
-                    //   'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.',
-                    //   textAlign: TextAlign.center,
-                    //   style: TextStyle(
-                    //     fontSize: 16,
-                    //     fontWeight: FontWeight.w400,
-                    //     height: 1.5,
-                    //     color: // Colors.red
-                    //         AppColor.accentColor400,
-                    //   ),
-                    // ),
-
-                    child: textTranslator(
-                      text: 'screen01BodyText',
+                    child: Text(
+                      // 'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.'.tr,
+                      'screen01BodyText'.tr,
                       textAlign: TextAlign.center,
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w400,
-                      height: 1.5,
-                      color: AppColor.accentColor400,
+                      style: TextStyle(
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w400,
+                        height: 1.5,
+                        color: // Colors.red
+                            AppColor.accentColor400,
+                      ),
                     ),
+
+                    // child: textTranslator(
+                    //   text: 'screen02HeadText',
+                    //   textAlign: TextAlign.center,
+                    //   fontSize: 18.sp,
+                    //   fontWeight: FontWeight.w400,
+                    //   height: 1.5,
+                    //   color: AppColor.accentColor400,
+                    // ),
                   ),
                 ],
               ),
