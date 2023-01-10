@@ -99,7 +99,9 @@ class _FirstScreenState extends State<FirstScreen> {
                       height: 169.47.h,
                     ),
                   ),
-                  SizedBox(height: 32.h,),
+                  SizedBox(
+                    height: 32.h,
+                  ),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 24.w),
                     // margin: const EdgeInsets.all(8), //can be restored later
@@ -110,7 +112,7 @@ class _FirstScreenState extends State<FirstScreen> {
                       'screen01BodyText'.tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 16.sp,
+                        fontSize: 21.sp,
                         fontWeight: FontWeight.w400,
                         height: 1.5,
                         color: // Colors.red
@@ -139,7 +141,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     children: [
                       Icon(
                         Icons.list,
-                        size: 16.sp,
+                        size: 18.sp,
                         color: AppColor.primaryColor500,
                       ),
                       const SizedBox(
@@ -149,7 +151,7 @@ class _FirstScreenState extends State<FirstScreen> {
                         child: Text(
                           'Choose language',
                           style: TextStyle(
-                            fontSize: 16.sp,
+                            fontSize: 18.sp,
                             fontWeight: FontWeight.bold,
                             color: Colors.black, //AppColor.primaryColor500
                           ),
@@ -163,8 +165,8 @@ class _FirstScreenState extends State<FirstScreen> {
                             value: item['name'],
                             child: Text(
                               item['name'],
-                              style:  TextStyle(
-                                fontSize: 14.sp,
+                              style: TextStyle(
+                                fontSize: 20.sp,
                                 fontWeight: FontWeight.bold,
                                 color: AppColor.accentColor400,
                               ),
@@ -196,7 +198,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   iconEnabledColor: AppColor.accentColor400,
                   iconDisabledColor: AppColor.accentColor400,
                   buttonHeight: 50,
-                  buttonWidth: width.width * 0.5, //160 //220
+                  buttonWidth: width.width * 0.55, //160 //220
                   buttonPadding: const EdgeInsets.only(left: 14, right: 14),
                   buttonDecoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(14),

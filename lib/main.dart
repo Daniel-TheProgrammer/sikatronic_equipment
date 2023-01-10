@@ -35,8 +35,8 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  // runApp(DevicePreview(enabled: !kReleaseMode, builder: (_) => const MyApp()));
-  runApp(const MyApp());
+  runApp(DevicePreview(enabled: !kReleaseMode, builder: (_) => const MyApp()));
+  // runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
           useInheritedMediaQuery: true,
           translations: AppTranslations(),
           // locale: DevicePreview.locale(context), //TODO: enable back after testing for responsiveness...
-          locale: DevicePreview.locale(context),
+          locale: Get.deviceLocale,
           builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
           initialBinding: Screen01Binding(),
