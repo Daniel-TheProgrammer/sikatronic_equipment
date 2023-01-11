@@ -86,7 +86,7 @@ class AppTranslations extends Translations {
           'screen03BodyText':
               'Sikatronics Equipment vous assiste pour les études techniques, l\'achat, la livraison et l\'installation d\'équipements pour votre entreprise.',
           'screen04HeadText':
-              'Trouvez des machines, des machines, des véhicules, des matières premières et la maintenance de votre entreprise',
+              'Trouvez des machines, des véhicules, des matières premières et la maintenance de votre entreprise',
           'screen04BodyText':
               'Contactez l\'équipe d\'assistance de Sikatronics Equipment et fournissez les détails de la machine, de l\'équipement, de la matière première ou de la machinerie dont vous avez besoin pour votre entreprise.',
           'screen05HeadText': 'Obtenez une étude technique et commerciale.',

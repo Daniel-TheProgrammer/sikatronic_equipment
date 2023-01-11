@@ -1,13 +1,13 @@
 // ignore_for_file: sized_box_for_whitespace, must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sikatronics_equipment/screens/Screen02/screen02.dart';
 import 'package:sikatronics_equipment/utils/media_query.dart';
 
 import 'package:sikatronics_equipment/widget/my_button.dart';
 import 'package:sikatronics_equipment/widget/translate_text.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../utils/colors.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
@@ -84,47 +84,50 @@ class _FirstScreenState extends State<FirstScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              margin: const EdgeInsets.fromLTRB(0, 0, 0, 32),
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 32.h),
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    margin: const EdgeInsets.fromLTRB(0, 0, 0, 32),
-                    width: 180,
-                    height: 169.47,
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 32.h),
+                    width: 180.w,
+                    height: 169.47.h,
                     child: Image.asset(
                       'assets/imgs/logo_violet.png',
-                      width: 180,
-                      height: 169.47,
+                      width: 180.w,
+                      height: 169.47.h,
                     ),
                   ),
+                  SizedBox(
+                    height: 32.h,
+                  ),
                   Container(
-                    margin: const EdgeInsets.all(8),
+                    padding: EdgeInsets.symmetric(horizontal: 24.w),
+                    // margin: const EdgeInsets.all(8), //can be restored later
                     // companionofentrepreneursweprov (75:626)
 
-                    // child:const Text(
-                    //   'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.',
-                    //   textAlign: TextAlign.center,
-                    //   style: TextStyle(
-                    //     fontSize: 16,
-                    //     fontWeight: FontWeight.w400,
-                    //     height: 1.5,
-                    //     color: // Colors.red
-                    //         AppColor.accentColor400,
-                    //   ),
-                    // ),
-
-                    child: textTranslator(
-                      text: 'screen01BodyText',
+                    child: Text(
+                      // 'Companion of entrepreneur’s. We provide your machines, equipment, raw materials and maintenance for your business.'.tr,
+                      'screen01BodyText'.tr,
                       textAlign: TextAlign.center,
-                      fontSize: SizerUtil.deviceType == DeviceType.mobile
-                          ? 16.sp
-                          : 13.sp,
-                      fontWeight: FontWeight.w400,
-                      height: 1.5,
-                      color: AppColor.accentColor400,
+                      style: TextStyle(
+                        fontSize: 21.sp,
+                        fontWeight: FontWeight.w400,
+                        height: 1.5,
+                        color: // Colors.red
+                            AppColor.accentColor400,
+                      ),
                     ),
+
+                    // child: textTranslator(
+                    //   text: 'screen02HeadText',
+                    //   textAlign: TextAlign.center,
+                    //   fontSize: 18.sp,
+                    //   fontWeight: FontWeight.w400,
+                    //   height: 1.5,
+                    //   color: AppColor.accentColor400,
+                    // ),
                   ),
                 ],
               ),
@@ -136,9 +139,9 @@ class _FirstScreenState extends State<FirstScreen> {
                   isExpanded: true,
                   hint: Row(
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.list,
-                        size: 16,
+                        size: 18.sp,
                         color: AppColor.primaryColor500,
                       ),
                       const SizedBox(
@@ -148,7 +151,7 @@ class _FirstScreenState extends State<FirstScreen> {
                         child: Text(
                           'Choose language',
                           style: TextStyle(
-                            fontSize: 12.sp,
+                            fontSize: 18.sp,
                             fontWeight: FontWeight.bold,
                             color: Colors.black, //AppColor.primaryColor500
                           ),
@@ -162,8 +165,8 @@ class _FirstScreenState extends State<FirstScreen> {
                             value: item['name'],
                             child: Text(
                               item['name'],
-                              style: const TextStyle(
-                                fontSize: 14,
+                              style: TextStyle(
+                                fontSize: 20.sp,
                                 fontWeight: FontWeight.bold,
                                 color: AppColor.accentColor400,
                               ),
@@ -175,7 +178,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   onChanged: (value) {
                     setState(() {
                       selectedValue = value as String;
-                      debugPrint('**************$selectedValue');
+                      // debugPrint('**************$selectedValue');
                       final localeName = locale
                           .where((element) => element['name'] == selectedValue)
                           .toList();
@@ -195,7 +198,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   iconEnabledColor: AppColor.accentColor400,
                   iconDisabledColor: AppColor.accentColor400,
                   buttonHeight: 50,
-                  buttonWidth: width.width * 0.5, //160 //220
+                  buttonWidth: width.width * 0.55, //160 //220
                   buttonPadding: const EdgeInsets.only(left: 14, right: 14),
                   buttonDecoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(14),
