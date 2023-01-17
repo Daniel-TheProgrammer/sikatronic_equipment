@@ -145,7 +145,7 @@ class RegitrationScreen extends StatelessWidget {
                       return MyInputField(
                         title: 'Phone Number'.tr,
                         hintText:
-                            '+${controller.phoneInit.toString()} 000 000 000',
+                            'XXX XXX XXX',
 
                         allowKeyboard: true,
                         textInputType: TextInputType.phone,
@@ -236,7 +236,7 @@ class RegitrationScreen extends StatelessWidget {
           _phoneNumberEditingController.text.length < 10 ||
           _companyNameEditingController.text.isEmpty ||
           _country == null) {
-        print('not validated');
+        debugPrint('not validated');
         return Get.snackbar(
             'sendRequestSnackbarTitle'.tr, 'sendRequestSnackbarMsg'.tr,
             snackPosition: SnackPosition.BOTTOM,
@@ -279,10 +279,11 @@ class RegitrationScreen extends StatelessWidget {
           Get.to(ProductList());
         }).catchError((error) {
           controller.progressOnOff(false);
-          print("Failed to add user: $error");
+          debugPrint("Failed to add user: $error");
         });
-        print(
+        debugPrint(
             'name :$_name,last name : $_lastName,email :$_email,country:$_country,company:$_company,phone number: $_phoneNum');
       }
   }
 }
+
