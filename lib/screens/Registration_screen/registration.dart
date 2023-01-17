@@ -113,6 +113,9 @@ class RegitrationScreen extends StatelessWidget {
                               showCountryPicker(
                                   context: context,
                                   onSelect: ((value) {
+                                     controller.getPhoneInit(
+                                      value.phoneCode,
+                                    );
                                     controller.getCountryName(
                                         value.name, value.flagEmoji);
                                     _country = value.name;
@@ -126,8 +129,8 @@ class RegitrationScreen extends StatelessWidget {
                                   child: Obx(
                                     (() {
                                       return Text(controller.countryFlag
-                                          .toString()); /* Image.asset(
-                                  ,
+                                          .toString()); 
+                                  /* Image.asset(
                                   height: 18,
                                   width: 20,
                                 ); */
@@ -144,9 +147,7 @@ class RegitrationScreen extends StatelessWidget {
                     Obx((() {
                       return MyInputField(
                         title: 'Phone Number'.tr,
-                        hintText:
-                            'XXX XXX XXX',
-
+                        hintText: 'XXX XXX XXX',
                         allowKeyboard: true,
                         textInputType: TextInputType.phone,
                         controller: _phoneNumberEditingController,
@@ -228,62 +229,61 @@ class RegitrationScreen extends StatelessWidget {
   }
 
   validation() async {
-  
+    if (_nameEditingController.text.isEmpty ||
+        _lastNameEditingController.text.isEmpty ||
+        _emailEditingController.text.isEmpty ||
+        _phoneNumberEditingController.text.length < 10 ||
+        _companyNameEditingController.text.isEmpty ||
+        _country == null) {
+      debugPrint('not validated');
+      return Get.snackbar(
+          'sendRequestSnackbarTitle'.tr, 'sendRequestSnackbarMsg'.tr,
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: Colors.white,
+          colorText: Colors.pink,
+          icon: const Icon(
+            Icons.warning_amber_outlined,
+            color: Colors.red,
+          ));
+    } else {
+      //This combines the country code from country picker package and the phone number inputted by the user
 
-      if (_nameEditingController.text.isEmpty ||
-          _lastNameEditingController.text.isEmpty ||
-          _emailEditingController.text.isEmpty ||
-          _phoneNumberEditingController.text.length < 10 ||
-          _companyNameEditingController.text.isEmpty ||
-          _country == null) {
-        debugPrint('not validated');
-        return Get.snackbar(
-            'sendRequestSnackbarTitle'.tr, 'sendRequestSnackbarMsg'.tr,
-            snackPosition: SnackPosition.BOTTOM,
-            backgroundColor: Colors.white,
-            colorText: Colors.pink,
-            icon: const Icon(
-              Icons.warning_amber_outlined,
-              color: Colors.red,
-            ));
-      } else {
-        //This combines the country code from country picker package and the phone number inputted by the user
+      final combinedCountryCodeUserPhoneNumber = [
+        '+${controller.phoneInit}',
+        _phoneNumberEditingController.text.trim()
+      ].join('');
+      debugPrint(combinedCountryCodeUserPhoneNumber);
+      //-----------------------------------------------------
 
-        final combinedCountryCodeUserPhoneNumber =
-            ['+${controller.phoneInit}', _phoneNumberEditingController.text.trim()].join('');
-        debugPrint(combinedCountryCodeUserPhoneNumber);
-        //-----------------------------------------------------
+      _name = _nameEditingController.text;
+      _lastName = _lastNameEditingController.text;
+      _email = _emailEditingController.text;
+      _company = _companyNameEditingController.text;
 
-        _name = _nameEditingController.text;
-        _lastName = _lastNameEditingController.text;
-        _email = _emailEditingController.text;
-        _company = _companyNameEditingController.text;
+      _phoneNum = combinedCountryCodeUserPhoneNumber;
+      controller.progressOnOff(true);
+      await controller.signIn(_email!).catchError((error) {
+        controller.progressOnOff(false);
+      });
 
-        _phoneNum = combinedCountryCodeUserPhoneNumber;
-        controller.progressOnOff(true);
-        await controller.signIn(_email!).catchError((error) {
-          controller.progressOnOff(false);
-        });
-
-        await controller
-            .addSellers(
-          name: _name,
-          lastName: _lastName,
-          email: _email,
-          companyName: _company,
-          country: _country,
-          phone: _phoneNum,
-        )
-            .then((value) {
-          controller.progressOnOff(false);
-          Get.to(ProductList());
-        }).catchError((error) {
-          controller.progressOnOff(false);
-          debugPrint("Failed to add user: $error");
-        });
-        debugPrint(
-            'name :$_name,last name : $_lastName,email :$_email,country:$_country,company:$_company,phone number: $_phoneNum');
-      }
+      await controller
+          .addSellers(
+        name: _name,
+        lastName: _lastName,
+        email: _email,
+        companyName: _company,
+        country: _country,
+        phone: _phoneNum,
+      )
+          .then((value) {
+        controller.progressOnOff(false);
+        Get.to(ProductList());
+      }).catchError((error) {
+        controller.progressOnOff(false);
+        debugPrint("Failed to add user: $error");
+      });
+      debugPrint(
+          'name :$_name,last name : $_lastName,email :$_email,country:$_country,company:$_company,phone number: $_phoneNum');
+    }
   }
 }
-
