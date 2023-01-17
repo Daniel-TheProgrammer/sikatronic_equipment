@@ -145,7 +145,7 @@ class RegitrationScreen extends StatelessWidget {
                       return MyInputField(
                         title: 'Phone Number'.tr,
                         hintText:
-                            '+${controller.phoneInit.toString()} 000 000 000',
+                            'XXX XXX XXX',
 
                         allowKeyboard: true,
                         textInputType: TextInputType.phone,
