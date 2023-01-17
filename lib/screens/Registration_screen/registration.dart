@@ -284,3 +284,4 @@ class RegitrationScreen extends StatelessWidget {
       }
   }
 }
+
