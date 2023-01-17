@@ -143,8 +143,10 @@ class RegitrationScreen extends StatelessWidget {
                     })),
                     Obx((() {
                       return MyInputField(
-                        title: 'registrationPhone'.tr,
-                        hintText: 'XXX XXX XXX',
+                        title: 'Phone Number'.tr,
+                        hintText:
+                            '+${controller.phoneInit.toString()} 000 000 000',
+
                         allowKeyboard: true,
                         textInputType: TextInputType.phone,
                         controller: _phoneNumberEditingController,

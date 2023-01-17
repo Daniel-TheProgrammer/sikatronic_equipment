@@ -252,7 +252,7 @@ class SendRequestPage extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    fieldLabel(label: 'Phone No'.tr),
+                    fieldLabel(label: 'Phone Number'.tr),
                     const SizedBox(
                       height: 10,
                     ),

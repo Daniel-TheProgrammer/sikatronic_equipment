@@ -66,7 +66,9 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           getPages: pages,
-          home: child,
+          home:
+
+          child,
               // FourthScreen()
          
         );
