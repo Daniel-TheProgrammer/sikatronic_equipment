@@ -35,8 +35,8 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(DevicePreview(enabled: !kReleaseMode, builder: (_) => const MyApp()));
-  // runApp(const MyApp());
+  // runApp(DevicePreview(enabled: !kReleaseMode, builder: (_) => const MyApp()));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

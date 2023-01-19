@@ -139,7 +139,7 @@ class FifthScreen extends StatelessWidget {
                                     // const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                     child: Padding(
                                       padding: EdgeInsets.all(
-                                          8.0), //EdgeInsets.all(8.0)
+                                          8.0.r), //EdgeInsets.all(8.0)
                                       // child: Text(
                                       //   'We will study your request technically and propose you the best equipment for your project.',
                                       //   style: GoogleFonts.poppins(
