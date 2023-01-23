@@ -209,7 +209,7 @@ class SendRequestPage extends StatelessWidget {
                     ),
                     Obx((() {
                       return MyInputField(
-                        title: 'Country'.tr,
+                        title: 'registrationCountry'.tr,
                         hintText: controller.countryName.toString(),
                         allowKeyboard: false,
                         controller: _countryEditingController,
@@ -262,7 +262,7 @@ class SendRequestPage extends StatelessWidget {
                         //Do something with the user input.
                       },
                       decoration: inputDeco.copyWith(
-                        hintText: 'Enter Phone Number'.tr,
+                        hintText: 'sendRequestphonenumber'.tr,
                       ),
                       controller: _phoneEditingController,
                     ),
