@@ -16,6 +16,42 @@ class AppTranslations extends Translations {
 
         //English
         'en_US': {
+          'industry':'industry',
+          'Machines for production, production lines, equipment for industry':'Machines for production, production lines, equipment for industry',
+          'Sikatronics equipment assists you technically and commercially to have new or used machines for production, production lines and equipment in the field of agri-food, electronics, metal and forging, packaging and conditioning, pharmaceutical, chemical, textiles, printing machines, wood, plastic, industrial equipment,... and any machine or equipment of your field':'Sikatronics equipment assists you technically and commercially to have new or used machines for production, production lines and equipment in the field of agri-food, electronics, metal and forging, packaging and conditioning, pharmaceutical, chemical, textiles, printing machines, wood, plastic, industrial equipment,... and any machine or equipment of your field',
+          'logistics & machinery':'logistics & machinery',
+          'Truck, machinery, tractors, commercial vehicle, trailer, semi trailer.':'Truck, machinery, tractors, commercial vehicle, trailer, semi trailer.',
+          'Sikatronics equipment assists you technically and commercially to have new or used tractors,trucks,commercial vehicle,'
+              ' machinery, roller, cranes,bulldozer,tractor agricultural, forklift ,generator,... and any logistic or machinery of your field':'Sikatronics equipment assists you technically and commercially to have new or used tractors,trucks,commercial vehicle,'
+              ' machinery, roller, cranes,bulldozer,tractor agricultural, forklift ,generator,... and any logistic or machinery of your field',
+          'transport':'transport',
+          'Bus, Car, Moto':'Bus, Car, Moto',
+          'Sikatronics equipment assists you technically and commercially to have new or used car, bus or motorbike of any brand':'Sikatronics equipment assists you technically and commercially to have new or used car, bus or motorbike of any brand',
+          'construction':'construction',
+          'Machines, equipments':'Machines, equipments',
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments, machines, machineries in the construction field, like concrete machines, blocks and bricks machines,... and any machines you need.':'Sikatronics equipment assists you technically and commercially to have new or used equipments, machines, machineries in the construction field, like concrete machines, blocks and bricks machines,... and any machines you need.',
+           'agriculture & breeding':'agriculture & breeding',
+          'Machines, engines,equipements':'Machines, engines,equipements',
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments ,machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed':'Sikatronics equipment assists you technically and commercially to have new or used equipments ,machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed',
+          'trading':'trading',
+          'Agri-food,construction,raw materials for insdustries':'Agri-food,construction,raw materials for insdustries',
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments ,'
+              'machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed':'Sikatronics equipment assists you technically and commercially to have new or used equipments ,'
+              'machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed',
+          'maintenance':'maintenance',
+          'Maintenance of machines or equivalence':'Maintenance of machines or equivalence',
+          'Sikatronics equipment assists you technically to do maintenance in your equipment and machines. '
+              'You fit any malfunction.':'Sikatronics equipment assists you technically to do maintenance in your equipment and machines. '
+              'You fit any malfunction.',
+          'other services':'other services',
+          'we provide diverse sets of services to our clients, get in touch to know more':'we provide diverse sets of services to our clients, get in touch to know more',
+          'other services ...':'other services ...',
+
+
+
+
+
+
           'screen01BodyText':
               'Companion of entrepreneur\'s. We provide your machines, equipment, raw materials and maintenance for your business.',
           'screen01ButtonText': 'Choose language',
@@ -76,6 +112,81 @@ class AppTranslations extends Translations {
 
         //French
         'fr_FR': {
+          'industry':'industrie',
+          'Machines for production, production lines, equipment for industry':'Machines de production, lignes de production, équipements pour l\'industrie',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used machines for production,'
+              ' production lines and equipment in the field of agri-food, electronics, metal and forging, packaging and '
+              'conditioning, pharmaceutical, chemical, textiles, printing machines, wood, plastic, industrial equipment,... '
+              'and any machine or equipment of your field'
+              :'Les équipements Sikatronics vous assistent techniquement et commercialement pour avoir des machines neuves ou d\'occasion pour la production,'
+        ' des lignes de production et des équipements dans le domaine de l\'agro-alimentaire, de l\'électronique, de la métallurgie et de la forge, de l\'emballage et '
+        'conditionnement, pharmaceutique, chimique, textile, machines d\'impression, bois, plastique, équipements industriels,...'
+    'et toute machine ou équipement de votre domaine',
+
+          'logistics & machinery':'logistique et machinerie',
+
+          'Truck, machinery, tractors, commercial vehicle, trailer, semi trailer.':'Camion, machinerie, tracteurs, véhicule utilitaire, remorque, semi-remorque.',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used tractors,trucks,commercial vehicle,'
+              ' machinery, roller, cranes,bulldozer,tractor agricultural, forklift ,generator,... and any logistic or'
+              ' machinery of your field':
+          'Les équipements Sikatronics vous assistent techniquement et commercialement pour disposer de tracteurs, camions, véhicules utilitaires neufs ou d\'occasion,'
+          ' engins, compacteur, grues, bulldozer, tracteur agricole, chariot élévateur , groupe électrogène,... et toute logistique ou'
+              ' machines de votre domaine',
+
+          'transport':'le transport',
+          'Bus, Car, Moto':'Autobus, Voiture, Moto',
+          'Sikatronics equipment assists you technically and commercially to have new or used car, bus or '
+              'motorbike of any brand'
+              :'Les équipements Sikatronics vous assistent techniquement et commercialement pour avoir une voiture, un bus ou un '
+              'moto de toute marque',
+
+          'construction':'construction',
+          'Machines, equipments':'Machines, équipements',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments, '
+              'machines, machineries in the construction field, like concrete machines,'
+              ' blocks and bricks machines,... and any machines you need.'
+              :'Sikatronics equipment vous accompagne techniquement et commercialement pour disposer d\'équipements neufs ou d\'occasion, '
+              'machines, machines dans le domaine de la construction, comme les machines à béton,'
+              'blocs et machines à briques,... et toutes les machines dont vous avez besoin.',
+
+          'agriculture & breeding':'agriculture & élevage',
+
+          'Machines, engines,equipements':'Machines, moteurs, équipements',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments ,'
+              'machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed':
+          'Les équipements Sikatronics vous assistent techniquement et commercialement pour disposer d\'équipements neufs ou d\'occasion,'
+              'machine pour tout produit que vous cultivez (manioc, maïs, arachide, cacao, café, riz, huile...) ou élevez',
+
+          'trading':'commerce',
+          'Agri-food,construction,raw materials for insdustries':'Agroalimentaire, construction, matières premières pour les industries',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments ,'
+              'machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed'
+              :'Les équipements Sikatronics vous assistent techniquement et commercialement pour disposer d\'équipements neufs ou d\'occasion,'
+              'machine pour tout produit que vous cultivez (manioc, maïs, arachide, cacao, café, riz, huile...) ou élevez',
+          'maintenance':'maintenance',
+          'Maintenance of machines or equivalence':'Maintenance des machines ou équivalence',
+          'Sikatronics equipment assists you technically to do maintenance in your equipment and machines. '
+              'You fit any malfunction.'
+              :'Les équipements Sikatronics vous assistent techniquement pour effectuer la maintenance de vos équipements et machines. '
+              'Vous correspondez à tout dysfonctionnement.',
+
+          'other services':'autres services',
+          'we provide diverse sets of services to our clients, get in touch to know more'
+              :'nous fournissons divers ensembles de services à nos clients, contactez-nous pour en savoir plus',
+          'other services ...':'autres services ...',
+
+
+
+
+
+
+
+
           'screen01BodyText':
               'Compagnon d\'entrepreneur. Nous fournissons vos machines, équipements, matières premières et maintenance pour votre entreprise.',
           'screen01ButtonText': 'Choisissez la langue',
@@ -137,6 +248,78 @@ class AppTranslations extends Translations {
 
         //German
         'de_DE': {
+          'industry':'Industrie',
+          'Machines for production, production lines, equipment for industry':'Maschinen für die Produktion, Produktionslinien, Ausrüstung für die Industrie',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used machines for production,'
+              ' production lines and equipment in the field of agri-food, electronics, metal and forging, packaging and '
+              'conditioning, pharmaceutical, chemical, textiles, printing machines, wood, plastic, industrial equipment,... '
+              'and any machine or equipment of your field'
+              :'Sikatronics-Equipment unterstützt Sie technisch und wirtschaftlich dabei, neue oder gebrauchte Maschinen für die Produktion zu haben,'
+              ' Produktionslinien und Ausrüstung in den Bereichen Lebensmittel, Elektronik, Metall und Schmieden, Verpackung und '
+              'Konditionierung, Pharmazie, Chemie, Textilien, Druckmaschinen, Holz, Kunststoff, Industrieanlagen,... '
+              'und jede Maschine oder Ausrüstung Ihres Bereichs',
+
+          'logistics & machinery':'Logistik & Maschinen',
+
+          'Truck, machinery, tractors, commercial vehicle, trailer, semi trailer.':'LKW, Maschinen, Traktoren, Nutzfahrzeuge, Anhänger, Auflieger.',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used tractors,trucks,commercial vehicle,'
+              ' machinery, roller, cranes,bulldozer,tractor agricultural, forklift ,generator,... and any logistic or'
+              ' machinery of your field':
+          'Sikatronics-Geräte unterstützen Sie technisch und wirtschaftlich dabei, neue oder gebrauchte Traktoren, LKWs, Nutzfahrzeuge zu besitzen.'
+          ' Maschinen, Walzen, Kräne, Planierraupen, landwirtschaftliche Traktoren, Gabelstapler, Generatoren, ... und alle logistischen oder'
+              'Maschinerie Ihres Faches',
+
+          'transport':'Transport',
+          'Bus, Car, Moto':'Bus, Auto, Motorrad',
+          'Sikatronics equipment assists you technically and commercially to have new or used car, bus or '
+              'motorbike of any brand'
+              :'Sikatronics-Geräte unterstützen Sie technisch und wirtschaftlich dabei, neue oder gebrauchte Autos, Busse oder '
+              'Motorrad jeder Marke',
+
+          'construction':'Konstruktion',
+          'Machines, equipments':'Maschinen, Anlagen',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments, '
+              'machines, machineries in the construction field, like concrete machines,'
+              ' blocks and bricks machines,... and any machines you need.'
+              :'Sikatronics-Equipment unterstützt Sie technisch und kommerziell dabei, neue oder gebrauchte Geräte zu haben, '
+              'Maschinen, Maschinen im Baubereich, wie Betonmaschinen'
+              ' Block- und Ziegelmaschinen, ... und alle Maschinen, die Sie benötigen.',
+
+          'agriculture & breeding':'Landwirtschaft & Zucht',
+
+          'Machines, engines,equipements':'Maschinen, Motoren, Geräte',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments ,'
+              'machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed':
+          'Sikatronics Equipment unterstützt Sie technisch und wirtschaftlich dabei, neue oder gebrauchte Geräte zu besitzen ,'
+              'Maschine für jedes Produkt, das Sie anbauen (Maniok, Mais, Erdnuss, Kakao, Kaffee, Riz, Öl ...) oder züchten',
+
+          'trading':'Handel',
+          'Agri-food,construction,raw materials for insdustries':'Lebensmittel, Bau, Rohstoffe für die Industrie',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments ,'
+              'machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed'
+              :'Sikatronics Equipment unterstützt Sie technisch und wirtschaftlich dabei, neue oder gebrauchte Geräte zu besitzen ,'
+              'Maschine für jedes Produkt, das Sie anbauen (Maniok, Mais, Erdnuss, Kakao, Kaffee, Riz, Öl ...) oder züchten',
+          'maintenance':'Wartung',
+          'Maintenance of machines or equivalence':'Wartung von Maschinen oder Gleichwertigkeit',
+          'Sikatronics equipment assists you technically to do maintenance in your equipment and machines. '
+              'You fit any malfunction.'
+              :'Sikatronics Equipment unterstützt Sie technisch bei der Wartung Ihrer Anlagen und Maschinen. '
+  '»Sie passen auf jede Fehlfunktion.',
+
+          'other services':'andere Dienstleistungen',
+          'we provide diverse sets of services to our clients, get in touch to know more'
+              :'Wir bieten unseren Kunden verschiedene Dienstleistungen an. Kontaktieren Sie uns, um mehr zu erfahren',
+          'other services ...':'andere Dienstleistungen ...',
+
+
+
+
+
           'screen01BodyText':
               'Begleiter des Unternehmers. Wir stellen Ihre Maschinen, Anlagen, Rohstoffe und Wartung für Ihr Unternehmen bereit.',
           'screen01ButtonText': 'Sprache wählen',
@@ -197,6 +380,80 @@ class AppTranslations extends Translations {
 
         //Portuguese
         'pt_PT': {
+          'industry':'indústria',
+          'Machines for production, production lines, equipment for industry':'Máquinas para produção, linhas de produção, equipamentos para a indústria',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used machines for production,'
+              ' production lines and equipment in the field of agri-food, electronics, metal and forging, packaging and '
+              'conditioning, pharmaceutical, chemical, textiles, printing machines, wood, plastic, industrial equipment,... '
+              'and any machine or equipment of your field'
+              :'Os equipamentos Sikatronics auxiliam você técnica e comercialmente a ter máquinas novas ou usadas para produção,'
+              ' linhas de produção e equipamentos na área de agro-alimentar, eletrônica, metal e forja, embalagem e '
+              'condicionamento, farmacêutico, químico, têxtil, máquinas de impressão, madeira, plástico, equipamentos industriais,...'
+              'e qualquer máquina ou equipamento de sua área',
+
+          'logistics & machinery':'logística e maquinaria',
+
+          'Truck, machinery, tractors, commercial vehicle, trailer, semi trailer.':'Caminhões, máquinas, tratores, veículos comerciais, reboques, semi-reboques.',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used tractors,trucks,commercial vehicle,'
+              ' machinery, roller, cranes,bulldozer,tractor agricultural, forklift ,generator,... and any logistic or'
+              ' machinery of your field':
+          'Os equipamentos Sikatronics auxiliam você técnica e comercialmente a ter tratores novos ou usados, caminhões, veículos comerciais,'
+  ' máquinas, rolo, guindastes, bulldozer, trator agrícola, empilhadeira, gerador,... e qualquer logística ou'
+  ' máquinas do seu campo',
+
+          'transport':'transporte',
+          'Bus, Car, Moto':'ônibus, carro, moto',
+          'Sikatronics equipment assists you technically and commercially to have new or used car, bus or '
+              'motorbike of any brand'
+              :'Os equipamentos Sikatronics auxiliam técnica e comercialmente você a ter carro novo ou usado, ônibus ou '
+              'moto de qualquer marca',
+
+          'construction':'construção',
+          'Machines, equipments':'máquinas, equipamentos',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments, '
+              'machines, machineries in the construction field, like concrete machines,'
+              ' blocks and bricks machines,... and any machines you need.'
+              :'Os equipamentos Sikatronics auxiliam você técnica e comercialmente a ter equipamentos novos ou usados, '
+              'máquinas, máquinas no campo da construção, como máquinas de concreto,'
+              ' máquinas de blocos e tijolos,... e todas as máquinas que você precisa.',
+
+          'agriculture & breeding':'agricultura e criação',
+
+          'Machines, engines,equipements':'Máquinas, motores, equipamentos',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments ,'
+              'machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed':
+          'Os equipamentos Sikatronics auxiliam você técnica e comercialmente a ter equipamentos novos ou usados,'
+              'máquina para qualquer produto que você cultive (mandioca,milho,amendoim,cacau,café,riz,óleo...) ou crie',
+
+          'trading':'negociação',
+          'Agri-food,construction,raw materials for insdustries':'Agro-alimentar, construção, matérias-primas para indústrias',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments ,'
+              'machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed'
+              :'Os equipamentos Sikatronics auxiliam você técnica e comercialmente a ter equipamentos novos ou usados,'
+              'máquina para qualquer produto que você cultive (mandioca,milho,amendoim,cacau,café,riz,óleo...) ou crie',
+          'maintenance':'manutenção',
+          'Maintenance of machines or equivalence':'Manutenção de máquinas ou equivalente',
+          'Sikatronics equipment assists you technically to do maintenance in your equipment and machines. '
+              'You fit any malfunction.'
+              :'Os equipamentos Sikatronics te auxiliam tecnicamente na manutenção de seus equipamentos e máquinas. '
+              'Você se encaixa em qualquer defeito.',
+
+          'other services':'outros serviços',
+          'we provide diverse sets of services to our clients, get in touch to know more'
+              :'fornecemos diversos conjuntos de serviços aos nossos clientes, entre em contato para saber mais',
+          'other services ...':'outros serviços ...',
+
+
+
+
+
+
+
           'screen01BodyText':
               'Companheiro de empresário. Fornecemos suas máquinas, equipamentos, matéria-prima e manutenção para o seu negócio.',
           'screen01ButtonText': 'Escolha o seu idioma',
@@ -258,6 +515,79 @@ class AppTranslations extends Translations {
 
         //Spanish
         'es_ES': {
+          'industry':'industria',
+          'Machines for production, production lines, equipment for industry':'Máquinas para la producción, líneas de producción, equipos para la industria',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used machines for production,'
+              ' production lines and equipment in the field of agri-food, electronics, metal and forging, packaging and '
+              'conditioning, pharmaceutical, chemical, textiles, printing machines, wood, plastic, industrial equipment,... '
+              'and any machine or equipment of your field'
+              :'Los equipos de Sikatronics te asiste técnica y comercialmente para tener máquinas nuevas o usadas para producción,'
+              ' Líneas y equipos de producción en el campo de la agroalimentación, electrónica, metal y forja, embalaje y '
+              'acondicionamiento, farmacéutico, químico, textil, máquinas de impresión, madera, plástico, equipos industriales,...'
+              'y cualquier máquina o equipo de su campo',
+
+          'logistics & machinery':'logística y maquinaria',
+
+          'Truck, machinery, tractors, commercial vehicle, trailer, semi trailer.':'Camión, maquinaria, tractores, vehículo comercial, remolque, semirremolque.',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used tractors,trucks,commercial vehicle,'
+              ' machinery, roller, cranes,bulldozer,tractor agricultural, forklift ,generator,... and any logistic or'
+              ' machinery of your field':
+          'Los equipos de Sikatronics lo ayudan técnica y comercialmente a tener tractores, camiones, vehículos comerciales, nuevos o usados.'
+          'maquinaria, rodillo, grúas,bulldozer,tractor agrícola, montacargas,generador,... y cualquier logística o'
+              'maquinaria de tu campo',
+
+          'transport':'transporte',
+          'Bus, Car, Moto':'autobús, coche, moto',
+          'Sikatronics equipment assists you technically and commercially to have new or used car, bus or '
+              'motorbike of any brand'
+              :'Los equipos de Sikatronics lo asisten técnica y comercialmente para tener un automóvil, autobús o \'nuevo o usado\'.'
+          'moto de cualquier marca',
+
+          'construction':'construcción',
+          'Machines, equipments':'Maquinas, equipos',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments, '
+              'machines, machineries in the construction field, like concrete machines,'
+              ' blocks and bricks machines,... and any machines you need.'
+              :'Los equipos Sikatronics te asiste técnica y comercialmente para tener equipos nuevos o usados,'
+  'máquinas, maquinarias en el campo de la construcción, como máquinas de hormigón,'
+ ' Máquinas de bloques y ladrillos,... y cualquier máquina que necesites.',
+
+          'agriculture & breeding':'agricultura y cría',
+
+          'Machines, engines,equipements':'Máquinas, motores, equipos',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments ,'
+              'machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed':
+          'Equipos Sikatronics te asiste técnica y comercialmente para tener equipos nuevos o usados,'
+              'máquina para cualquier producto que cultive (mandioca, maíz, maní, cacao, café, riz, aceite...) o cría',
+
+          'trading':'comercio',
+          'Agri-food,construction,raw materials for insdustries':'Agroalimentario,construcción,materias primas para la industria',
+
+          'Sikatronics equipment assists you technically and commercially to have new or used equipments ,'
+              'machine for any product you grow(cassava,corn,peanut,cocoa,coffee, riz,oil...) or breed'
+              :'Equipos Sikatronics te asiste técnica y comercialmente para tener equipos nuevos o usados,'
+              'máquina para cualquier producto que cultive (mandioca, maíz, maní, cacao, café, riz, aceite...) o cría',
+          'maintenance':'mantenimiento',
+          'Maintenance of machines or equivalence':'Mantenimiento de máquinas o equivalencia',
+          'Sikatronics equipment assists you technically to do maintenance in your equipment and machines. '
+              'You fit any malfunction.'
+              :'Los equipos Sikatronics lo asisten técnicamente para realizar el mantenimiento de sus equipos y máquinas. '
+              'Encajas en cualquier mal funcionamiento.',
+
+          'other services':'otros servicios',
+          'we provide diverse sets of services to our clients, get in touch to know more'
+              :'proporcionamos diversos conjuntos de servicios a nuestros clientes, póngase en contacto para saber más',
+          'other services ...':'otros servicios ...',
+
+
+
+
+
+
           'screen01BodyText':
               'Compañero del emprendedor. Proveemos sus máquinas, equipos, materias primas y mantenimiento para su negocio.',
           'screen01ButtonText': 'Elige lengua',

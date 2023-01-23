@@ -33,10 +33,8 @@ class SuccessFullScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 40,
-        ),
-        // Text(valid ? 'Thank You!' : 'Ouups',
-        //     style: GoogleFonts.poppins(
+          height: 40,),
+               //     style: GoogleFonts.poppins(
         //         fontSize: 30,
         //         color: Colors.white,
         //         fontWeight: FontWeight.bold)),
